@@ -4,19 +4,57 @@ using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using ComputerShop.Presenters;
+using ComputerShop.Views;
 
 namespace ComputerShop.FormViews
 {
-    public partial class FLogin : Form
+    public partial class FLogin : Form,IAuthenticationUser,IAuthenticationAddress
     {
-        private MySqlConnection connection;
-
+        #region Properies
+     
+        //Interface IAuthentication
+        public string Login 
+        {
+            get
+            {
+                return LoginTextBox.Text;
+            }
+            set
+            {
+                LoginTextBox.Text = value;
+            } 
+        }
+        public string Password 
+        { 
+            get
+            {
+                return PasswordTextBox.Text;
+            }
+            set
+            {
+                PasswordTextBox.Text = value;
+            } 
+        }
+        public int UserId { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public bool IsaAClient { get; set; }
+        public bool IsACompany { get; set; }
+        public int AddressId { get; set; }
+        public string Street { get; set; }
+        public string HouseNumber { get; set; }
+        public string City { get; set; }
+        public string PostCode { get; set; }
+        public string Surname { get; set; }
+        public string UserName { get; set; }
+        #endregion
         public FLogin()
         {
             InitializeComponent();
             //Seting connection to database
-            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
-            connection = new MySqlConnection(conn);
+            //string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            //connection = new MySqlConnection(conn);
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
@@ -54,12 +92,11 @@ namespace ComputerShop.FormViews
         #region Buttons
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string query = "SELECT * FROM user WHERE Login = '" + LoginTextBox.Text.Trim() + "' and Password = '" + PasswordTextBox.Text.Trim() + "'";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-            DataTable dt1 = new DataTable();
-            adapter.Fill(dt1);
-            if (dt1.Rows.Count == 1)
+            //connection.Open();
+            AuthenticationPresenter authenticationPresenter = new AuthenticationPresenter(this,this);
+            bool LoginSuccessfully =authenticationPresenter.Login();
+
+            if (LoginSuccessfully)
             {
                 FMain objFMain = new FMain();
                 this.Hide();
@@ -67,7 +104,7 @@ namespace ComputerShop.FormViews
             }
             else
             {
-                WrongDataErrorLabel.Text = "*wrong login or password.If you have not registered yet, click Sign Up button.";
+                WrongDataErrorLabel.Text = "*wrong login or password. If you have not registered yet, click Sign Up button.";
                 LoginTextBox.Text = String.Empty;
                 PasswordTextBox.Text = String.Empty;
 
@@ -79,7 +116,7 @@ namespace ComputerShop.FormViews
                 PasswordPanel2.BackColor = Color.WhiteSmoke;
                 PasswordTextBox.ForeColor = Color.WhiteSmoke;
             }
-            connection.Close();
+            //connection.Close();
          
         }
 

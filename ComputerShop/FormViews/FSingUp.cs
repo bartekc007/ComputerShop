@@ -4,14 +4,158 @@ using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
-
+using ComputerShop.Presenters;
+using ComputerShop.Views;
+using System.Collections;
 
 namespace ComputerShop.FormViews
 {
-    public partial class FSingUp : Form
+    public partial class FSingUp : Form , IAuthenticationUser,IAuthenticationAddress
     {
         private MySqlConnection connection;
 
+        #region Properties
+        //User
+        public int UserId { get; set; }
+        public string UserName
+        {
+            get
+            {
+                return NameTextBox.Text;
+            }
+            set
+            {
+                NameTextBox.Text = value;
+            }
+        }
+        public string Surname
+        {
+            get
+            {
+                return SurnameTextBox.Text;
+            }
+            set
+            {
+                SurnameTextBox.Text = value;
+            }
+        }
+        public string Login
+        {
+            get
+            {
+                return LoginTextBox.Text;
+            }
+            set
+            {
+                LoginTextBox.Text = value;
+            }
+        }
+        public string Password
+        {
+            get
+            {
+                return PasswordTextBox.Text;
+            }
+            set
+            {
+                PasswordTextBox.Text = value;
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return EmailTextBox.Text;
+            }
+            set
+            {
+                EmailTextBox.Text = value;
+            }
+        }
+        public string PhoneNumber
+        {
+            get
+            {
+                return PhoneNumberTextBox.Text;
+            }
+            set
+            {
+                PhoneNumberTextBox.Text = value;
+            }
+        }       
+        public bool IsaAClient
+        {
+            get
+            {
+                return true;
+            }
+            set
+            {
+                value = true;
+            }
+        }
+        public bool IsACompany
+        {
+            get
+            {
+                return false;
+            }
+            set
+            {
+                value = false;
+            }
+        }
+
+        //Address 
+        public int AddressId { get; set; }
+        public string Street
+        {
+            get
+            {
+                return StreetTextBox.Text;
+            }
+            set
+            {
+                StreetTextBox.Text = value;
+            }
+        }
+        public string HouseNumber
+        {
+            get
+            {
+                return NumberTextBox.Text;
+            }
+            set
+            {
+                NumberTextBox.Text = value;
+            }
+        }
+        public string City
+        {
+            get
+            {
+                return CityTextBox.Text;
+            }
+            set
+            {
+                CityTextBox.Text = value;
+            }
+        }
+        public string PostCode
+        {
+            get
+            {
+                return PostCodeTextBox.Text;
+            }
+            set
+            {
+                PostCodeTextBox.Text = value;
+            }
+        }
+
+        #endregion
+
+        #region Constructors
         public FSingUp()
         {
             InitializeComponent();
@@ -34,6 +178,7 @@ namespace ComputerShop.FormViews
             PostCodePictureBox.Image = Properties.Resources.LocationIcon;
             LogoPictureBox.Image = Properties.Resources.LogoIcon;
         }
+        #endregion
 
         #region TextBoxes
 
@@ -68,6 +213,7 @@ namespace ComputerShop.FormViews
         {
             SetTextBoxForeColorWhite();
             SetPanelBackColorWhite();
+            PasswordTextBox.PasswordChar = '*';
             PasswordTextBox.ForeColor = Color.DeepSkyBlue;
             PasswordLabel1.BackColor = Color.DeepSkyBlue;
             PasswordLabel2.BackColor = Color.DeepSkyBlue;
@@ -130,94 +276,235 @@ namespace ComputerShop.FormViews
         #endregion
 
         #region Buttons
+        /// <summary>
+        /// If ok send you to main Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
+            //bool DataIsOk = true;
+
+            AuthenticationPresenter authenticationPresenter = new AuthenticationPresenter(this,this);
+           // Hashtable IsCorrectHashtable = authenticationPresenter.CheckIfNotEmptyOrDefault();
+
             bool DataIsOk = true;
 
+
+
             if ((SurnameTextBox.Text == "Surname") || (SurnameTextBox.Text == String.Empty))
+
             {
+
                 SurnameErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 SurnameErrorLabel.Text = String.Empty;
 
+
+
             if ((NameTextBox.Text == "Name") || (NameTextBox.Text == String.Empty))
+
             {
+
                 NameErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 NameErrorLabel.Text = String.Empty;
 
+
+
             if ((LoginTextBox.Text == "login") || (LoginTextBox.Text == String.Empty))
+
             {
+
                 LoginErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
 
+
+
             else
+
                 LoginErrorLabel.Text = String.Empty;
 
+
+
             if ((PasswordTextBox.Text == "password") || (PasswordTextBox.Text == String.Empty))
+
             {
+
                 PasswordErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 PasswordErrorLabel.Text = String.Empty;
 
+
+
             if ((PhoneNumberTextBox.Text == "Phone number") || (PhoneNumberTextBox.Text == String.Empty))
+
             {
+
                 PhoneNumberErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 PhoneNumberErrorLabel.Text = String.Empty;
 
+
+
             if ((StreetTextBox.Text == "Street") || (StreetTextBox.Text == String.Empty))
+
             {
+
                 StreetErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 StreetErrorLabel.Text = String.Empty;
 
+
+
             if ((NumberTextBox.Text == "House Number") || (NumberTextBox.Text == String.Empty))
+
             {
+
                 HouseNumberErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 HouseNumberErrorLabel.Text = String.Empty;
 
+
+
             if ((CityTextBox.Text == "City") || (CityTextBox.Text == String.Empty))
+
             {
+
                 CityErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 CityErrorLabel.Text = String.Empty;
 
+
+
             if ((PostCodeTextBox.Text == "Post code") || (PostCodeTextBox.Text == String.Empty))
+
             {
+
                 PostCodeErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 PostCodeErrorLabel.Text = String.Empty;
 
+
+
             if ((EmailTextBox.Text == "Email address") || (EmailTextBox.Text == String.Empty))
+
             {
+
                 EmailErrorLabel.Text = "* this field can not be empty";
+
                 DataIsOk = false;
+
             }
+
             else
+
                 EmailErrorLabel.Text = String.Empty;
 
+            /* if (IsCorrectHashtable.ContainsKey("Name") == false)
+                 NameErrorLabel.Text = "*this field can not be empty";
+             else
+                 NameErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("Surname") == false)
+                 SurnameErrorLabel.Text = "*this field can not be empty";
+             else
+                 SurnameErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("Login") == false)
+                 LoginErrorLabel.Text = "*this field can not be empty";
+             else
+                 LoginErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("Password") == false)
+                 PasswordErrorLabel.Text = "*this field can not be empty";
+             else
+                 PasswordErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("Email") == false)
+                 EmailErrorLabel.Text = "*this field can not be empty";
+             else
+                 EmailErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("PhoneNumer") == false)
+                 PhoneNumberErrorLabel.Text = "*this field can not be empty";
+             else
+                 PhoneNumberErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("Street") == false)
+                 StreetErrorLabel.Text = "*this field can not be empty";
+             else
+                 StreetErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("HouseNumber") == false)
+                 HouseNumberErrorLabel.Text = "*this field can not be empty";
+             else
+                 HouseNumberErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("City") == false)
+                 CityErrorLabel.Text = "*this field can not be empty";
+             else
+                 CityErrorLabel.Text = string.Empty; DataIsOk = false;
+
+             if (IsCorrectHashtable.ContainsKey("PostCode") == false)
+                 PostCodeErrorLabel.Text = "*this field can not be empty";
+             else
+                 PostCodeErrorLabel.Text = string.Empty; DataIsOk = false;*/
 
 
-            
+
+
             string selectNameSurname = "SELECT * FROM user WHERE Name = '" + NameTextBox.Text.Trim() + "' and Surname = '" + SurnameTextBox.Text.Trim() + "'";
             MySqlDataAdapter adapter = new MySqlDataAdapter(selectNameSurname, connection);
             DataTable dt1 = new DataTable();
@@ -258,10 +545,13 @@ namespace ComputerShop.FormViews
                 PhoneNumberErrorLabel.Text = "User with this phone number address already exists";
                 DataIsOk = false;
             }
+            
+            
 
             if (DataIsOk == true)
             {
-                connection.Open();
+                authenticationPresenter.Registration();
+                /*connection.Open();
                 string InsertIntoNewAddress = "INSERT INTO addresses(Street,Number,City,Post_code) VALUES('" + StreetTextBox.Text.Trim() + "','" + NumberTextBox.Text.Trim() + "','" + CityTextBox.Text.Trim() + "','" + PostCodeTextBox.Text.Trim() + "'  )";
                 MySqlCommand InsertIntoNewAddressCmd = new MySqlCommand(InsertIntoNewAddress, connection);
                 InsertIntoNewAddressCmd.ExecuteNonQuery();
@@ -275,13 +565,17 @@ namespace ComputerShop.FormViews
                 InsertIntoNewUserCmd.Parameters.AddWithValue("@addressId", addressid);
                 InsertIntoNewUserCmd.ExecuteNonQuery();
 
-                connection.Close();
+                connection.Close();*/
                 FMain objFMain = new FMain();
                 this.Hide();
                 objFMain.Show();
             }
         }
-
+        /// <summary>
+        /// Send you back to Login Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {
             FLogin objFLogin = new FLogin();
@@ -344,12 +638,7 @@ namespace ComputerShop.FormViews
             PostCodeLabel1.BackColor = Color.White;
             PostCodeLabel2.BackColor = Color.White;
         }
-
-
-
-
         #endregion
 
-      
     }
 }

@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\PlaceHolderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormViews\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +69,14 @@
     <Compile Include="FormViews\FSingUp.Designer.cs">
       <DependentUpon>FSingUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AuthenticationModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Presenters\AuthenticationPresenter.cs" />
+    <Compile Include="Presenters\UserPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IAuthentication.cs" />
+    <Compile Include="Views\IUser.cs" />
     <EmbeddedResource Include="FormViews\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,5 +124,6 @@
   <ItemGroup>
     <None Include="Resources\LogoIcon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
