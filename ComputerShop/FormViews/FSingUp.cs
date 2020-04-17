@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace ComputerShop.FormViews
 {
-    public partial class FSingUp : Form , IAuthenticationUser,IAuthenticationAddress
+    public partial class FSingUp : Form , IAuthenticationUser,IAuthenticationAddress,IErrorLabel
     {
         private MySqlConnection connection;
 
@@ -153,6 +153,118 @@ namespace ComputerShop.FormViews
             }
         }
 
+        //Error labels
+        public string UserNameError
+        {
+            get
+            {
+                return NameErrorLabel.Text;
+            }
+            set
+            {
+                NameErrorLabel.Text = value;
+            }
+        }
+        public string SurnameError
+        {
+            get
+            {
+                return SurnameErrorLabel.Text;
+            }
+            set
+            {
+                SurnameErrorLabel.Text = value;
+            }
+        }
+        public string LoginError
+        {
+            get
+            {
+                return LoginErrorLabel.Text;
+            }
+            set
+            {
+                LoginErrorLabel.Text = value;
+            }
+        }
+        public string PasswordError
+        {
+            get
+            {
+                return PasswordErrorLabel.Text;
+            }
+            set
+            {
+                PasswordErrorLabel.Text = value;
+            }
+        }
+        public string EmailError
+        {
+            get
+            {
+                return EmailErrorLabel.Text;
+            }
+            set
+            {
+                EmailErrorLabel.Text = value;
+            }
+        }
+        public string PhoneNumberError
+        {
+            get
+            {
+                return PhoneNumberErrorLabel.Text;
+            }
+            set
+            {
+                PhoneNumberErrorLabel.Text = value;
+            }
+        }
+        public string StreetError
+        {
+            get
+            {
+                return StreetErrorLabel.Text;
+            }
+            set
+            {
+                StreetErrorLabel.Text = value;
+            }
+        }
+        public string HouseNumberError
+        {
+            get
+            {
+                return HouseNumberErrorLabel.Text;
+            }
+            set
+            {
+                HouseNumberErrorLabel.Text = value;
+            }
+        }
+        public string CityError
+        {
+            get
+            {
+                return CityErrorLabel.Text;
+            }
+            set
+            {
+                CityErrorLabel.Text = value;
+            }
+        }
+        public string PostCodeError
+        {
+            get
+            {
+                return PostCodeErrorLabel.Text;
+            }
+            set
+            {
+                PostCodeErrorLabel.Text = value;
+            }
+        }
+
         #endregion
 
         #region Constructors
@@ -177,6 +289,20 @@ namespace ComputerShop.FormViews
             CityPictureBox.Image = Properties.Resources.LocationIcon;
             PostCodePictureBox.Image = Properties.Resources.LocationIcon;
             LogoPictureBox.Image = Properties.Resources.LogoIcon;
+
+            NameTextBox.Text = "name";
+            SurnameTextBox.Text = "surname";
+            LoginTextBox.Text = "login";
+            PasswordTextBox.Text = "password";
+            EmailTextBox.Text = "email address";
+            PhoneNumberTextBox.Text = "phone number";
+            StreetTextBox.Text = "street";
+            NumberTextBox.Text = "house number";
+            CityTextBox.Text = "city";
+            PostCodeTextBox.Text = "post code";
+
+            SetTextBoxForeColorWhite();
+            SetPanelBackColorWhite();
         }
         #endregion
 
@@ -286,290 +412,18 @@ namespace ComputerShop.FormViews
             //bool DataIsOk = true;
 
             AuthenticationPresenter authenticationPresenter = new AuthenticationPresenter(this,this);
-           // Hashtable IsCorrectHashtable = authenticationPresenter.CheckIfNotEmptyOrDefault();
-
-            bool DataIsOk = true;
-
-
-
-            if ((SurnameTextBox.Text == "Surname") || (SurnameTextBox.Text == String.Empty))
-
-            {
-
-                SurnameErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                SurnameErrorLabel.Text = String.Empty;
-
-
-
-            if ((NameTextBox.Text == "Name") || (NameTextBox.Text == String.Empty))
-
-            {
-
-                NameErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                NameErrorLabel.Text = String.Empty;
-
-
-
-            if ((LoginTextBox.Text == "login") || (LoginTextBox.Text == String.Empty))
-
-            {
-
-                LoginErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-
-
-            else
-
-                LoginErrorLabel.Text = String.Empty;
-
-
-
-            if ((PasswordTextBox.Text == "password") || (PasswordTextBox.Text == String.Empty))
-
-            {
-
-                PasswordErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                PasswordErrorLabel.Text = String.Empty;
-
-
-
-            if ((PhoneNumberTextBox.Text == "Phone number") || (PhoneNumberTextBox.Text == String.Empty))
-
-            {
-
-                PhoneNumberErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                PhoneNumberErrorLabel.Text = String.Empty;
-
-
-
-            if ((StreetTextBox.Text == "Street") || (StreetTextBox.Text == String.Empty))
-
-            {
-
-                StreetErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                StreetErrorLabel.Text = String.Empty;
-
-
-
-            if ((NumberTextBox.Text == "House Number") || (NumberTextBox.Text == String.Empty))
-
-            {
-
-                HouseNumberErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                HouseNumberErrorLabel.Text = String.Empty;
-
-
-
-            if ((CityTextBox.Text == "City") || (CityTextBox.Text == String.Empty))
-
-            {
-
-                CityErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                CityErrorLabel.Text = String.Empty;
-
-
-
-            if ((PostCodeTextBox.Text == "Post code") || (PostCodeTextBox.Text == String.Empty))
-
-            {
-
-                PostCodeErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                PostCodeErrorLabel.Text = String.Empty;
-
-
-
-            if ((EmailTextBox.Text == "Email address") || (EmailTextBox.Text == String.Empty))
-
-            {
-
-                EmailErrorLabel.Text = "* this field can not be empty";
-
-                DataIsOk = false;
-
-            }
-
-            else
-
-                EmailErrorLabel.Text = String.Empty;
-
-            /* if (IsCorrectHashtable.ContainsKey("Name") == false)
-                 NameErrorLabel.Text = "*this field can not be empty";
-             else
-                 NameErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("Surname") == false)
-                 SurnameErrorLabel.Text = "*this field can not be empty";
-             else
-                 SurnameErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("Login") == false)
-                 LoginErrorLabel.Text = "*this field can not be empty";
-             else
-                 LoginErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("Password") == false)
-                 PasswordErrorLabel.Text = "*this field can not be empty";
-             else
-                 PasswordErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("Email") == false)
-                 EmailErrorLabel.Text = "*this field can not be empty";
-             else
-                 EmailErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("PhoneNumer") == false)
-                 PhoneNumberErrorLabel.Text = "*this field can not be empty";
-             else
-                 PhoneNumberErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("Street") == false)
-                 StreetErrorLabel.Text = "*this field can not be empty";
-             else
-                 StreetErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("HouseNumber") == false)
-                 HouseNumberErrorLabel.Text = "*this field can not be empty";
-             else
-                 HouseNumberErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("City") == false)
-                 CityErrorLabel.Text = "*this field can not be empty";
-             else
-                 CityErrorLabel.Text = string.Empty; DataIsOk = false;
-
-             if (IsCorrectHashtable.ContainsKey("PostCode") == false)
-                 PostCodeErrorLabel.Text = "*this field can not be empty";
-             else
-                 PostCodeErrorLabel.Text = string.Empty; DataIsOk = false;*/
-
-
-
-
-            string selectNameSurname = "SELECT * FROM user WHERE Name = '" + NameTextBox.Text.Trim() + "' and Surname = '" + SurnameTextBox.Text.Trim() + "'";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(selectNameSurname, connection);
-            DataTable dt1 = new DataTable();
-            adapter.Fill(dt1);
-            if (dt1.Rows.Count == 1)
-            {
-                NameErrorLabel.Text = "User with this name already exists";
-                SurnameErrorLabel.Text = "User with this name already exists";
-                DataIsOk = false;
-            }
-
-            string selectLogin = "SELECT * FROM user WHERE Login = '" + LoginTextBox.Text.Trim() + "'";
-            adapter = new MySqlDataAdapter(selectLogin, connection);
-            dt1 = new DataTable();
-            adapter.Fill(dt1);
-            if (dt1.Rows.Count == 1)
-            {
-                LoginErrorLabel.Text = "User with this login already exists";
-                DataIsOk = false;
-            }
-
-            string selectEmail = "SELECT * FROM user WHERE Email = '" + EmailTextBox.Text.Trim() + "'";
-            adapter = new MySqlDataAdapter(selectEmail, connection);
-            dt1 = new DataTable();
-            adapter.Fill(dt1);
-            if (dt1.Rows.Count == 1)
-            {
-                EmailErrorLabel.Text = "User with this email address already exists";
-                DataIsOk = false;
-            }
-
-            string selectPhoneNumber = "SELECT * FROM user WHERE Phone_number = '" + PhoneNumberTextBox.Text.Trim() + "'";
-            adapter = new MySqlDataAdapter(selectPhoneNumber, connection);
-            dt1 = new DataTable();
-            adapter.Fill(dt1);
-            if (dt1.Rows.Count == 1)
-            {
-                PhoneNumberErrorLabel.Text = "User with this phone number address already exists";
-                DataIsOk = false;
-            }
+            ErrorLabelPresenter errorLabelPresenter = new ErrorLabelPresenter(this, this);
+            bool result1 = errorLabelPresenter.CheckIsDataOk(this);
+            bool result2 = errorLabelPresenter.CheckIsDuplicates(this);
             
-            
-
-            if (DataIsOk == true)
+            if(result1 && result2)
             {
                 authenticationPresenter.Registration();
-                /*connection.Open();
-                string InsertIntoNewAddress = "INSERT INTO addresses(Street,Number,City,Post_code) VALUES('" + StreetTextBox.Text.Trim() + "','" + NumberTextBox.Text.Trim() + "','" + CityTextBox.Text.Trim() + "','" + PostCodeTextBox.Text.Trim() + "'  )";
-                MySqlCommand InsertIntoNewAddressCmd = new MySqlCommand(InsertIntoNewAddress, connection);
-                InsertIntoNewAddressCmd.ExecuteNonQuery();
-
-                string selectAddressId = "SELECT ID FROM addresses WHERE Street='" + StreetTextBox.Text.Trim() + "' AND Number ='" + NumberTextBox.Text.Trim() + "' AND City='" + CityTextBox.Text.Trim() + "' AND Post_code='" + PostCodeTextBox.Text.Trim() + "'";
-                MySqlCommand SelectAddressIdCmd = new MySqlCommand(selectAddressId, connection);
-                var addressid = (Int32)SelectAddressIdCmd.ExecuteScalar();
-
-                string InsertIntoNewUser = "INSERT INTO user(name, surname, addressid, login, password, email, phone_number, is_a_client, is_a_company_client) VALUES('" + NameTextBox.Text.Trim() + "','" + SurnameTextBox.Text.Trim() + "',@addressId,'" + LoginTextBox.Text.Trim() + "','" + PasswordTextBox.Text.Trim() + "','" + EmailTextBox.Text.Trim() + "','" + PhoneNumberTextBox.Text.Trim() + "',1,0)";
-                MySqlCommand InsertIntoNewUserCmd = new MySqlCommand(InsertIntoNewUser, connection);
-                InsertIntoNewUserCmd.Parameters.AddWithValue("@addressId", addressid);
-                InsertIntoNewUserCmd.ExecuteNonQuery();
-
-                connection.Close();*/
-                FMain objFMain = new FMain();
+                FMain fMain = new FMain();
                 this.Hide();
-                objFMain.Show();
+                fMain.Show();
             }
+            
         }
         /// <summary>
         /// Send you back to Login Window
