@@ -21,7 +21,7 @@ namespace ComputerShop
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Run first App Window Flogin 
-            Application.Run(new FLogin());
+            Application.Run(new FMain());
         }
     }
 }
