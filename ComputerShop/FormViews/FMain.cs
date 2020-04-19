@@ -36,7 +36,7 @@ namespace ComputerShop.FormViews
 
         private void ProductsComputersButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsMain());
+            
             
             
             
@@ -51,7 +51,50 @@ namespace ComputerShop.FormViews
 
         private void ProductsComponentsButton_Click(object sender, EventArgs e)
         {
-            HideSubmenu();
+            if (ComponentsPanel.Visible == false)
+            {
+                HideSubmenu();
+                ComponentsPanel.Visible = true;
+            }
+        }
+
+
+
+        private void CpuSubmenuButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FProductsCpuMain());
+            
+        }
+
+        private void MainboardSubmenuButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FProductsMainboardsMain());
+            
+        }
+
+        private void GpuSubmenyButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RamSubmenuButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void HardDriveSubmenuButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ScreenSubmenuButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void powerSupplyUnitSubmenuButton_Click(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion
@@ -74,13 +117,15 @@ namespace ComputerShop.FormViews
         private void CustomizeDesign()
         {
             ProductSubmenuPanel.Visible = false;
-
+            ComponentsPanel.Visible = false;
         }
 
         private void HideSubmenu()
         {
             if (ProductSubmenuPanel.Visible == true)
                 ProductSubmenuPanel.Visible = false;
+            if (ComponentsPanel.Visible == true)
+                ComponentsPanel.Visible = false;
 
         }
 
@@ -112,5 +157,7 @@ namespace ComputerShop.FormViews
             childForm.Show();
         }
         #endregion
+
+        
     }
 }

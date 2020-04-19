@@ -41,15 +41,25 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.MainPannel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ComponentsPanel = new System.Windows.Forms.Panel();
+            this.CpuSubmenuButton = new System.Windows.Forms.Button();
+            this.MainboardSubmenuButton = new System.Windows.Forms.Button();
+            this.GpuSubmenyButton = new System.Windows.Forms.Button();
+            this.RamSubmenuButton = new System.Windows.Forms.Button();
+            this.HardDriveSubmenuButton = new System.Windows.Forms.Button();
+            this.ScreenSubmenuButton = new System.Windows.Forms.Button();
+            this.powerSupplyUnitSubmenuButton = new System.Windows.Forms.Button();
             this.LeftMenuPanel.SuspendLayout();
             this.ProductSubmenuPanel.SuspendLayout();
             this.MainPannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ComponentsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenuPanel
             // 
             this.LeftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.LeftMenuPanel.Controls.Add(this.ComponentsPanel);
             this.LeftMenuPanel.Controls.Add(this.button1);
             this.LeftMenuPanel.Controls.Add(this.OrdersHistoryButton);
             this.LeftMenuPanel.Controls.Add(this.OrderButton);
@@ -78,10 +88,10 @@
             this.OrdersHistoryButton.FlatAppearance.BorderSize = 0;
             this.OrdersHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OrdersHistoryButton.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.OrdersHistoryButton.Location = new System.Drawing.Point(0, 398);
+            this.OrdersHistoryButton.Location = new System.Drawing.Point(0, 345);
             this.OrdersHistoryButton.Name = "OrdersHistoryButton";
             this.OrdersHistoryButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.OrdersHistoryButton.Size = new System.Drawing.Size(187, 70);
+            this.OrdersHistoryButton.Size = new System.Drawing.Size(187, 43);
             this.OrdersHistoryButton.TabIndex = 5;
             this.OrdersHistoryButton.Text = "Orders history";
             this.OrdersHistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,10 +104,10 @@
             this.OrderButton.FlatAppearance.BorderSize = 0;
             this.OrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OrderButton.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.OrderButton.Location = new System.Drawing.Point(0, 328);
+            this.OrderButton.Location = new System.Drawing.Point(0, 297);
             this.OrderButton.Name = "OrderButton";
             this.OrderButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.OrderButton.Size = new System.Drawing.Size(187, 70);
+            this.OrderButton.Size = new System.Drawing.Size(187, 48);
             this.OrderButton.TabIndex = 3;
             this.OrderButton.Text = "Order";
             this.OrderButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +123,7 @@
             this.ProductSubmenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ProductSubmenuPanel.Location = new System.Drawing.Point(0, 149);
             this.ProductSubmenuPanel.Name = "ProductSubmenuPanel";
-            this.ProductSubmenuPanel.Size = new System.Drawing.Size(187, 179);
+            this.ProductSubmenuPanel.Size = new System.Drawing.Size(187, 148);
             this.ProductSubmenuPanel.TabIndex = 2;
             // 
             // ProductsComponentsButton
@@ -216,6 +226,134 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ComponentsPanel
+            // 
+            this.ComponentsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
+            this.ComponentsPanel.Controls.Add(this.powerSupplyUnitSubmenuButton);
+            this.ComponentsPanel.Controls.Add(this.ScreenSubmenuButton);
+            this.ComponentsPanel.Controls.Add(this.HardDriveSubmenuButton);
+            this.ComponentsPanel.Controls.Add(this.RamSubmenuButton);
+            this.ComponentsPanel.Controls.Add(this.GpuSubmenyButton);
+            this.ComponentsPanel.Controls.Add(this.MainboardSubmenuButton);
+            this.ComponentsPanel.Controls.Add(this.CpuSubmenuButton);
+            this.ComponentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ComponentsPanel.Location = new System.Drawing.Point(0, 388);
+            this.ComponentsPanel.Name = "ComponentsPanel";
+            this.ComponentsPanel.Size = new System.Drawing.Size(187, 259);
+            this.ComponentsPanel.TabIndex = 3;
+            // 
+            // CpuSubmenuButton
+            // 
+            this.CpuSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CpuSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.CpuSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CpuSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.CpuSubmenuButton.Location = new System.Drawing.Point(0, 0);
+            this.CpuSubmenuButton.Name = "CpuSubmenuButton";
+            this.CpuSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.CpuSubmenuButton.Size = new System.Drawing.Size(187, 36);
+            this.CpuSubmenuButton.TabIndex = 1;
+            this.CpuSubmenuButton.Text = "CPU";
+            this.CpuSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CpuSubmenuButton.UseVisualStyleBackColor = true;
+            this.CpuSubmenuButton.Click += new System.EventHandler(this.CpuSubmenuButton_Click);
+            // 
+            // MainboardSubmenuButton
+            // 
+            this.MainboardSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainboardSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.MainboardSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainboardSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.MainboardSubmenuButton.Location = new System.Drawing.Point(0, 36);
+            this.MainboardSubmenuButton.Name = "MainboardSubmenuButton";
+            this.MainboardSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.MainboardSubmenuButton.Size = new System.Drawing.Size(187, 36);
+            this.MainboardSubmenuButton.TabIndex = 2;
+            this.MainboardSubmenuButton.Text = "Mainboard";
+            this.MainboardSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainboardSubmenuButton.UseVisualStyleBackColor = true;
+            this.MainboardSubmenuButton.Click += new System.EventHandler(this.MainboardSubmenuButton_Click);
+            // 
+            // GpuSubmenyButton
+            // 
+            this.GpuSubmenyButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GpuSubmenyButton.FlatAppearance.BorderSize = 0;
+            this.GpuSubmenyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GpuSubmenyButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.GpuSubmenyButton.Location = new System.Drawing.Point(0, 72);
+            this.GpuSubmenyButton.Name = "GpuSubmenyButton";
+            this.GpuSubmenyButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.GpuSubmenyButton.Size = new System.Drawing.Size(187, 36);
+            this.GpuSubmenyButton.TabIndex = 3;
+            this.GpuSubmenyButton.Text = "GPU";
+            this.GpuSubmenyButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GpuSubmenyButton.UseVisualStyleBackColor = true;
+            this.GpuSubmenyButton.Click += new System.EventHandler(this.GpuSubmenyButton_Click);
+            // 
+            // RamSubmenuButton
+            // 
+            this.RamSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RamSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.RamSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RamSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.RamSubmenuButton.Location = new System.Drawing.Point(0, 108);
+            this.RamSubmenuButton.Name = "RamSubmenuButton";
+            this.RamSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.RamSubmenuButton.Size = new System.Drawing.Size(187, 36);
+            this.RamSubmenuButton.TabIndex = 4;
+            this.RamSubmenuButton.Text = "RAM";
+            this.RamSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RamSubmenuButton.UseVisualStyleBackColor = true;
+            this.RamSubmenuButton.Click += new System.EventHandler(this.RamSubmenuButton_Click);
+            // 
+            // HardDriveSubmenuButton
+            // 
+            this.HardDriveSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HardDriveSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.HardDriveSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HardDriveSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.HardDriveSubmenuButton.Location = new System.Drawing.Point(0, 144);
+            this.HardDriveSubmenuButton.Name = "HardDriveSubmenuButton";
+            this.HardDriveSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.HardDriveSubmenuButton.Size = new System.Drawing.Size(187, 33);
+            this.HardDriveSubmenuButton.TabIndex = 5;
+            this.HardDriveSubmenuButton.Text = "Hard drive";
+            this.HardDriveSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HardDriveSubmenuButton.UseVisualStyleBackColor = true;
+            this.HardDriveSubmenuButton.Click += new System.EventHandler(this.HardDriveSubmenuButton_Click);
+            // 
+            // ScreenSubmenuButton
+            // 
+            this.ScreenSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ScreenSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.ScreenSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScreenSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ScreenSubmenuButton.Location = new System.Drawing.Point(0, 177);
+            this.ScreenSubmenuButton.Name = "ScreenSubmenuButton";
+            this.ScreenSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.ScreenSubmenuButton.Size = new System.Drawing.Size(187, 36);
+            this.ScreenSubmenuButton.TabIndex = 6;
+            this.ScreenSubmenuButton.Text = "Screen";
+            this.ScreenSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ScreenSubmenuButton.UseVisualStyleBackColor = true;
+            this.ScreenSubmenuButton.Click += new System.EventHandler(this.ScreenSubmenuButton_Click);
+            // 
+            // powerSupplyUnitSubmenuButton
+            // 
+            this.powerSupplyUnitSubmenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.powerSupplyUnitSubmenuButton.FlatAppearance.BorderSize = 0;
+            this.powerSupplyUnitSubmenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.powerSupplyUnitSubmenuButton.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.powerSupplyUnitSubmenuButton.Location = new System.Drawing.Point(0, 213);
+            this.powerSupplyUnitSubmenuButton.Name = "powerSupplyUnitSubmenuButton";
+            this.powerSupplyUnitSubmenuButton.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.powerSupplyUnitSubmenuButton.Size = new System.Drawing.Size(187, 35);
+            this.powerSupplyUnitSubmenuButton.TabIndex = 7;
+            this.powerSupplyUnitSubmenuButton.Text = "Power supply unit";
+            this.powerSupplyUnitSubmenuButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.powerSupplyUnitSubmenuButton.UseVisualStyleBackColor = true;
+            this.powerSupplyUnitSubmenuButton.Click += new System.EventHandler(this.powerSupplyUnitSubmenuButton_Click);
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -234,6 +372,7 @@
             this.ProductSubmenuPanel.ResumeLayout(false);
             this.MainPannel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ComponentsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,5 +392,13 @@
         private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Panel MainPannel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel ComponentsPanel;
+        private System.Windows.Forms.Button powerSupplyUnitSubmenuButton;
+        private System.Windows.Forms.Button ScreenSubmenuButton;
+        private System.Windows.Forms.Button HardDriveSubmenuButton;
+        private System.Windows.Forms.Button RamSubmenuButton;
+        private System.Windows.Forms.Button GpuSubmenyButton;
+        private System.Windows.Forms.Button MainboardSubmenuButton;
+        private System.Windows.Forms.Button CpuSubmenuButton;
     }
 }
