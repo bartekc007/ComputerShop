@@ -294,7 +294,7 @@ VALUES ('MSI','GeForce GTX2060', 1830, 6, 'GDDR6', 'HDMI - 1 szt. DisplayPort - 
 INSERT INTO gpus (Brand,Name, Clock_speed, RAM_capacity, RAM_type, Output)
 VALUES ('Gigabyte','GeForce GTX1650', 1755, 4, 'GDDR6', 'HDMI - 1 szt. DVI - 1 szt. DisplayPort - 1 szt.');
 INSERT INTO gpus (Brand,Name, Clock_speed, RAM_capacity, RAM_type, Output)
-VALUES ('MSI','GeForce GTX2070 SUPER', 1800, 6, 'GDDR6', 'HDMI - 1 szt. DisplayPort - 3 szt.');
+VALUES ('MSI','GeForce GTX2070 SUPER', 1800, 8, 'GDDR6', 'HDMI - 1 szt. DisplayPort - 3 szt.');
 INSERT INTO gpus (Brand,Name, Clock_speed, RAM_capacity, RAM_type, Output)
 VALUES ('MSI','Radeon RX580', 1800, 8, 'GDDR5', 'HDMI - 2 szt. DVI - 1 szt. DisplayPort - 2 szt.');
 INSERT INTO gpus (Brand,Name, Clock_speed, RAM_capacity, RAM_type, Output)
@@ -333,7 +333,7 @@ VALUES ('WD', 'BLUE', 'HDD', 1000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
 VALUES ('WD', 'RED', 'HDD', 4000, NULL, NULL, 5400,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Toshiba', 'P300', 'HDD', 1000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
+VALUES ('Toshiba', 'P300', 'HDD', 2000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
 VALUES ('Toshiba', 'P300', 'HDD', 2000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
@@ -430,7 +430,7 @@ VALUES ('Corsair', 'RMx', 650, 90);
 INSERT INTO power_supply_units (Brand, Name, DC_Output, Efficiency)
 VALUES ('Gigabyte', 'G750H', 750, 90);
 INSERT INTO power_supply_units (Brand, Name, DC_Output, Efficiency)
-VALUES ('Corsair', 'RMx', 750, 92);
+VALUES ('Corsair', 'HX750i', 750, 93);
 INSERT INTO power_supply_units (Brand, Name, DC_Output, Efficiency)
 VALUES ('Chieftec', 'GPE-700S', 700, 80);
 
@@ -442,7 +442,7 @@ VALUES ('G.SKILL', 'FlareX Black Ryzen', 'DDR4', 16, 2, 3200);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('G.SKILL', 'Trident Z', 'DDR4', 16, 2, 3000);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
-VALUES ('G.SKILL', 'CL16 Aegis', 'DDR4', 4, 1, 2400);
+VALUES ('G.SKILL', 'CL16 Aegis', 'DDR4', 8, 1, 2400);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('GOODRAM', 'IRIDIUM Black', 'DDR4', 8, 1, 2133);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
@@ -462,7 +462,7 @@ VALUES ('G.SKILL', 'TridentZ Royal Silver', 'DDR4', 16, 2, 4600);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('HyperX', 'Predator RGB', 'DDR4', 16, 2, 3200);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
-VALUES ('HyperX', 'Predator RGB', 'DDR3', 8, 1, 1600);
+VALUES ('HyperX', 'Predator RGB', 'DDR3', 8, 1, 3200);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('GOODRAM', ' ', 'DDR3', 4, 1, 1333);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
@@ -791,6 +791,8 @@ INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_
 VALUES (NULL,NULL,NULL,NULL,24,NULL,NULL);
 
 INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
+VALUES (NULL,NULL,NULL,NULL,NULL,1,NULL);
+INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
 VALUES (NULL,NULL,NULL,NULL,NULL,2,NULL);
 INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
 VALUES (NULL,NULL,NULL,NULL,NULL,3,NULL);
@@ -846,8 +848,6 @@ INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_
 VALUES (NULL,NULL,NULL,NULL,NULL,28,NULL);
 INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
 VALUES (NULL,NULL,NULL,NULL,NULL,29,NULL);
-INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
-VALUES (NULL,NULL,NULL,NULL,NULL,30,NULL);
 
 INSERT INTO specyfications (mainboard, CPU, GPU, RAM, Hard_drive, Screen, Power_supply_unit)
 VALUES (NULL,NULL,NULL,NULL,NULL,NULL,1);
@@ -1264,4 +1264,927 @@ VALUES ('Procesory', 399.00, 'AMD', 17,'AMD Ryzen 3 2200G z grafiką Radeon RX V
 Skorzystaj z potencjału, jaki dostarcza układ AMD Ryzen 3 2200G ze zintegrowaną grafiką Radeon RX Vega. Dzięki połączeniu inteligentnej architektury CPU Zen z wysokowydajną architekturą GPU Vega powstała platforma gamingowa, umożliwiająca płynną rozgrywkę z popularnymi tytułami. Przygotuj się na bezbłędną wielozadaniowość oraz wspaniałe efekty wizualne. Wszystko w kompaktowej formie, która bez trudu zmieści się w obudowie ITX.',
         4.6, 47);
 
-insert into user (Name, Surname, AddressID, Login, Password, Email, Phone_number, Is_a_client, Is_a_company_client) VALUES ('a','a',NULL,'a','a','a','a',1,1);
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 699.00, 'MSI', 12, 'Odkryj MSI RX 570 ARMOR 4G OC w 360 stopniach
+Architektura GCN czwartej generacji została zaprojektowana z myślą o graczach, którzy grają we wszystkie możliwe rodzaje gier, począwszy od najnowszych gier MOBA (Multiplayer Online Battle Arena) na najpopularniejszych, wysokobudżetowych nastawionych na najwyższą jakość produkcjach klasy AAA skończywszy. Asynchroniczne shadery (jednostki cieniujące) i udoskonalony silnik geometrii (Geometry Engine) sprawiają, że karta graficzna przenosi użytkownika na nowy poziom wydajności i płynnej rozgrywki.',
+        4.5, 48);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 1099.00, 'Gigabyte', 15, 'Odkryj Gigabyte GeForce GTX 1660 GAMING OC w 360 stopniach
+Wykorzystaj rewolucyjną architekturę NVIDIA Turing, aby od tej pory napędzała Twoją rozgrywkę dzięki układowi GTX 1660, wspieranemu przez 6GB pamięci GDDR5 o przepustowości 192 GB/s. O stabilność pracy zadba złożony z trzech 80 mm wentylatorów układ chłodzenia Windforce 3X oraz najwyższej klasy komponenty, tworzące m.in. 6+2 fazową sekcję zasilania. Umieszczone z boku karty podświetlane logo Gigabyte możesz spersonalizować według własnego gustu, nadając mu ulubione kolory i efekty świetlne z pomocą RGB Fusion 2.0.',
+        4.1, 49);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 1299.00, 'Gigabyte', 9, 'Gigabyte GeForce GTX 1660 SUPER GAMING OC
+Nowa generacja kart napędzanych architekturą NVIDIA Turing oferuje jeszcze większą wydajność na potrzeby płynnego gamingu. Gigabyte GeForce GTX 1660 SUPER GAMING OC to fabrycznie podkręcana konstrukcja, wspomagana przez 6GB pamięci GDDR6 oraz szynę pamięci 192-bit. Najwyższej jakości podzespoły oraz wydajny układ chłodzenia gwarantują stabilność i niezawodność nawet w trakcie najgorętszej rozgrywki.',
+        4.2, 50);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 1719.00, 'Gigabyte', 13,'Odkryj Gigabyte RTX 2060 GAMING OC PRO w 360 stopniach
+Pozwól porwać się do świata gamingu, jakiego niedane Ci było doświadczyć nigdy wcześniej. Karta graficzna Gigabyte RTX 2060 GAMING OC PRO przeniesie Cię w zupełnie nowy świat gamingu, dzięki najbardziej zaawansowanej architekturze GPU, oszałamiającym efektom świetlnym technologii ray tracing oraz bezbłędnej płynności i dynamice obrazu.',
+        3.9, 51);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 12239.00, 'MSI', 15,'Odkryj MSI Geforce RTX 2060 SUPER GAMING X w 360 stopniach
+Oto długo wyczekiwana karta graficzna MSI Geforce RTX 2060 SUPER GAMING X, oparta na rewolucyjnej architekturze NVIDIA Turing i wyposażona w system chłodzenia z dwoma wentylatorami MSI. Karta charakteryzuje się stylistyką będącą polaczeniem czerni oraz metalicznych szarości, które komponują się z eleganckimi kształtami i klasyczną tylna płytą mocującą wykonaną ze szczotkowanego metalu. Mistrzowskie wzornictwo najwyższej klasy współgra z widocznymi na zewnątrz wspaniałymi, płynnymi efektami świetlnymi RGB. Nowa karta MSI Geforce RTX 2060 SUPER GAMING X po prostu mają zadziwiać.',
+        4.2, 52);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 919.00, 'Gigabyte', 5, 'Gigabyte GeForce GTX 1650 SUPER WINDFORCE OC
+Wykorzystaj nowoczesną architekturę NVIDIA Turing zamkniętą w przystępnej i kompaktowej formie. Karta graficzna Gigabyte GeForce GTX 1650 SUPER WINDFORCE OC oferuje nawet dwukrotnie wyższą wydajność niż model GeForce GTX 1050, dzięki czemu możesz cieszyć się wyjątkowo płynną rozgrywką. Zyskujesz też gwarancję długiej i stabilnej pracy, gdyż kartę zbudowano w oparciu o najwyższej jakości komponenty, wyposażono w układ chłodzenia Windforce 2X oraz zabezpieczono stylowym backplatem.',
+        4.1, 53);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 2799.00, 'MSI', 31, 'Odkryj MSI Geforce RTX 2070 SUPER GAMING X TRIO w 360 stopniach
+Karta graficzna MSI Geforce RTX 2070 SUPER GAMING X TRIO to powrót prawdziwej, trójwentylatorowej graficznej bestii MSI. Linia TRIO, która zarezerwowana jest wyłącznie dla najpotężniejszych procesorów graficznych. Karta charakteryzuje się stylistyką będącą połączeniem czerni oraz metalicznych szarości, które komponują się z eleganckimi kształtami i klasyczną tylna płytą mocującą wykonaną ze szczotkowanego metalu. Idealnie domyka ona wzornictwo przedniej części karty. Dzięki niezwykłemu podświetleniu RGB, którym można sterować z poziomu oprogramowania MSI Mystic Light, całość wygląda naprawdę niesamowicie.',
+        4.3, 54);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 789.00, 'MSI', 4, 'Eleganckie, klasyczne czarno-białe wzornictwo
+Graj ze stylem i odróżnij się od innych graczy korzystając z wyjątkowych kart graficznych MSI ARMOR. Stylistyka tych urządzeń zainspirowana została wyglądem zaawansowanego opancerzenia i połączona została z klasycznym czarno-białym wykończeniem. Karty graficzne z serii ARMOR idealnie nadają się dla graczy oraz moderów, którzy szukają wydajnych i jednocześnie wyróżniających się pod względem wzornictwa urządzeń.',
+        3.8, 55);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 759.00, 'MSI', 15, 'Odkryj MSI GeForce GTX 1050 Ti Gaming X w 360 stopniach
+Znudzony dotychczasową rozgrywką? Przełącz się na zupełnie nowe doznania z MSI GeForce GTX 1050 Ti Gaming X. Ten ogromnie wydajny układ zapewni Ci płynną obsługę najnowszych gier, możliwość gry na monitorach 4K, a także rozgrywkę w rzeczywistości wirtualnej. Zyskaj stabilność w najgorętszych bitwach krystalicznie czysty obraz w każdym starciu. Twój gaming właśnie się odmienia.',
+        4.0, 56);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 699.00, 'XFX', 7, 'Karta graficzna XFX Radeon RX 570 8GB GDDR5
+Zbudowana dla graczy, na bazie architektury AMD Polaris, karta graficzna Radeon RX 570 8GB GDDR5 pozwoli Ci zagrać w swoje ulubione gry na ustawieniach ultra i w rozdzielczości 1080p. Od gier e-sportowych, przez MOBA, po oszałamiające wizualnie tytuły AAA. Dzięki wiodącej wydajności DirectX12 oraz stale aktualizowanym pod kątem gier sterownikom możesz mieć pewność, że XFX Radeon RX 570 8GB GDDR5 będzie inwestycją na długie lata.',
+        3.7, 57);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 2549.00, 'Gainward', 30, 'Odkryj Gainward GeForce RTX 2070 SUPER Phantom GS w 360 stopniach
+Realizm, jakiego jeszcze nie było w grach. Efekty specjalne, od których nie oderwiesz wzroku. Wyjątkowo płynna rozgrywka. To wszystko oferuje karta graficzna Gainward GeForce RTX 2070 SUPER Phantom GS. Zbudowana w oparciu o rewolucyjną architekturę NVIDIA Turing dostarczy Ci niezapomnianych wrażeń z gry. Wejdź do świata VR, który zachwyci Cię bogactwem szczegółów. Graj w topowe tytułu w rozdzielczości 4K. Naciesz swoje oczy efektami technologii ray tracing w czasie rzeczywistym.',
+        4.7, 58);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 21399.00, 'AMD', 2, 'AMD Radeon Pro SSG Vega 16 GB HBM2
+AMD Radeon Pro SSG Vega 16 GB HBM2 jest potężną kartą graficzną dla profesjonalistów, wykonaną w procesie technologicznym 14nm. Posiada pełen rdzeń oferujący 64 Compute Units, czyli 4096 procesory strumieniowe oraz 16 GB pamięci HBM2 o przepustowości 484 GB/s., pracujące pod kontrolą architektury AMD Vega. Karta posiada też dysk SSG 2 TB, który usprawnia pracę z materiałami wymagającymi dużej przestrzeni dyskowej. Radeon Pro SSG jest dzięki temu idealnym narzędziem do pracy z aplikacjami Adobe Effects, Autodesk Maya i Blender, jak i do obróbki wideo 8K.',
+        5.0, 59);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 5699.00, 'gigabyte', 10, 'Odkryj Gigabyte GeForce RTX 2080 Ti GAMING OC 11 GB w 360 stopniach
+Gigabyte GeForce RTX 2080 Ti GAMING OC 11 GB to rewolucja w gamingu. Zapewnia wyższą wydajność, jeszcze lepsze doznania wizualne, a także znakomitą sprawność energetyczną. A wszystko to dzięki nowej architekturze NVIDIA Turing, która gwarantuje ray tracing w czasie rzeczywistym oraz zaawansowane SI.',
+        4.9, 60);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 169.00, 'ASUS', 19, 'ASUS GeForce GT 710
+ASUS GeForce GT 710 to bezgłośna karta o niskim profilu. 1GB pamięci zapewni płynne działanie aplikacji. Zmodernizuj swój stary komputer i dostarcz mu dodatkową energię. Niski profil kart pozwoli Ci zamontować ją w nawet najbardziej kompaktowych modelach.',
+        4.1, 61);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 399.00, 'PNY', 3, 'PNY GeForce GT 1030
+Przyspiesz swój komputer PC z pomocą wydajnej karty graficznej PNY GeForce GT 1030. Wielokrotnie nagradzana architektura NVIDIA Pascal, potężny silnik graficzny i najnowocześniejsze technologie oddają w Twoje ręce wydajność, która jest niezbędna do obsługi wymagających aplikacji na PC.',
+        4.4, 62);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 2199.00, 'ASRock', 15, 'Odkryj ASRock Radeon RX 5700 XT Phantom GAMING D OC w 360 stopniach
+Wyjątkowe układy AMD w architekturze RDNA, zapewniające m.in. wsparcie dla PCI-E 4.0, pozwolą Ci doświadczyć zupełnie nowej jakości w grach. Karta graficzna ASRock Radeon RX 5700 XT Phantom GAMING D OC zapewnia wysoką wydajność, dzięki której będziesz się cieszyć płynnym i stabilnym gamingiem. Prz tym karta będzie się prezentować wyjątkowo stylowo w obudowie, gdyż środkowy wentylator posiada podświetlenie RGB, a tył karty zamyka metalowy backplate.',
+        3.4, 63);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 899.00, 'Sapphire', 17, 'Odkryj Sapphire Radeon RX 5500 XT PULSE w 360 stopniach
+Zbudowany w nowatorskiej architekturze AMD RDNA układ graficzny Radeon RX 5500 XT zapewnia oszałamiającą wydajność, która zadowoli każdego fana elektronicznej rozrywki. Za chłodzenie GPU odpowiadają dwa ciche wentylatory, dzięki czemu karta zachowuje wyjątkową kulturę pracy.. Zapewnij sobie maksymalne wrażenia z gier ogrywanych na PC, dzięki karcie graficznej Sapphire Radeon RX 5500 XT PULSE.',
+        4.7, 64);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 1429.00, 'ASRock', 21, 'ASRock Radeon RX 5600 XT Phantom Gaming D2 6G OC
+Korzystaj z nowatorskich technologii AMD, takich jak FreeSync oraz nowego oprogramowania Adrenalin 2020 Edition, za sprawą wyjątkowej karty ASRock Radeon RX 5600 XT Phantom Gaming D2 6G OC. GPU wyprodukowane w architekturze AMD RDNA zapewnia wyjątkowe osiągi, które wykorzystasz w grach, a dwa wentylatory zadbają o optymalne temperatury. Możesz przy tym rozświetlić wnętrze obudowy za sprawą wbudowanego podświetlenia ARGB i oprogramowania Polychrome SYNC.',
+        4.9, 65);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Karty graficzne', 3599.00, 'PNY', 5, 'Odkryj PNY GeForce RTX 2080 SUPER XLR8 TF Gaming OC w 360 stopniach
+Potężna karta graficzna PNY należąca do gamingowej serii XLR8 to gwarancja SUPER osiągów i nowej jakości realizmu. Dzięki wykorzystaniu GPU stworzonego w zaawansowanej architekturze NVIDIA Turing, PNY GeForce RTX 2080 SUPER XLR8 TF Gaming OC pozwoli Ci nacieszyć się płynną rozgrywką i wyjątkową grafiką, m.in. dzięki wykorzystaniu nowoczesnej technologii Ray Tracing.',
+        4.0, 66);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 829.00, 'G.SKILL', 31, 'Pamięć RAM DDR4 FlareX Black Ryzen
+Pamięć FlareX Black Ryzen została zaprojektowana z myślą o najnowszym procesorze AMD Ryzen. FlareX zapewnia niesamowitą wydajność oraz niezawodność nawet przy dużych obciążeniach. Zagwarantuj sobie najlepszy układ do gier lub dla potężnej stacji roboczej dzięki serii FlareX.',
+        0.0, 67 );
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 1082.00, 'G.SKILL', 13, 'Trident Z
+Najnowsza generacja ekstremalnie wydajnej pamięci DDR4. Opierając się na silnym sukcesie produktów G.SKILL producent stworzył serię Trident Z, która cechuję się najwyższą wydajnością przeznaczona głównie dla entuzjastów PC i ekstremalnych graczy. Podczas produkcji użyte zostały najlepsze w swojej klasie komponenty, zapewniające trwałość oraz wytrzymałość nawet podczas obciążeń systemu.
+
+Aluminiowa konstrukcja zapewnia prawidłowy przepływ powietrza oraz skutecznie odprowadza nagromadzone ciepło. Pamięć zbudowana została z ekranowanych układów, które podczas tworzenia były rygorystycznie testowane pod względem niezawodności, kompatybilności oraz wydajności.',
+        4.7, 68);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 185.00, 'G.SKILL', 33, 'Pamięć RAM DDR4 G.Skill Aegis
+G.SKILL AEGIS oferuje natychmiastowy wzrost wydajności i stabilności dla wszystkich systemów gier PC. Pamięci tej serii to jeden z najprostszych i najbardziej efektywnych kosztowo sposobów, aby uaktualnić swoje wrażenia w grach.
+
+Niezależnie czy jest to gra typu first-person shooter (FPS), strategia czasu rzeczywistego (RTS) czy nawet MMORPG, pamięci G.SKILL Aegis wyzwolą prawdziwą moc Twojego systemu gier bez względu na to w jakie gry grasz!',
+        4.1, 69);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 389.00, 'GOODRAM', 18, 'GOODRAM IRDM DDR4
+GOODRAM IRDM DDR4 to moduły pamięci RAM stworzone z myślą o graczach, entuzjastach i profesjonalistach. Pamięci zostały wykonane z wyselekcjonowanych kości oraz ośmio warstwowej płytki PCB. Całość dopełnia efektowny radiator, który odprowadza nadmiar ciepła. Pamięci GOODRAM IRDM są dostępne w kilku wariantach kolorystycznych.',
+        4.0, 70);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 389.00, 'GOODRAM', 10,'Pamięć DDR4 GOODRAM IRDM X 3000MHz 16GB (2x8GB)
+IRDM X DDR4 to moduły stworzone z myślą o graczach, entuzjastach i profesjonalistach. Pamięci te zbudowane zostały z wyselekcjonowanych kości oraz 8-warstwowej płytki PCB. Całość zamknięto w ulepszone, odprowadzające nadmiar ciepła radiatory w kolorze białym.',
+        4.1, 71);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 489.00, 'Patriot', 15, 'Pamięć RAM DDR4 Patriot Viper RGB
+Moduły pamięci z serii Viper RGB zostały zaprojektowane i skonstruowane z myślą o ekstremalnej wydajności. Są w pełni kompatybilne z najnowszymi platformami Intel oraz AMD, aby zapewnić Twojej konfiguracji najbardziej płynną pracę. Seria Viper RGB zapewnia niezrównaną stabilność i wydajność, a także wyjątkowy design zapewniony przez wielostrefowe podświetlenie RGB. A dzięki taktowaniu 3200 MHz oraz opóźnieniom CL16, pamięci RAM od firmy Patriot to jedne z najlepszych rozwiązań dostępnych na rynku.',
+        4.0, 72);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 179.00, 'GOODRAM', 8, 'Pamięć DDR4 GOODRAM IRDM X 2666MHz 8GB
+IRDM X DDR4 to moduły stworzone z myślą o graczach, entuzjastach i profesjonalistach. Pamięci te zbudowane zostały z wyselekcjonowanych kości oraz 8-warstwowej płytki PCB. Całość zamknięto w ulepszone, odprowadzające nadmiar ciepła radiatory w kolorze czarnym.',
+        4.8, 73);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 409.00, 'GOODRAM', 29, 'GOODRAM Iridium 8GB 3000MHz CL16
+GOODRAM IRDM DDR4 to moduły stworzone z myślą o graczach, entuzjastach i profesjonalistach. Pamięci zbudowane zostały z wyselekcjonowanych kości oraz 8-warstwowej płytki PCB. Całość zamknięto w efektowne, odprowadzające nadmiar ciepła radiatory, dostępne w kilku wariantach kolorystycznych.
+
+Te moduły Iridium Black dostępne są w pojemnościach 8 GB. W każdej z konfiguracji pamięci te gwarantują pracę z częstotliwością na poziomie 3000 MHz z opóźnieniami na poziomie CL16. Takie konfiguracje pomogą spełnić oczekiwania użytkowników wymagających wysokiej wydajności i stabilności systemu.',
+        4.9, 74);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 209.00, 'Corsair', 16, 'Vengeance LPX
+Moduł Vengeance LPX jest zbudowany z ośmiu warstw PCB i wysoko ekranowanych układów pamięci. Skuteczny rozpraszacz ciepła zapewnia skuteczne chłodzenie, aby poprawić potencjał naszego komputera. Wykonana z czystego aluminium szybciej odprowadza ciepło, zapewniając prawidłowo pracę.',
+        4.9, 75);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 3509.00, 'G.SKILL', 0, ' ', 0.0, 76);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 2299.00, 'G.SKILL', 19, 'Pamięć RAM DDR4 G.SKILL Trident Z Royal Silver
+Moduły z serii Royal są kolejnym członkiem rodziny pamięci Trident Z od G.SKILL. Charakteryzujące się unikatowym designem i wyjątkowymi osiągami, moduły Royal dodadzą wnętrzu Twojej obudowy odrobinę luksusu, a przy tym zapewnią wydajność na potrzeby obsługi najbardziej wymagających aplikacji.
+
+Dzięki wielu testom kompatybilności i niezawodności, masz możliwość zbudowania prawdziwie spersonalizowanego komputera, korzystając z szerokiej gamy płyt głównych na platformach Intel oraz AMD.',
+        4.9, 77);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 479.00, 'HyperX', 1, 'Pamięć RAM DDR4 HyperX Predator RGB 2x8GB
+Jeżeli szukasz ekstra wydajności niezbędnej do utrzymania się na topie, ultraszybka pamięć HyperX Predator DDR4 RGB zapewni Ci niezbędną przewagę. Ciesz się wyższymi ustawieniami grafiki, bezproblemowo odbieraj strumienie multimediów i błyskawicznie renderuj najważniejsze momenty. Drapieżny, czarny radiator pamięci Predator DDR4 zapewnia zarówno doskonałe chłodzenie jak i nietuzinkowy wygląd.',
+        4.2, 78);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 249.00, 'HyperX', 5, 'Pamięć RAM DDR4 HyperX Predator RGB 8GB
+Jeżeli szukasz ekstra wydajności niezbędnej do utrzymania się na topie, ultraszybka pamięć HyperX Predator DDR4 RGB zapewni Ci niezbędną przewagę. Ciesz się wyższymi ustawieniami grafiki, bezproblemowo odbieraj strumienie multimediów i błyskawicznie renderuj najważniejsze momenty. Drapieżny, czarny radiator pamięci Predator DDR4 zapewnia zarówno doskonałe chłodzenie jak i nietuzinkowy wygląd.',
+        4.2, 79);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 99.00, 'GOODRAM', 2, 'Wydajne pamięci DDR3
+Moduły pamięci RAM typu DDR3 są powszechnie stosowane w komputerach PC, gdzie wymagana jest bardzo duża szybkość transferu danych, duża pojemność oraz niski pobór mocy (w przypadku modułów low voltage nawet 1,35 V).
+
+Dzięki topologii „fly-by” oraz terminacji magistrali adresowej na module pamięci możliwe jest taktowanie DDR3 z częstotliwością nawet powyżej 1200 MHz (transfer danych z częstotliwością powyżej 2400 MHz). Niski pobór mocy predysponuje moduły DDR3 do aplikacji mobilnych.',
+        5.0, 80);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 519.00, 'HyperX', 13, 'HyperX Fury Red
+Ruszaj do gry z HyperX® FURY. Nawet żółtodzioby szybko wkręcą się w rozgrywkę, bo pamięć FURY automatycznie rozpoznaje używaną platformę i automatycznie przetaktowuje się do najwyższej dostępnej częstotliwości — do 1600MHz — zapewniając większą moc na kolejny deathmatch.
+
+Asymetryczny projekt radiatora pamięci FURY pozwoli Ci wyróżnić się spośród tłumu „kwadraciaków”. Pamięć ma czarną płytkę drukowaną, a radiator może mieć kolor czarny, niebieski, czerwony oraz — pierwszy raz w historii serii HyperX — biały. Tak więc możesz mieć sprzęt w Twoim stylu i z dumą pokazywać go znajomym.',
+        4.9, 81);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 499.00, 'HyperX', 13, 'HyperX Fury White
+Ruszaj do gry z HyperX® FURY. Nawet żółtodzioby szybko wkręcą się w rozgrywkę, bo pamięć FURY automatycznie rozpoznaje używaną platformę i automatycznie przetaktowuje się do najwyższej dostępnej częstotliwości — do 1600MHz — zapewniając większą moc na kolejny deathmatch.
+
+Asymetryczny projekt radiatora pamięci FURY pozwoli Ci wyróżnić się spośród tłumu „kwadraciaków”. Pamięć ma czarną płytkę drukowaną, a radiator może mieć kolor czarny, niebieski, czerwony oraz — pierwszy raz w historii serii HyperX — biały. Tak więc możesz mieć sprzęt w Twoim stylu i z dumą pokazywać go znajomym.',
+        4.0, 82);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 159.00, 'Patriot', 1, 'Najwyższa wydajność
+Firma Patriot od 30 lat zajmuje się produkowaniem wydajnych pamięci RAM dla komputerów PC, w jej ofercie znajduje się wiele różnorodnych modeli pamięci. Niezależnie od tego, czy składasz komputer, na którym uruchamiać będziesz najbardziej wymagające gry i programy, czy też ulepszasz system do podstawowych zadań, w ofercie firmy Patriot znajdziesz coś dla siebie.',
+        0.0, 83);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 569.00, 'Corsair', 15, 'Corsair Vengeance XMP
+Moduły pamięci DDR3 Vengeance zostały stworzone z myślą o overclockingu. Kości Vengeance przygotowano ze specjalnie wyselekcjonowanych pod względem wysokiej wydajności modułów RAM. Aluminiowe radiatory pomagają odprowadzać ciepło oraz sprawiają, że kości wyglądają agresywnie i stylowo.',
+        0.0, 84);
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 259.00, 'G.SKILL', 3, 'Wybrana przez overclockerów
+Wybór pasjonatów musi być trafny. Tworząca światowej klasy wydajność, uwzględniająca możliwości podkręcania seria RipjawsX G.Skill, została uznana najlepszą serią pamięci przez społeczność overclockerów w 2011r. Jeśli oczekujesz wysokiej wydajności oraz jakości aby stworzyć swoją potężną maszynę to wybór wydaje się być oczywisty. Pamięci z serii RipjawsX to absolutnie najwyższej jakości produkty, którym możesz zaufać',
+        5.2, 85);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('RAM', 326.00, 'Crucial', 19, 'Wydajne pamięci DDR3
+W celu zapewnienia najwyższej jakości modułów pamięci, Crucial współpracuje jedynie z najlepszymi dostawcami komponentów, a w produkcji modułów pamięci stosuje wyselekcjonowane kości pamięci światowych marek. Dzięki niesamowicie szerokiej i różnorodnej ofercie firmy Crucial, możesz mieć pewność, że w Twoje ręce trafiają produkty nie tylko o najwyższej niezawodności i jakości wykonania, ale także idealnie trafiające w Twoje potrzeby.',
+        4.5, 86);
+
+##### Dyski twarde #####
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 285.00, 'Toshiba', 15, 'Dysk twardy SATA 3,5" — seria P300
+3,5-calowy wewnętrzny dysk twardy Toshiba P300 to gwarancja wysokiej wydajności dla profesjonalistów. Dzięki technologii Dual-Stage Actuator można liczyć na płynne, szybkie reakcje urządzenia.
+
+Poza tym dane i multimedia są chronione przez technologię Ramp Loading oraz czujnik wstrząsów. Dysk P300 jest dostępny w wersjach o pojemności do 3 TB.',
+        4.6, 87);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 209.00, 'Seagate', 12, 'Wszechstronny, szybki i niezawodny
+Dysk BarraCuda jest liderem w branży, oferując największą pojemność pamięci masowej do komputerów stacjonarnych i przenośnych. Bezkompromisowy dysk BarraCuda Pro łączy największą w branży przestrzeń pamięci masowej z prędkością na poziomie 7200 obr./min, umożliwiając osiągnięcie wysokiej wydajności i niskich czasów ładowania podczas korzystania z gier lub pracy przy dużych obciążeniach.',
+        4.1, 88);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 209.00, 'WD', 13, 'Sprawdzone rozwiązania
+Dyski WD Blue oferują pojemność i funkcje dopasowane do potrzeb typowych użytkowników, a ich konstrukcja spełnia najwyższe standardy jakości i niezawodności firmy WD. WD Blue to sprawdzone dyski do codziennej pracy. Marka, której ufasz, i jakość, której oczekujesz.',
+        3.9, 89);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 539.00, 'WD', 1, 'Dysk HDD NAS WD RED 4TB
+To jeden z najlepszych dysków WD Red, odpowiedni dla wszystkich zgodnych systemów NAS, znakomicie zaspokajający potrzeby związane z przechowywaniem danych. Dyski WD Red oferują szeroki zakres zastosowań z myślą o klientach chcących utworzyć wysoko wydajne magazyny NAS. Dyski twarde WD Red, utworzone dla systemów NAS składających się z 1 do 8 dysków twardych, służą do przechowywania cennych danych w jednej niezwykle wydajnej jednostce.',
+        0.0, 90);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 285.00, 'Toshiba', 15, 'Dysk twardy SATA 3,5" — seria P300
+3,5-calowy wewnętrzny dysk twardy Toshiba P300 to gwarancja wysokiej wydajności dla profesjonalistów. Dzięki technologii dual-stage actuator można liczyć na płynne, szybkie reakcje urządzenia. Poza tym dane i multimedia są chronione przez technologię ramp loading oraz czujnik wstrząsów. Dysk P300 jest dostępny w wersjach o pojemności do 3 TB.',
+        4.4, 91);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 285.00, 'Toshiba', 15, 'Dysk twardy SATA 3,5" — seria P300
+3,5-calowy wewnętrzny dysk twardy Toshiba P300 to gwarancja wysokiej wydajności dla profesjonalistów. Dzięki technologii dual-stage actuator można liczyć na płynne, szybkie reakcje urządzenia. Poza tym dane i multimedia są chronione przez technologię ramp loading oraz czujnik wstrząsów. Dysk P300 jest dostępny w wersjach o pojemności do 3 TB.',
+        4.3, 92);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 289.00, 'WD', 13, 'Sprawdzone rozwiązania
+Dyski WD Blue oferują pojemność i funkcje dopasowane do potrzeb typowych użytkowników, a ich konstrukcja spełnia najwyższe standardy jakości i niezawodności firmy WD. WD Blue to sprawdzone dyski do codziennej pracy. Marka, której ufasz, i jakość, której oczekujesz.',
+        4.1, 93);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 359.00, 'Toshiba', 18, 'Dysk twardy SATA 3,5" — seria P300
+3,5-calowy wewnętrzny dysk twardy Toshiba P300 to gwarancja wysokiej wydajności dla profesjonalistów. Dzięki technologii dual-stage actuator można liczyć na płynne, szybkie reakcje urządzenia. Poza tym dane i multimedia są chronione przez technologię ramp loading oraz czujnik wstrząsów. Dysk P300 jest dostępny w wersjach o pojemności do 3 TB.',
+        4.4, 94);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 799.00, 'Toshiba', 15, 'Wewnętrzne dyski twarde Toshiba L200 Mobile
+2,5-calowy dysk twardy Toshiba L200, przeznaczony do codziennego użytku dla użytkowników laptopów i graczy, to idealny sposób na rozbudowę i zwiększenie pojemności pamięci masowej laptopa lub konsoli do gier o 1 TB — i dodanie buforu o wielkości 128 MB.
+
+Toshiba Dynamic Cache Technology może dodatkowo zwiększyć wydajność operacji dostępu. Dzięki dyskowi L200 Twój notebook lub konsola do gier korzystają ze słynnej wytrzymałości i niezawodności technologii firmy Toshiba.',
+        5.0, 95);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 289.00, 'Plextor', 8, 'Dysk SSD Plextor 512GB 2,5" SSD M8VC
+Seria M8V wyposażona jest w wysokiej jakości kontroler i 64-warstwowe układy 3D NAND, które zapewniają prędkości odczytu/zapisu sekwencyjnego odpowiednio do 560/520 MB/s, a także prędkości losowego odczytu/zapisu do 82 000/ 81 000 operacji we/wy na sekundę. Ponadto seria M8V została wyposażona w mechanizm korekcji błędów LDPC oraz obsługuje unikatowe aplikacje Plextor poprawiające wydajność i zapewniające najwyższą trwałość.',
+        4.5, 96);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 299.00, 'GOODRAM', 33, 'Dysk SSD GOODRAM CL100 480GB
+Ten przystępny dysk SSD CL100 gen.2 od firmy GOODRAM bazuje na wyselekcjonowanych pamięciach TLC NAND flash oraz kontrolerze Marvell 1120. W połączeniu z tradycyjnym interfejsem SATA III (6 Gb/s), CL100 gen.2 pozwoli przyśpieszyć komputer ze zwykłym dyskiem HDD nawet 10-krotnie, zapewniając jednocześnie stabilność pracy i niezawodność przez długi czas. Będzie stanowić również świetną podstawę do budowy konfiguracji zupełnie nowego komputera.',
+        4.2, 97);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 439.00, 'ADATA', 22, 'Dysk SSD M.2 XPG SX8200 Pro 512GB
+Ten przeznaczony dla entuzjastów PC oraz zapalonych graczy i overclockerów dysk SSD jest wyposażony w bardzo szybki interfejs M.2 PCIe Gen3 x4, zapewniający utrzymywane maks. szybkości odczytu/zapisu na poziomie nawet 3500/2300 MB/s, pozostawiając daleko w tyle możliwości tradycyjnego napędu HDD.',
+        4.3, 98);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 229.00, 'Crucial', 15, 'Dysk SSD Crucial BX500 240GB
+Przyspiesz działanie swojego komputera, wyposażając go w nośnik flash Crucial BX500 - najprostszy sposób, aby cieszyć się wydajnością nowoczesnych komputerów niewielkim kosztem. Ten wyposażony w interfejs SATA III, 2,5-calowy dysk SSD stanowi doskonałą bazę pod system operacyjny i programy użytkowe, gwarantując uzyskanie wyjątkowo krótkiego czasu rozruchu komputera i błyskawicznych operacjach na danych.',
+        4.5, 99);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 359.00, 'Crucial', 11, 'Dysk SSD 2,5 Crucial MX500 500GB
+Za każdym razem, gdy uruchamiasz swój komputer, używasz zamontowanego w nim dysku twardego, przechowując tam dane systemowe oraz najważniejsze pliki. Dołącz do użytkowników technologii SSD, wykorzystując dysk SSD Crucial MX500 stworzony przez firmę Micron. Przyspiesz pracę swojego komputera, jednocześnie zmniejszając hałas i zużycie energii. Możesz być przy tym spokojny o swoje dane, dzięki wielu zaawansowanych technologiom, gwarantującym nie tylko niezmienne osiągi, ale także wyjątkowe bezpieczeństwo i niezawodność.',
+        4.1, 100);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 399.00, 'Samsung', 30, 'Dysk SSD godny zaufania
+Samsung 860 EVO to szybki i niezawodny dysk SSD, opracowany z myślą o najbardziej popularnych komputerach PC i laptopach. Posiada najnowszą wersją V-NAND i solidny kontroler oparty na algorytmie, a także jest dostępny w różnych wariantach obudów i pojemności.',
+        4.6, 101);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 179.00, 'PNY', 3, 'Dysk SSD PNY CS900 240GB
+PNY CS900 to wyjątkowo smukły dysk SSD w formacie 2.5'''' o grubości zaledwie 7 mm. Zbudowany w oparciu o pamięć TLC NAND Flash oraz interfejs SATA III, gwarantuje możliwie najszybszy dostęp do danych dla systemu operacyjnego oraz rozmaitych aplikacji.
+
+Dzięki prędkościom odczytu/zapisu danych na poziomie nawet 535/500 MB/s odczujesz znaczącą poprawę pracy swojego laptopa lub desktopa, jak również wyjątkowo wydajną pracę dopiero co zbudowanej konfiguracji.',
+        4.3, 102);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 799.00, 'Plextor', 26, 'Dysk SSD Plextor M9PGN Plus M.2 PCIe 512GB
+Charakteryzujący się niezawodną pracą dysk M9PGN Plus został stworzony w taki sposób, aby zapewnić każdemu graczowi najwyższy poziom rozgrywki. Dysk wspiera protokół NVMe najnowszej generacji, wykorzystuje także pamięć flash zaprojektowaną w zaawansowanej technologii 3D NAND z flagowym kontrolerem. Technologia PlexNitro pozwala na wykorzystanie pełnego potencjału dysku M9PGN Plus.',
+        0.0, 103);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 229.00, 'Silicon Power', 35, 'Dysk SSD Silicon Power A55 M.2 2280
+Dysk SSD A55 łączy zalety najnowocześniejszej technologii półprzewodnikowej oraz kompaktowe rozmiary standardu M.2 2280. Brak obudowy umożliwia montaż dysku w najnowszych komputerach przenośnych jak i stacjonarnych',
+        4.0, 104);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 799.00, 'Crucial', 15, 'Dysk SSD M.2 Crucial P1 1024GB
+Niezależnie od tego, czy chcesz jak najszybciej dostać się do gry lub przechowywać swoje najcenniejsze wspomnienia, dysk SSD Crucial P1 da Ci wydajność i przestrzeń, jakiej potrzebujesz. Ta wyjątkowa konstrukcja została zaprojektowana, z myślą o zostaniu jedynym dyskiem jakiego potrzebujesz: pojemnym, szybkim i niezawodnym.',
+        3.9, 105);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 1599.00, 'Patriot', 2, 'Dysk SSD M.2 Patriot Viper VPN100 2TB
+Dedykowany zastosowaniom gamingowym, wydajny dysk Viper VPN100 oferuje ponadprzeciętną kombinację osiągów, ultra szybkiego transferu oraz wielozadaniowości. Dzięki nawet 5-krotnie większej szybkości niż dyski SATA SSD, jest jednym z najlepszych w swojej klasie dysków dla graczy, jak również entuzjastów technologii, twórców treści, grafików 3D czy profesjonalistów zajmujących się renderowaniem wideo.',
+        3.8, 106);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 1999.00, 'Intel', 4, 'Dysk SSD M.2 Intel MP600 2TB
+Dysk SSD Corsair MP600 wykorzystuje nowoczesny interfejs NVMe PCIe 4.0 x4 M.2, dzięki czemu jest w stanie osiągać wyjątkowe prędkości odczytu/zapisu danych sięgające nawet 4950/4250 MB/s, zapewniając błyskawiczny czas reakcji.',
+        0.0, 107);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 699.00, 'Intel', 2, 'Dysk SSD M.2 Intel 660p 1TB
+Dysk SSD Intel 660p ma to co ważne w klienckich dyskach SSD, aby sprostać stale rosnącym wymaganiom. Został opracowany z wykorzystaniem pamięci 3D NAND QLC oraz specyfikacji NVMe, w celu zapewnianiu inteligentnej pamięci masowej na potrzeby typowych i podstawowych zadań.',
+        4.2, 108);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 649.00, 'Silicon Power', 8, 'Dysk SSD Silicon Power A60 1TB M.2 PCIe NVMe
+Dysk A60 to przystępne i wydajne rozwiązanie pamięci masowej. Jest przeznaczony dla początkujących użytkowników, twórców systemów DIY lub po prostu tych, którzy chcą uaktualnić swój komputer. Interfejs PCIe Gen3x4 oznacza, że aż cztery linie są używane do jednoczesnego przesyłania i odbierania danych. Tym samym dysk A60 osiąga prędkości odczytu/zapisu na poziomie nawet 2200/1600 MB/s.',
+        5.0, 109);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Dyski twarde', 999.00, 'Samsung', 15, 'Dysk SSD M.2 Samsung 970 EVO Plus 1TB
+Szybszy od swojego poprzednika, dysk 970 EVO Plus wykorzystuje najnowszą technologię V-NAND i zoptymalizowane oprogramowanie sprzętowe. Podzespół maksymalizuje potencjał przepustowości łącza NVMe, zapewniając komputerowi niezrównane działanie. Oferuje przy tym aż 1TB pojemności oraz sekwencyjną prędkość odczytu/zapisu wynoszącą odpowiednio nawet 3500/3300 MB/s.',
+        5.0, 110);
+
+##### Ekrany #####
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 749.00, 'AOC', 17, 'Monitor gamingowy AOC 24G2U5
+Zdominuj pole walki z monitorem dla graczy AOC 24G2U5. Błyskawiczny czas reakcji matrycy da Ci dodatkowe ułamki sekundy w szybkich starciach. Płynność obrazu przełoży się na zwiększoną precyzję celowania, dzięki czemu zyskasz dodatkową przewagę nad przeciwnikiem. Co więcej, dynamika obrazu oraz rewelacyjne barwy sprawią, że jeszcze bardziej zagłębisz się w rozgrywce.',
+        4.1, 111);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 449.00, 'Dell', 17,'Elegancki wygląd w codziennych zastosowaniach
+Przystępny cenowo 24-calowy monitor Dell z większym obszarem wyświetlania dzięki ulepszonej ramce zapewnia elegancki wygląd w codziennych zastosowaniach. Jakość obrazu: szeroki kąt oglądania i maksymalny komfort rozrywki dzięki jaskrawym, głębokim kolorom na ekranie o rozdzielczości Full HD. Niezawodność i łatwa obsługa: zgodność z najnowszymi normami środowiskowymi i przepisami oraz obsługa starszych i nowych portów ze względu na złącza VGA i HDMI. Skuteczna ochrona dzięki zaawansowanej usłudze wymiany i gwarancji.',
+        4.2, 112);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 419.00, 'AOC', 10, 'Odkryj idealny do domu i biura monitor ASUS VZ229HE w 360 stopniach
+Spędzasz wiele godzin, pracując przy arkuszach kalkulacyjnych? A może chcesz się zrelaksować przy filmie? Uniwersalny monitor ASUS VZ229HE sprawdzi się doskonale zarówno w domu, jak i w biurze. Matryca o dużej rozdzielczości zapewni wyraźny obraz i wystarczającą przestrzeń roboczą do wygodnej pracy. Nowoczesna konstrukcja monitora stanowić będzie za to idealne uzupełnienie kompozycji na każdym stanowisku komputerowym.',
+        4.2, 113);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 439.00, 'HP', 13, 'Odkryj monitor do domu i do biura HP 24W w 360 stopniach
+Zapewnij sobie komfort pracy i rozrywki z monitorem HP 24W. Przeznaczony do biura i domowych zastosowań zachwyca swoją funkcjonalnością, a przy tym dba o Twoje oczy dzięki technologiom ochrony wzroku. HP 24W posiada panel o wysokiej rozdzielczości, charakteryzujący się szerokimi kątami widzenia, dzięki czemu sprawdzi się w przypadku pracy z arkuszami kalkulacyjnymi, dokumentami tekstowymi, a także podczas przeglądania stron internetowych czy multimediów.',
+        4.1, 114);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 1249.00, 'Acer', 17, 'Monitor gamingowy Acer ED273URPBIDPX
+Zdominuj pole walki z monitorem dla graczy Acer ED273URPBIDPX. Szybki czas reakcji matrycy da Ci dodatkowe ułamki sekundy w szybkich starciach. Płynność obrazu przełoży się na zwiększoną precyzję celowania, dzięki czemu zyskasz dodatkową przewagę nad przeciwnikiem. Co więcej, dynamika obrazu oraz rewelacyjne barwy sprawią, że jeszcze bardziej zagłębisz się w rozgrywce.',
+        4.0, 115);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 699.00, 'Acer', 7, 'Monitor dla graczy Acer Nitro QG271BII
+To, jak szybko zareagujesz na to, co widzisz, zwykle decyduje o wyniku starcia. Z monitorem gamingowym Acer Nitro QG271BII zyskasz dodatkowe ułamki sekund, które wyłonią zwycięzcę. Błyskawiczny czas reakcji matrycy oznacza wysoką płynność obrazu, którą wykorzystasz, aby zwiększyć precyzję celowania. Dodatkowo rewelacyjne kolory i dynamika wyświetlania sprawią, że rozgrywka pochłonie Cię w całości.',
+        4.9, 116);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 569.00, 'Acer', 28, 'Odkryj monitor gamingowy Acer Nitro VG240YBMIIX w 360 stopniach
+Zdominuj pole walki z monitorem dla graczy Acer Nitro VG240YBMIIX. Błyskawiczny czas reakcji matrycy da Ci dodatkowe ułamki sekundy w szybkich starciach. Płynność obrazu przełoży się na zwiększoną precyzję celowania, dzięki czemu zyskasz dodatkową przewagę nad przeciwnikiem. Co więcej, dynamika obrazu oraz rewelacyjne barwy sprawią, że jeszcze bardziej zagłębisz się w rozgrywce.,',
+        4.1, 117);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 599.00, 'Iiyama', 9, 'Odkryj Monitor gamingowy iiyama G-Master G2530HSU Black Hawk w 360 stopniach
+Zdominuj pole walki z monitorem dla graczy iiyama G-Master G2530HSU Black Hawk. Błyskawiczny czas reakcji matrycy da Ci dodatkowe ułamki sekundy w szybkich starciach. Płynność obrazu przełoży się na zwiększoną precyzję celowania, dzięki czemu zyskasz dodatkową przewagę nad przeciwnikiem. Co więcej, dynamika obrazu oraz rewelacyjne barwy sprawią, że jeszcze bardziej zagłębisz się w rozgrywce.',
+        4.2, 118);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 1499.00, 'Eizo', 50, 'Monitor do zadań biznesowych Eizo FlexScan EV2451
+Eizo FlexScan EV2451 to monitor, który doskonale odnajdzie się w środowisku biznesowym. Wysoka rozdzielczość zapewnia wyraźny i szczegółowy obraz, niezależnie czy przeglądasz dokumenty, czy wykresy graficzne. Eizo FlexScan EV2451 jest bezpieczny dla oczu nawet przy długim korzystaniu, dzięki specjalnym technologiom ochrony wzorku. Ergonomiczna konstrukcja natomiast zapewnia komfortową pracę.',
+        0.0, 119);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 1499.00, 'Samsung', 35, 'Odkryj monitor dla gracza Samsung C27JG50QQUX Curved w 360 stopniach
+Zyskaj dodatkową przewagę nad przeciwnikiem za sprawą gamingowego monitora Samsung C27JG50QQUX Curved. Daj się porwać niezwykłej dynamice i wiernie oddanym kolorom. Zyskaj też dodatkowy oręż w walce w postaci szybkiej reakcji matrycy. To sprawia, że obraz jest płynniejszy, co da Ci więcej czasu na reakcję i umożliwi dokładniejsze celowanie.',
+        4.0, 120);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 849.00, 'AOC', 17, 'Odkryj monitor dla graczy AOC C24G1 w 360 stopniach
+To, jak szybko zareagujesz na to, co widzisz, zwykle decyduje o wyniku starcia. Z monitorem gamingowym AOC C24G1 zyskasz dodatkowe ułamki sekund, które wyłonią zwycięzcę. Błyskawiczny czas reakcji matrycy oznacza wysoką płynność obrazu, którą wykorzystasz, aby zwiększyć precyzję celowania. Dodatkowo rewelacyjne kolory i dynamika wyświetlania sprawią, że rozgrywka pochłonie Cię w całości.',
+        4.2, 121);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 649.00, 'Dell', 76, 'Biznesowy monitor Dell UP2516D
+Sprawuj kontrolę nad wszystkimi zadaniami z biznesowym monitorem Dell UP2516D. Stworzony do codziennego użytku w biurze, charakteryzuje się ergonomicznym designem i nowoczesnymi technologiami ochrony wzroku. Dell UP2516D oferuje jakość obrazu klasy korporacyjnej z oszałamiającą ilością detali. Zapewnij sobie komfortowe warunki pracy, wpływając na większą produktywność w biznesie.',
+        3.9, 122);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 511.00, 'AOC', 106, 'Idealny do domu i biura monitor AOC E719SDA
+Spędzasz wiele godzin, pracując przy arkuszach kalkulacyjnych? A może chcesz się zrelaksować przy filmie? Uniwersalny monitor AOC E719SDA sprawdzi się doskonale zarówno w domu, jak i w biurze. Matryca o rozdzielczości SXGA zapewni dobry obraz i wystarczającą przestrzeń roboczą do wygodnej pracy.',
+        0.0, 123);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 649.00, 'Acer', 29, 'Idealny do domu i biura monitor ASUS VB199T
+Spędzasz wiele godzin, pracując przy arkuszach kalkulacyjnych? A może chcesz się zrelaksować przy filmie? Uniwersalny monitor ASUS VB199T sprawdzi się doskonale zarówno w domu, jak i w biurze. Matryca o dużej rozdzielczości zapewni wyraźny obraz i wystarczającą przestrzeń roboczą do wygodnej pracy. Nowoczesna konstrukcja monitora stanowić będzie za to idealne uzupełnienie kompozycji na każdym stanowisku komputerowym.',
+        0.0, 124);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 659.00, 'Dell', 38, 'Monitor biznesowy Dell P1917S
+Duży ekran i wysoka rozdzielczość monitora Dell P1917S doskonale sprawdzą się do zastosowań biznesowych. Matryca oferuje przestrzeń roboczą wystarczającą do sprawnej pracy, nawet z dużymi arkuszami. Dzięki temu widzisz wszystkie dane bez konieczności przewijania, co ułatwia i przyspiesza pracę. Co więcej, wysoka rozdzielczość zapewnia ostry jak brzytwa obraz, który pokochają Twoje oczy.',
+        5.0, 125);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 649.00, 'Iiyama', 49, 'Gwarancja zero martwych pikseli
+Satysfakcja Klienta jest dla marki iiyama priorytetem. Każdy monitor wykonywany jest z ogromną precyzją oraz dbałością o każdy detal. Dzięki temu masz pewność, że na Twoje biurko trafi pewny i niezawodny sprzęt. Jednak jeśli w ciągu 30 dni od daty zakupu zauważysz na matrycy martwy piksel, wówczas iiyama wymieni Twój monitor na nowy. Tak działa 30-dniowa gwarancja zero martwych pikseli. Oto nowy standard wśród monitorów.',
+        0.0, 126);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 4299.00, 'MSI', 10, 'Monitor dla graczy MSI Optix MPG341CQR Curved
+To, jak szybko zareagujesz na to, co widzisz, zwykle decyduje o wyniku starcia. Z monitorem gamingowym MSI Optix MPG341CQR Curved zyskasz dodatkowe ułamki sekund, które wyłonią zwycięzcę. Błyskawiczny czas reakcji matrycy oznacza wysoką płynność obrazu, którą wykorzystasz, aby zwiększyć precyzję celowania. Dodatkowo rewelacyjne kolory i dynamika wyświetlania sprawią, że rozgrywka pochłonie Cię w całości.',
+        4.9, 127);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 4999.00, 'Acer', 9, 'Monitor dla graczy Acer Predator CG437KP
+Poznaj wyjątkowe funkcje monitora Acer Predator CG437KP i dołącz do rozgrywki. Urządzenie zostało zaprojektowane z myślą o graczach, więc szybko stanie się Twoim oknem na wirtualne światy. Obsługując technologię HDR, monitor oferuje szerszy zakres jasności i kontrastu, czyniąc gry jeszcze bardziej klimatycznymi. Acer Predator CG437KP dostarczy Ci płynnego obrazu w jakości 4K, a technologie ochrony wzroku zmniejszą zmęczenie oczu do minimum.',
+        4.7, 128);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Monitory', 1701.00, 'Philips', 4, 'Monitor do domu i biura Philips 328E1CA/00
+Niezależnie od tego, czy korzystasz z monitora w domu, czy w biurze, warto zadbać o komfort oczu. Ekran Philips 328E1CA/00 nie tylko zapewnia wystarczającą przestrzeń roboczą do wygodnej pracy, ale też posiada wysoką rozdzielczość. W efekcie rewelacyjnie sprawdzi się zarówno podczas wpisywania danych w programach, jak i podczas oglądania filmów. Co więcej, nowoczesna konstrukcja urządzenia stanowi eleganckie uzupełnienie każdego miejsca pracy.',
+        5.0, 129);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 1699.00, 'Philips', 17, 'Telewizor Philips 4K 50PUS6504
+Usiądź wygodnie i rozkoszuj się obrazem, jaki emituje dla Ciebie telewizor Philips 50PUS6504. Dzięki technologii Pixel Precise Ultra HD dostrzeżesz świat pełen szczegółów i bogatych kolorów. Zaskoczy Cię także płynność poruszania się obrazu, a także niezwykła głębia. W połączeniu z wyraźnym dźwiękiem oraz łatwym dostępem do najlepszej rozrywki, jaką oferuje platforma SAPHI, telewizor Philips będzie gwarancją doskonałości w Twoim domu.',
+        4.1, 130);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 9999.00, 'Philips', 10, 'elewizor Philips OLED 4K 65OLED854
+Odkryj prawdziwą głębię obrazu, jaką oferuje Ci telewizor Philips 65OLED854. Wyposażony w matrycę OLED oraz rozdzielczość 4K sprawi, że każda scena będzie niezwykle realistyczna. Przyciemnianie i wyłączanie każdego piksela osobno sprawia, czerń jest wyjątkowo głęboka, a kolory nasycone i pełne kontrastu. Co więcej, zwiększa się kąt widzenia, a dzięki obrotowej podstawie, każdy domownik będzie widział moc szczegółów, niezależnie od miejsca, w którym siedzi. W połączeniu z dźwiękiem wspieranym przez Dolby Atmos oraz łatwym dostępem do najlepszej rozrywki, jaką oferuje system Android TV, telewizor Philips będzie gwarancją doskonałości w Twoim domu.',
+        4.0, 131);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 2849.00, 'Samsung', 29, '49-calowy telewizor QLED Samsung QE49Q60RA
+Urządź sobie prywatne kino w zaciszu swojego domu. Perfekcyjny obraz i duży, 49-calowy ekran telewizora QLED Samsung QE49Q60RA przeniosą Cię w świat niesamowitej rozrywki i to bez wychodzenia z domu. 100% Natężenie Kolorów uzyskane dzięki technologii Quantum Dot sprawi, że każda scena ożyje, a naturalne barwy i realistyczne odwzorowanie pozwolą Ci się poczuć, jakbyś był jej częścią. Telewizor QLED wypełni Twoje życie miliardem odcieni i to zarówno w jasnych, jak i ciemnych scenach. Od teraz nie tylko dynamiczna akcja będzie zapierać Ci dech w piersiach.',
+        3.9, 132);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 2899.00, 'LG', 37, 'Technologia NanoCell w telewizorze LG 55SM8500
+Przekonaj się na własne oczy, jak nanocząsteczki przenoszą jakość obrazu wyświetlanego na ekranie telewizora LG 55SM8500 na nowy poziom. Technologia NanoCell™ sprawia, że reprodukowane materiały nabierają jeszcze piękniejszych barw i stają się pełne życia, a każda sena jest doskonale odwzorowana.
+
+Wykorzystanie technologi NanoCell pozwoliło usunąć niepotrzebne fale światła, jak również ograniczyć wyciek kolorów RGB. Dzięki czemu możesz cieszyć się niesamowitymi kolorami na 55-calowym 55SM8500 podczas każdego seansu.',
+        5.0, 133);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 4999.00, 'Sony', 11, 'Pełna harmonia w telewizorze Sony KD-55XG9505
+Sony KD-55XG9505 to telewizor, który zafunduje Ci autentyczność doznań dzięki brzmieniu Acoustic Multi-Audio™ idealnie zharmonizowanemu z realistycznym odwzorowaniem każdego detalu. Z nim bogaty świat kolorów i szczegółów w jakości 4K HDR staje przed Tobą otworem za pomocą jednego naciśnięcia. Za ekranem tego telewizora kryje się gama wyjątkowych technologii przetwarzania sygnału i popraw obrazu.
+
+KD-55XG9505 ma także pełne podświetleni Full Array LED. Większa liczba diod LED równomiernie rozmieszczonych za 55-calowym ekranem jeszcze lepiej go podświetla. To wraz z technologią precyzyjnego lokalnego przyciemniania umożliwia niezależne zmniejszanie lub zwiększanie jasności, poszczególnych obszarów diod LED. Dzięki czemu możesz cieszyć się dokładniejszym kontrastem i kinowym wrażeniem we własnym salonie.',
+        3.7, 134);
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 11999.00, 'Sony', 5, 'Wydajny procesor w telewizorze Sony KD-85XG8596
+Pozwól się porwać w niezwykłe krainy wyświetlane na 85-calowym ekranie telewizora Sony KD-85XG8596. Dzięki doskonałej współpracy wykorzystanych technologii poprawy obrazu z wydajnym procesorem masz wrażenie, że każda scena jest wręcz namacalna. Zobacz jak wszystko to, co oglądasz — ożywa, dzięki większej głębi, lepszemu odwzorowaniu detali i faktur.
+
+Procesor obrazu 4K HDR Processor X1 wykorzystany w KD-85XG8596 idealnie odwzorowuje nawet drobne wzory i tekstury i to z niezwykłym realizmem. Dodatkowo w połączeniu z funkcją Object-based HDR remaster oddaje czyste barwy z większą jasnością. Teraz masz wrażenie, że morze może sięgnąć Twoich stóp.',
+        0.0, 135);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 1279.00, 'LG', 31, '43-calowy telewizor Full HD LG 43LM6300
+LG Telewizor LG 43LM6300 z ekranem Full HD da Tobie i Twojej rodzinie jeszcze więcej przyjemności płynącej z oglądania ulubionych programów. Cztery szybkie i dokładne procesory usuwają szum oraz zapewniają bogate kolory i dynamiczny kontrast. Rozdzielczość obrazów o niskiej jakości jest podnoszona w celu zwiększenia ostrości i zapewnienia bardziej żywych kolorów. Model 43LM6300 dysponuje także dynamicznym wzmacniaczem kolorów, dzięki któremu obrazy stają się bardziej naturalne. Delektuj się prawdziwymi kolorami natury na ekranie swojego telewizora.',
+        0.0, 136);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 2599.00, 'Sony', 17, 'Telewizor Ultra HD Sony KD-43XG8096
+Daj pochłonąć się niesamowitemu obrazowi wyświetlanemu na 43-calowym ekranie telewizora Sony KD-43XG8096. Produkt ten to przykład doskonałej współpracy wykorzystanych technologii z wydajnym procesorem. Efektem tego jest niezwykła głębia, piękne kolory i szczegółowość obrazu, a co za tym idzie jeszcze większa przyjemność z oglądania.
+
+Technologia 4K X-Reality™ PRO, wyświetlacz TRILUMINOS Display i platforma Android TV zadbają o najlepszą jakość i niezmierzoną ilość rozrywki. Natomiast technologia Motionflow™ XR sprawi, że nawet podczas wyświetlania najbardziej dynamicznych scen, obraz na ekranie tv KD-43XG8096 wciąż pozostanie niezwykle płynny. Ogląda, graj, baw się i zapomnij o ograniczeniach.',
+        4.5, 137);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 3299.00, 'Philips', 30, 'Telewizor Philips 4K 70PUS6504
+Usiądź wygodnie i rozkoszuj się obrazem, jaki emituje dla Ciebie telewizor Philips 70PUS6504. Dzięki technologii Pixel Precise Ultra HD dostrzeżesz świat pełen szczegółów i bogatych kolorów. Zaskoczy Cię także płynność poruszania się obrazu, a także niezwykła głębia. W połączeniu z wyraźnym dźwiękiem oraz łatwym dostępem do najlepszej rozrywki, jaką oferuje platforma SAPHI, telewizor Philips będzie gwarancją doskonałości w Twoim domu.',
+        4.1, 138);
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Telewizory', 6999.00, 'Philips', 15, 'Telewizor Philips OLED 4K 55OLED804
+Telewizor Philips 55OLED804 to gwarancja doskonałości, która od teraz zawita w Twoim domu. Bogactwo kolorów i fantastyczna głębia zostały uzyskane dzięki wyjątkowej matrycy OLED oraz rozdzielczości 4K. Każdy piksel jest niezależny, a co za tym idzie - wyłączany i przyciemniany osobno. Taki zabieg pozwolił uzyskać jeszcze głębszą czerń, nasycenie barw i zachwycający kontrast. Telewizor Philips to także łatwy dostęp do najlepszej rozrywki, jaką oferuje platforma Android Smart TV. Co więcej, obsługa takich formatów audio i wideo jak Dolby Vision i Dolby Atmos zapewni niemal kinową jakość obrazu i dźwięku. Natomiast dzięki technologii Ambilight, emocje podczas oglądania będą jeszcze lepsze.',
+        4.6, 139);
+
+##### zasilacze #####
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 199.00, 'SilentiumPC', 19, 'SilentiumPC 500W Vero L2 Bronze
+Zasilacz SilentiumPC Vero L2 Bronze 500 W to nowoczesna platforma wykorzystującą układ rezonansowy LLC oraz niezależną regulację napięć wyjściowych. Zapewnia to bardzo dobrą stabilność napięć, a także wysoką sprawność energetyczną przekraczającą 85%, co zostało potwierdzone certyfikatem 80 PLUS®Bronze.
+
+Przekłada się to na niższe rachunki za energię elektryczną, niższe temperatury, cichsze działanie wentylatora oraz dłuższą bezawaryjną pracę, co potwierdza 3-letnia gwarancja w systemie door-to-door.',
+        4.5, 140);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 229.00, 'SilentiumPC', 21, 'SilentiumPC 600W Vero L2 Bronze
+Zasilacz SilentiumPC Vero L2 Bronze 600 W to nowoczesna platforma wykorzystującą układ rezonansowy LLC oraz niezależną regulację napięć wyjściowych. Zapewnia to bardzo dobrą stabilność napięć, a także wysoką sprawność energetyczną przekraczającą 85%, co zostało potwierdzone certyfikatem 80 PLUS®Bronze.
+
+Przekłada się to na niższe rachunki za energię elektryczną, niższe temperatury, cichsze działanie wentylatora oraz dłuższą bezawaryjną pracę, co potwierdza 3-letnia gwarancja w systemie door-to-door.',
+        4.4, 141);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 169.00, 'SilentiumPC', 7, 'SilentiumPC Elementum E2 550W
+SilentiumPC Elementum E2 550W to zasilacz o potwierdzonej certyfikatem, wysokiej sprawności 80 PLUS. Oznacza to, że w najpopularniejszych zestawach komputerowych pobierających realnie od 100 do 300 W, zasilacz Elementum E2 550W oferuje ponadprzeciętną w tym segmencie efektywność, co obniża rachunki za prąd i redukuje generowany hałas. Bogaty zestaw okablowania umożliwia podpięcie aż 6 urządzeń ze złączem SATA/MOLEX oraz kart graficznych z podwójnym złączem zasilającym PCI-Express.',
+        4.1, 142);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 409.00, 'SilentiumPC', 23, 'SilentiumPC 750W Supremo FM2 Gold
+Zasilacz SilentiumPC Supremo FM2 Gold 750 W to najnowsza wersja zasilacza z tej linii, który ma być podstawą do budowy najwydajniejszych komputerów.
+
+Za zasilanie podzespołów komputera odpowiada platforma oferująca bardzo wysoką sprawność energetyczną, wynoszącą do 92%, co zostało potwierdzone certyfikatem 80 PLUS®Gold.
+
+Wysoka sprawność przekłada się na niższe rachunki za energię elektryczną, niższe temperatury pracy, a tym samym cichsze działanie wentylatora.',
+        3.9, 143);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 309.00, 'be quiet!', 11, 'Zasilacz be quiet! System Power 9 600W CM
+Postaw na sprawdzoną niezawodność i dobrą wydajność. be quiet! System Power 9 CM 600W oferuje ciszę oraz słynną niezawodność be quiet! dla wszystkich integratorów systemów PC. Zasilacz zapewnia stabilność dzięki dwóm liniom 12V, wspiera tryb multi-GPU z dwoma PCIe, a pobór mocy w trybie czuwania osiąga rezultat poniżej 0,15 wattów. Co więcej, sterowany temperaturą wentylator 120 mm znacznie redukuje hałas.',
+        5.0, 144);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 579.00, 'be quiet!', 30, 'be quiet! Straight Power 11 750 W
+Zależy Ci na bezkompromisowej stabilności zasilania? Wybierz be quiet! Straight Power 11 750 W – zasilacz stworzony z myślą o zaawansowanych systemach, gdzie liczy się niezachwiana stabilność oraz superciche chłodzenie. Dzięki japońskim kondensatorom zasilacz odznacza się niezawodnością, a także wytrzymałością do 105°. Posiada również w pełni modularne zarządzanie przewodami, gwarantujące maksymalną elastyczność konfiguracji oraz cztery, wysokowydajne linie 12V. be quiet! Straight Power 11 750 W zapewnia ponadto wsparcie dla najmocniejszych GPU z dwoma złączami PCI-e.',
+        4.3, 145);
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 509.00, 'be quiet!', 11, 'Odkryj be quiet! Straight Power 11 w 360 stopniach
+W zaawansowanych systemach zainstaluj be quiet! Straight Power 11 650 W. Skuteczny, a zarazem cichy zasilacz wyposażony w japońskie kondensatory, będące gwarancją wydajności oraz niezawodności. Posiada w pełni modularne zarządzanie przewodami, gwarantujące maksymalną elastyczność konfiguracji oraz cztery, wysokowydajne linie 12V. be quiet! Straight Power 11 650 W oferuje ponadto wsparcie dla najmocniejszych GPU z dwoma złączami PCI-e. Wszystko po to, by zagwarantować Ci bezkompromisową stabilność zasilania.',
+        4.9, 146);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 569.00, 'Seasonic', 2, 'Zasilacz Focus SGX 650W
+Nowa linia produktów Seasonic Focus SGX cechuje wszechstronne zastosowanie. Dzięki niewielkim rozmiarom oraz dołączonemu adapterowi, umożliwia montaż zasilacza zarówno w obudowach SFX jak i ATX. Wyjątkowa konstrukcja urządzenia o mocy 650 watów zapewni wszystkim komponentom w Twoim komputerze stabilne i prawidłowe chłodzenie przy dowolnym obciążeniu.',
+        3.0, 147);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 559.00, 'Corsair', 4, 'Zasilacz Corsair RM 650x 650W
+Zasilacze modularne z serii RMx dają bardzo ścisłą kontrolę napięcia, cichą pracę oraz w pełni modularny zestaw kabli. Zbudowany został z japońskich 105° C kondensatorów, dlatego jest doskonałym wyborem dla komputerów potrzebujących wydajności i niezawodności.',
+        3.4, 148);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 359.00, 'Gigabyte', 5, 'Zasilacz Gigabyte G750H 750W
+Wyposażona w zaawansowane technologie, 750-watowa konstrukcja od Gigabyte, umożliwia stabilne zasilanie komputera wyposażonego nawet w najnowocześniejsze, wydajne podzespoły. Gdy wymagana jest doskonała stabilność i minimalny hałas, sięgnij po Gigabyte G750H, który dodatkowo posiada pół-modularne okablowanie. Dzięki temu skorzystasz wyłącznie z tych przewodów, których aktualnie potrzebujesz. Zasilacz Gigabyte G750H zyskał ponadto certyfikat 80 PLUS Gold, który potwierdza lepszą wydajność energetyczną - mniejsze straty mocy, a w konsekwencji niższe temperatury pracy.',
+        3.4, 149);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 769.00, 'Corsair', 21, 'Pełna kontrola
+Rewolucyjny zasilacz HX750i daje Ci możliwość kontrolowania jego pracy za pomocą dołączonej aplikacji Corsair Link. Do zasilacza dołączony jest również specjalny kabel USB, który po pobraniu oprogramowania daje jeszcze więcej opcji monitorowania i sterowania.',
+       4.0, 150);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Zasilacze', 239.00, 'Chieftec', 11, 'Chieftec GPS-700A8
+Nowa seria smart oferuje zarówno wysoką jakość wykonania jak i sprawność. Zasilacz jest pomalowany na czarno oraz wyposażony w długie kable, przewód zasilający oraz solidny karton, który chroni go w transporcie. Dzięki sprawność zasilacza na poziomie powyżej 80% GPS-700A8 spełnia wymagania zielonego IT, przy umiarkowanej cenie zakupu.',
+        4.2, 151);
+
+
+##### Laptopy ####
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1299.00, 'HP', 28, '', 2.9, 152);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'Lenovo', 73, '', 3.1, 153);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3999.00, 'HP', 69 , '', 4.2, 154);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5599.00, 'ASUS', 73, '', 3.9, 155);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4599.00, 'ASUS', 45, '', 4.4, 156);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 11399.00, 'ASUS', 24, '', 4.3, 157);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8199.00, 'Lenovo', 53, '', 4.4, 158);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 7099.00, 'MSI', 18, '', 3.2, 159);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1699.00, 'HP', 53, '', 3.7, 160);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4899.00, 'Dell', 54, '', 4.1, 161);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'MSI', 20, '', 3.9, 162);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4399.00, 'Apple', 79, '', 2.7, 163);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5999.00, 'ASUS', 42, '', 4.4, 164);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8899.00, 'HP', 11, '', 4.1, 165);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8999.00, 'Apple', 13, '', 4.3, 167);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'Acer', 17, '', 3.3, 168);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9499.00, 'Acer', 11, '', 3.8, 169);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4399.00, 'Acer', 30, '', 3.7, 170);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9299.00, 'Acer', 44, '', 3.4, 171);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8299.00, 'Microsoft', 24, '', 4.2, 172);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4799.00, 'Apple', 75, '', 4.2, 173);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3599.00, 'Acer', 29, '', 4.7, 174);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4399.00, 'Microsoft', 18, '', 4.6, 175);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9999.00, 'Microsoft', 46, '', 4.8, 176);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'Huawei', 16, '', 2.9, 177);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8999.00, 'Dell', 36, '', 3.2, 178);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3799.00, 'Huawei', 29, '', 3.2, 179);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 11399.00, 'MSI', 74, '', 3.5, 180);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3099.00, 'Dell', 26, '', 4.5, 181);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9299.00, 'HP', 25, '', 3.6, 182);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1899.00, 'Huawei', 13, '', 4.6, 183);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3399.00, 'LG ', 64, '', 3.9, 184);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5999.00, 'LG ', 46, '', 3.5, 185);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5099.00, 'HP', 33, '', 3.4, 186);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8399.00, 'Lenovo', 74, '', 4.2, 187);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 10099.00, 'MSI', 19, '', 4.3, 188);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1499.00, 'Lenovo', 44, '', 4.4, 189);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 12099.00, 'MSI ', 33, '', 3.2, 190);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 10799.00, 'Dell', 28, '', 3.1, 191);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6499.00, 'Dell', 9, '', 3.6, 192);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5899.00, 'Lenovo', 17, '', 3.7, 193);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 2099.00, 'Lenovo', 73, '', 4.2, 194);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8999.00, 'Apple', 13, '', 4.3, 167);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'Acer', 17, '', 3.3, 170);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9499.00, 'Acer', 11, '', 3.8, 171);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4399.00, 'Acer', 30, '', 3.7, 163);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9299.00, 'Acer', 44, '', 3.4, 153);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8299.00, 'Microsoft', 24, '', 4.2, 163);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4799.00, 'Apple', 75, '', 4.2, 176);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3599.00, 'Acer', 29, '', 4.7, 157);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 4399.00, 'Microsoft', 18, '', 4.6, 191);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9999.00, 'Microsoft', 46, '', 4.8, 174);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6599.00, 'Huawei', 16, '', 2.9, 159);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8999.00, 'Dell', 36, '', 3.2, 154);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3799.00, 'Huawei', 29, '', 3.2, 186);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 11399.00, 'MSI', 74, '', 3.5, 177);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3099.00, 'Dell', 26, '', 4.5, 173);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 9299.00, 'HP', 25, '', 3.6, 179);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1899.00, 'Huawei', 13, '', 4.6, 193);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 3399.00, 'LG ', 64, '', 3.9, 168);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5999.00, 'LG ', 46, '', 3.5, 164);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5099.00, 'HP', 33, '', 3.4, 177);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 8399.00, 'Lenovo', 74, '', 4.2, 189);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 10099.00, 'MSI', 19, '', 4.3, 185);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 1499.00, 'Lenovo', 44, '', 4.4, 188);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 12099.00, 'MSI ', 33, '', 3.2, 155);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 10799.00, 'Dell', 28, '', 3.1, 170);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 6499.00, 'Dell', 9, '', 3.6, 190);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 5899.00, 'Lenovo', 17, '', 3.7, 186);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Laptopy', 2099.00, 'Lenovo', 73, '', 4.2, 189);
+
+##### Komputery #####
+
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 10799.00, 'Dell', 28, '', 3.1, 195);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6499.00, 'Cat', 9, '', 3.6, 196);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5899.00, 'Lenovo', 17, '', 3.7, 197);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 2099.00, 'Lenovo', 73, '', 4.2, 198);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8399.00, 'Lenovo', 74, '', 4.2, 199);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 10099.00, 'MSI', 19, '', 4.3, 200);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 1499.00, 'Lenovo', 44, '', 4.4, 201);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 12099.00, 'MSI ', 33, '', 3.2, 202);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 4399.00, 'Cat', 18, '', 4.6, 203);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 9999.00, 'Microsoft', 46, '', 4.8, 204);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6599.00, 'Huawei', 16, '', 2.9, 205);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8999.00, 'Dell', 36, '', 3.2, 206);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 3799.00, 'Cat', 29, '', 3.2, 207);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 11399.00, 'MSI', 74, '', 3.5, 208);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 1299.00, 'HP', 28, '', 2.9, 209);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6599.00, 'Lenovo', 73, '', 3.1, 210);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 3999.00, 'HP', 69 , '', 4.2, 211);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5599.00, 'ASUS', 73, '', 3.9, 212);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 4599.00, 'Cat', 45, '', 4.4, 213);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 11399.00, 'ASUS', 24, '', 4.3, 214);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8199.00, 'Lenovo', 53, '', 4.4, 215);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5999.00, 'LG ', 46, '', 3.5, 216);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5099.00, 'HP', 33, '', 3.4, 217);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8399.00, 'Lenovo', 74, '', 4.2, 218);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 10799.00, 'Dell', 28, '', 3.1, 204);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6499.00, 'Cat', 9, '', 3.6, 214);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5899.00, 'Lenovo', 17, '', 3.7, 204);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 2099.00, 'Lenovo', 73, '', 4.2, 206);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8399.00, 'Lenovo', 74, '', 4.2, 218);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 10099.00, 'MSI', 19, '', 4.3, 204);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 1499.00, 'Lenovo', 44, '', 4.4, 212);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 12099.00, 'MSI ', 33, '', 3.2, 209);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 4399.00, 'Cat', 18, '', 4.6, 199);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 9999.00, 'Microsoft', 46, '', 4.8, 196);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6599.00, 'Huawei', 16, '', 2.9, 200);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8999.00, 'Dell', 36, '', 3.2, 196);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 3799.00, 'Cat', 29, '', 3.2, 199);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 11399.00, 'MSI', 74, '', 3.5, 211);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 1299.00, 'HP', 28, '', 2.9, 199);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 6599.00, 'Lenovo', 73, '', 3.1, 198);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 3999.00, 'HP', 69 , '', 4.2, 210);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5599.00, 'ASUS', 73, '', 3.9, 206);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 4599.00, 'Cat', 45, '', 4.4, 197);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 11399.00, 'ASUS', 24, '', 4.3, 211);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8199.00, 'Lenovo', 53, '', 4.4, 210);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5999.00, 'LG ', 46, '', 3.5, 212);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 5099.00, 'HP', 33, '', 3.4, 195);
+
+INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
+VALUES ('Komputery', 8399.00, 'Lenovo', 74, '', 4.2, 207);
