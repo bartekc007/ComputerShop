@@ -63,11 +63,17 @@
     <Compile Include="FormViews\FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormViews\FProductsMain.cs">
+    <Compile Include="FormViews\FProductsMainboardsMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormViews\FProductsMain.Designer.cs">
-      <DependentUpon>FProductsMain.cs</DependentUpon>
+    <Compile Include="FormViews\FProductsMainboardsMain.Designer.cs">
+      <DependentUpon>FProductsMainboardsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViews\FProductsCpuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsCpuMain.Designer.cs">
+      <DependentUpon>FProductsCpuMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FormViews\FSingUp.cs">
       <SubType>Form</SubType>
@@ -92,8 +98,11 @@
     <EmbeddedResource Include="FormViews\FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViews\FProductsMain.resx">
-      <DependentUpon>FProductsMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormViews\FProductsMainboardsMain.resx">
+      <DependentUpon>FProductsMainboardsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsCpuMain.resx">
+      <DependentUpon>FProductsCpuMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FSingUp.resx">
       <DependentUpon>FSingUp.cs</DependentUpon>
@@ -147,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mainPannelLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\cat.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
