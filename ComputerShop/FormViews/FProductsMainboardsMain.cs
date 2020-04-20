@@ -33,7 +33,7 @@ namespace ComputerShop.FormViews
         private void FProductsMain_Load(object sender, EventArgs e)
         {
             connection.Open();
-            string query = "SELECT mainboards.Name,products.Price FROM ((products INNER JOIN specyfications ON products.specyficationsID = specyfications.mainboard) INNER JOIN mainboards ON specyfications.mainboard = mainboards.ID)";
+            string query = "SELECT mainboards.Name,products.Price FROM ((products INNER JOIN specyfications ON products.specyficationsID = specyfications.ID) INNER JOIN mainboards ON specyfications.mainboard = mainboards.ID)";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query,connection);
             DataTable dtb1 = new DataTable();
             adapter.Fill(dtb1);
