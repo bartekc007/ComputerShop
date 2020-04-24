@@ -419,7 +419,10 @@ namespace ComputerShop.FormViews
             if(result1 && result2)
             {
                 authenticationPresenter.Registration();
-                FMain fMain = new FMain();
+                int userid =authenticationPresenter.GetUserId();
+                
+
+                FMain fMain = new FMain(userid);
                 this.Hide();
                 fMain.Show();
             }

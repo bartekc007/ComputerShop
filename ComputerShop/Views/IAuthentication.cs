@@ -11,7 +11,7 @@ namespace ComputerShop.Views
     public interface IAuthenticationUser
     {
 
-        int UserId { get; set; }
+        int UserId { get; }
         string UserName { get; set; }
         string Surname { get; set; }
         string Login { get; set; }

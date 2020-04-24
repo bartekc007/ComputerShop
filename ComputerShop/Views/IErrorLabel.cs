@@ -22,4 +22,6 @@ namespace ComputerShop.Views
         string CityError { get; set; }
         string PostCodeError { get; set; }
     }
+
+    
 }

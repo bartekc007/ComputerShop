@@ -60,10 +60,26 @@ namespace ComputerShop.Presenters
 
             authentication.FRegister();
         }
-       /* public Hashtable CheckIfNotEmptyOrDefault()
+
+        public int GetUserId()
         {
-            return authentication.CheckIfNotEmptyOrDefault();
-        }*/
+            authentication.UserId = authenticationUserView.UserId;
+            authentication.Name = authenticationUserView.UserName;
+            authentication.Surname = authenticationUserView.Surname;
+            authentication.Login = authenticationUserView.Login;
+            authentication.Password = authenticationUserView.Password;
+            authentication.Email = authenticationUserView.Email;
+            authentication.PhoneNumber = authenticationUserView.PhoneNumber;
+            authentication.IsaAClient = authenticationUserView.IsaAClient;
+            authentication.IsACompany = authenticationUserView.IsACompany;
+            authentication.AddressId = authenticationAddressView.AddressId;
+            authentication.Street = authenticationAddressView.Street;
+            authentication.HouseNumber = authenticationAddressView.HouseNumber;
+            authentication.City = authenticationAddressView.City;
+            authentication.PostCode = authenticationAddressView.PostCode;
+
+            return authentication.GetID();
+        }
 
     }
 }

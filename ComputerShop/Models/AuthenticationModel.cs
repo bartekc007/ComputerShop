@@ -41,10 +41,12 @@ namespace ComputerShop.Models
 
         public bool FLogin()
         {
+            connection.Open();
             string query = "SELECT * FROM user WHERE Login = '" + Login.Trim() + "' and Password = '" + Password.Trim() + "'";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
             DataTable dt1 = new DataTable();
             adapter.Fill(dt1);
+            connection.Close();
             if (dt1.Rows.Count == 1)
             {
                 return true;
@@ -54,6 +56,16 @@ namespace ComputerShop.Models
                 return false;
             }
         }
+        public int GetID()
+        {
+            connection.Open();
+            string selectUserId = "SELECT ID FROM user WHERE Login='" + Login.Trim() + "' AND Password = '" + Password.Trim() + "'";
+            MySqlCommand SelectUserIdCmd = new MySqlCommand(selectUserId, connection);
+            int userid = (Int32)SelectUserIdCmd.ExecuteScalar();
+            connection.Close();
+            return userid;
+        }
+
         public void FRegister()
         {
             connection.Open();
@@ -73,6 +85,9 @@ namespace ComputerShop.Models
             connection.Close();
         }
 
-       
+        public void UpdateUsersData()
+        {
+
+        }
     }
 }

@@ -75,6 +75,12 @@
     <Compile Include="FormViews\FProductsCpuMain.Designer.cs">
       <DependentUpon>FProductsCpuMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViews\FSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FSettings.Designer.cs">
+      <DependentUpon>FSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViews\FSingUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FProductsCpuMain.resx">
       <DependentUpon>FProductsCpuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FSettings.resx">
+      <DependentUpon>FSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FSingUp.resx">
       <DependentUpon>FSingUp.cs</DependentUpon>
@@ -159,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\cat.sql" />
+    <None Include="Resources\user2-setting-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

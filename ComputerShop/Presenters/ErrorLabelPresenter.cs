@@ -16,11 +16,18 @@ namespace ComputerShop.Presenters
         
         IErrorLabel errorLabelView;
         FSingUp item;
+        FSettings settings;
         
         public ErrorLabelPresenter(IErrorLabel view, FSingUp window)
         {
             errorLabelView = view;
             item = window;
+        }
+
+        public ErrorLabelPresenter(IErrorLabel view, FSettings settings)
+        {
+            errorLabelView = view;
+           this.settings = settings;
         }
 
         public bool CheckIsDataOk(FSingUp item)
@@ -30,10 +37,24 @@ namespace ComputerShop.Presenters
             return result;
         }
 
+        public bool CheckIsDataOk(FSettings settings)
+        {
+            ErrorLabelModel errorLabelModel = new ErrorLabelModel();
+            bool result = errorLabelModel.CheckIsDataOk(settings);
+            return result;
+        }
+
         public bool CheckIsDuplicates(FSingUp item)
         {
             ErrorLabelModel errorLabelModel = new ErrorLabelModel();
             bool result =errorLabelModel.CheckDuplikates(item);
+            return result;
+        }
+
+        public bool CheckIsDuplicates(FSettings settings)
+        {
+            ErrorLabelModel errorLabelModel = new ErrorLabelModel();
+            bool result = errorLabelModel.CheckDuplikates(settings);
             return result;
         }
 

@@ -12,6 +12,7 @@ namespace ComputerShop.FormViews
     public partial class FLogin : Form,IAuthenticationUser,IAuthenticationAddress
     {
         #region Properies
+        private MySqlConnection connection;
      
         //Interface IAuthentication
         public string Login 
@@ -53,8 +54,8 @@ namespace ComputerShop.FormViews
         {
             InitializeComponent();
             //Seting connection to database
-            //string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
-            //connection = new MySqlConnection(conn);
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
@@ -98,7 +99,8 @@ namespace ComputerShop.FormViews
 
             if (LoginSuccessfully)
             {
-                FMain objFMain = new FMain();
+                int userid = authenticationPresenter.GetUserId();
+                FMain objFMain = new FMain(userid);
                 this.Hide();
                 objFMain.Show();
             }
@@ -124,7 +126,7 @@ namespace ComputerShop.FormViews
         {
             FSingUp objFSignUp = new FSingUp();
             this.Hide();
-            objFSignUp.Show();
+            objFSignUp.Show();            
         }
 
         #endregion
