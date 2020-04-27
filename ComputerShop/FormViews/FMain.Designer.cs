@@ -37,6 +37,7 @@
             this.GpuSubmenyButton = new System.Windows.Forms.Button();
             this.MainboardSubmenuButton = new System.Windows.Forms.Button();
             this.CpuSubmenuButton = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
             this.OrdersHistoryButton = new System.Windows.Forms.Button();
             this.OrderButton = new System.Windows.Forms.Button();
             this.ProductSubmenuPanel = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.MainPannel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SettingsButton = new System.Windows.Forms.Button();
             this.LeftMenuPanel.SuspendLayout();
             this.ComponentsPanel.SuspendLayout();
             this.ProductSubmenuPanel.SuspendLayout();
@@ -201,6 +201,20 @@
             this.CpuSubmenuButton.UseVisualStyleBackColor = true;
             this.CpuSubmenuButton.Click += new System.EventHandler(this.CpuSubmenuButton_Click);
             // 
+            // SettingsButton
+            // 
+            this.SettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SettingsButton.Location = new System.Drawing.Point(12, 768);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(89, 37);
+            this.SettingsButton.TabIndex = 6;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
             // OrdersHistoryButton
             // 
             this.OrdersHistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
@@ -346,28 +360,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // SettingsButton
-            // 
-            this.SettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(55)))));
-            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SettingsButton.Location = new System.Drawing.Point(12, 768);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(89, 37);
-            this.SettingsButton.TabIndex = 6;
-            this.SettingsButton.Text = "Settings";
-            this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1358, 817);
             this.Controls.Add(this.MainPannel);
             this.Controls.Add(this.BottomPanel);
             this.Controls.Add(this.LeftMenuPanel);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1600, 900);

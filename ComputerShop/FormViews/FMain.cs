@@ -112,27 +112,27 @@ namespace ComputerShop.FormViews
 
         private void GpuSubmenyButton_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FProductsGpuMain());
         }
 
         private void RamSubmenuButton_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FProductsRAMMain());
         }
 
         private void HardDriveSubmenuButton_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FProductsHardDrivesMain());
         }
 
         private void ScreenSubmenuButton_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FProductsScreensMain());
         }
 
         private void powerSupplyUnitSubmenuButton_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FProductsPowerSupplyUnitsMain());
         }
 
         #endregion

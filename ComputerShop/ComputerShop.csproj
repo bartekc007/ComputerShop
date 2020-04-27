@@ -63,6 +63,18 @@
     <Compile Include="FormViews\FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViews\FProductsGpuMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsGpuMain.Designer.cs">
+      <DependentUpon>FProductsGpuMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViews\FProductsHardDrivesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsHardDrivesMain.Designer.cs">
+      <DependentUpon>FProductsHardDrivesMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViews\FProductsMainboardsMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,24 @@
     </Compile>
     <Compile Include="FormViews\FProductsCpuMain.Designer.cs">
       <DependentUpon>FProductsCpuMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViews\FProductsPowerSupplyUnitsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsPowerSupplyUnitsMain.Designer.cs">
+      <DependentUpon>FProductsPowerSupplyUnitsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViews\FProductsRAMMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsRAMMain.Designer.cs">
+      <DependentUpon>FProductsRAMMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViews\FProductsScreensMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViews\FProductsScreensMain.Designer.cs">
+      <DependentUpon>FProductsScreensMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FormViews\FSettings.cs">
       <SubType>Form</SubType>
@@ -104,11 +134,26 @@
     <EmbeddedResource Include="FormViews\FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsGpuMain.resx">
+      <DependentUpon>FProductsGpuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsHardDrivesMain.resx">
+      <DependentUpon>FProductsHardDrivesMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FProductsMainboardsMain.resx">
       <DependentUpon>FProductsMainboardsMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FProductsCpuMain.resx">
       <DependentUpon>FProductsCpuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsPowerSupplyUnitsMain.resx">
+      <DependentUpon>FProductsPowerSupplyUnitsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsRAMMain.resx">
+      <DependentUpon>FProductsRAMMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViews\FProductsScreensMain.resx">
+      <DependentUpon>FProductsScreensMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViews\FSettings.resx">
       <DependentUpon>FSettings.cs</DependentUpon>

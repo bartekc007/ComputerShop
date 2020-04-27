@@ -33,7 +33,10 @@ namespace ComputerShop.FormViews
         private void FProductsMain_Load(object sender, EventArgs e)
         {
             connection.Open();
-            string query = "SELECT mainboards.Name,products.Price FROM ((products INNER JOIN specyfications ON products.specyficationsID = specyfications.ID) INNER JOIN mainboards ON specyfications.mainboard = mainboards.ID)";
+            string query = "SELECT DISTINCT r.Name, products.Brand, products.Price, products.Rating " +
+                "FROM products " +
+                "INNER JOIN specyfications s on products.specyficationsID = s.ID " +
+                "INNER JOIN mainboards r on s.mainboard = r.ID WHERE CPU IS NULL";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query,connection);
             DataTable dtb1 = new DataTable();
             adapter.Fill(dtb1);
@@ -47,7 +50,7 @@ namespace ComputerShop.FormViews
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-                NameLabel.Text = row.Cells["ProductName"].Value.ToString();
+                NameLabel.Text = row.Cells["Product"].Value.ToString();
 
                 string selectcpusocketmodel = "SELECT CPU_model_socket From mainboards WHERE Name = '"+NameLabel.Text.Trim()+"'";
                 MySqlCommand selectcpusocketmodelcmd = new MySqlCommand(selectcpusocketmodel, connection);
