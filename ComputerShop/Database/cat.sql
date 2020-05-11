@@ -343,35 +343,35 @@ VALUES ('Toshiba', 'P300', 'HDD', 3000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
 VALUES ('Toshiba', 'L200', 'HDD', 1000, NULL, NULL, 5400,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Plextor', ' ', 'SSD', 512, 560, 520, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Plextor', '-', 'SSD', 512, 560, 520, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('GOODRAM', ' ', 'SSD', 480, 550, 460, NULL,'SATA III (6 Gbit/s)');
+VALUES ('GOODRAM', '-', 'SSD', 480, 550, 460, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('ADATA', ' ', 'SSD', 512, 3500, 2300, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('ADATA', '-', 'SSD', 512, 3500, 2300, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', ' ', 'SSD', 240, 540, 500, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Crucial', '-', 'SSD', 240, 540, 500, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', ' ', 'SSD', 500, 560, 510, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Crucial', '-', 'SSD', 500, 560, 510, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Samsung', ' ', 'SSD', 500, 550, 520, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Samsung', '-', 'SSD', 500, 550, 520, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('PNY', ' ', 'SSD', 240, 535, 500, NULL,'SATA III (6 Gbit/s)');
+VALUES ('PNY', '-', 'SSD', 240, 535, 500, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Plextor', ' ', 'SSD', 512, 3200, 2000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Plextor', '-', 'SSD', 512, 3200, 2000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Silicon Power', ' ', 'SSD', 256, 3400, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Silicon Power', '-', 'SSD', 256, 3400, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', ' ', 'SSD', 1024, 2000, 1700, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Crucial', '-', 'SSD', 1024, 2000, 1700, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Patriot', ' ', 'SSD', 2048, 3100, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Patriot', '-', 'SSD', 2048, 3100, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Corsair', ' ', 'SSD', 2048, 4950, 4250, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Corsair', '-', 'SSD', 2048, 4950, 4250, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Intel', ' ', 'SSD', 2048, 1800, 1800, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Intel', '-', 'SSD', 2048, 1800, 1800, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Silicon Power', ' ', 'SSD', 1024, 2200, 1600, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Silicon Power', '-', 'SSD', 1024, 2200, 1600, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Samsung', ' ', 'SSD', 1024, 3500, 3300, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Samsung', '-', 'SSD', 1024, 3500, 3300, NULL,'M.2 PCIe NVMe 3.0 x4');
 
 
 ##### Płyty główne #####
@@ -464,13 +464,13 @@ VALUES ('HyperX', 'Predator RGB', 'DDR4', 16, 2, 3200);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('HyperX', 'Predator RGB', 'DDR3', 8, 1, 3200);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
-VALUES ('GOODRAM', ' ', 'DDR3', 4, 1, 1333);
+VALUES ('GOODRAM', '-', 'DDR3', 4, 1, 1333);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('HyperX', 'Fury Red', 'DDR3', 16, 2, 1600);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('HyperX', 'Fury White', 'DDR3', 4, 1, 1600);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
-VALUES ('Patriot ', ' ', 'DDR3', 4, 1, 1600);
+VALUES ('Patriot ', '-', 'DDR3', 4, 1, 1600);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
 VALUES ('Corsair', 'Vengeance XMP Black', 'DDR3', 16, 2, 1600);
 INSERT INTO rams (Brand, Name, RAM_type, RAM_capacity, Number_of_items, Clock_speed)
@@ -1411,7 +1411,7 @@ Moduł Vengeance LPX jest zbudowany z ośmiu warstw PCB i wysoko ekranowanych uk
         4.9, 75);
 
 INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
-VALUES ('RAM', 3509.00, 'G.SKILL', 0, ' ', 0.0, 76);
+VALUES ('RAM', 3509.00, 'G.SKILL', 0, '-', 0.0, 76);
 
 INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
 VALUES ('RAM', 2299.00, 'G.SKILL', 19, 'Pamięć RAM DDR4 G.SKILL Trident Z Royal Silver
