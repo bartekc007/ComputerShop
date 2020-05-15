@@ -632,5 +632,10 @@ namespace ComputerShop.FormViews
         }
 
         #endregion
+
+        private void FSettings_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

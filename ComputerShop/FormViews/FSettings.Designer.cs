@@ -657,6 +657,7 @@
             this.Controls.Add(this.NamePictureBox);
             this.Name = "FSettings";
             this.Text = "FSettings";
+            this.Load += new System.EventHandler(this.FSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EmailPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneNumberPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PostCodePictureBox)).EndInit();

@@ -16,14 +16,25 @@ namespace ComputerShop.FormViews
     public partial class FProductsCpuMain : Form
     {
         private MySqlConnection connection;
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
+
         public FProductsCpuMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
         }
+        public FProductsCpuMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
+        }
 
-       
 
         private void FProductsLeftPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -33,8 +44,8 @@ namespace ComputerShop.FormViews
         private void FProductsMain_Load(object sender, EventArgs e)
         {
             connection.Open();
-            string query = "SELECT cpus.CPU_model,products.Price, products.Rating, products.Brand FROM ((products INNER JOIN specyfications ON products.specyficationsID = specyfications.ID) INNER JOIN cpus ON specyfications.CPU = cpus.ID)";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query,connection);
+            string query = "SELECT cpus.CPU_model,products.Price, products.Rating, products.Brand FROM ((products INNER JOIN specyfications ON products.specyficationsID = specyfications.ID) INNER JOIN cpus ON specyfications.CPU = cpus.ID) WHERE GPU IS NULL";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
             DataTable dtb1 = new DataTable();
             adapter.Fill(dtb1);
             dataGridView1.DataSource = dtb1;
@@ -51,7 +62,7 @@ namespace ComputerShop.FormViews
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-                NameLabelSpecyfication.Text = row.Cells["CPU_model"].Value.ToString();
+                NameLabelSpecyfication.Text = row.Cells["Product"].Value.ToString();
 
                 string selectbrand = "SELECT Brand From cpus WHERE CPU_model = '" + NameLabelSpecyfication.Text.Trim() + "'";
                 MySqlCommand selectbrandcmd = new MySqlCommand(selectbrand, connection);
@@ -92,7 +103,27 @@ namespace ComputerShop.FormViews
                 MySqlCommand selectCachecmd = new MySqlCommand(selectCache, connection);
                 var cache = selectCachecmd.ExecuteScalar().ToString();
                 CacheLabelSpecyfication.Text = cache;
+
+                string selectProductId = "Select p.ID From cpus " +
+                                         "INNER JOIN specyfications s on cpus.ID = s.CPU " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where CPU_model = '" + NameLabelSpecyfication.Text.Trim() + "' AND GPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
             }
+        }
+
+        private void FProductsLeftPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
+
+        private void KoszykButton_Click_1(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

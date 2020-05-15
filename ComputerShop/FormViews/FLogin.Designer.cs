@@ -57,6 +57,8 @@
             // 
             this.RegisterButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RegisterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.RegisterButton.Location = new System.Drawing.Point(168, 511);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(130, 49);
@@ -69,6 +71,8 @@
             // 
             this.LoginButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginButton.Location = new System.Drawing.Point(168, 444);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(130, 49);

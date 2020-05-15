@@ -1,4 +1,5 @@
-﻿using ComputerShop.Views;
+﻿using ComputerShop.Presenters;
+using ComputerShop.Views;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace ComputerShop.FormViews
 {
-    public partial class FMain : Form,IAuthenticationUser,IAuthenticationAddress
+    public partial class FMain : Form,IAuthenticationUser,IAuthenticationAddress,Ikoszyk
     {
         #region Constructors
         public FMain()
@@ -33,7 +34,7 @@ namespace ComputerShop.FormViews
             connection = new MySqlConnection(conn);
             
             this.UserId = userId;
-
+            this.koszyk = new KoszykService(UserId);
             this.UpdateFMainData(UserId);
 
             
@@ -64,6 +65,7 @@ namespace ComputerShop.FormViews
         public string City { get; set; }
         public string PostCode { get; set; }
         public bool IsACompanyClient { get; set; }
+        public KoszykService koszyk { get; set; }
         #endregion
 
         #region Products Menu
@@ -100,7 +102,7 @@ namespace ComputerShop.FormViews
 
         private void CpuSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsCpuMain());
+            OpenChildForm(new FProductsCpuMain(koszyk.koszyk.MyProducts, UserId));
             
         }
 
@@ -141,6 +143,7 @@ namespace ComputerShop.FormViews
         private void OrderButton_Click(object sender, EventArgs e)
         {
             HideSubmenu();
+            OpenChildForm(new FKoszyk(koszyk.koszyk.MyProducts, UserId));
         }
         #endregion
 
