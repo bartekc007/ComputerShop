@@ -75,18 +75,17 @@ namespace ComputerShop.FormViews
         }
 
         private void ProductsComputersButton_Click(object sender, EventArgs e)
-        {
-            
-            
-            
-            
+        {          
             HideSubmenu();
-            
+            OpenChildForm(new FComputersMain());
+
         }
 
         private void ProductsLaptopButton_Click(object sender, EventArgs e)
         {
             HideSubmenu();
+            OpenChildForm(new FLaptopsMain());
+
         }
 
         private void ProductsComponentsButton_Click(object sender, EventArgs e)

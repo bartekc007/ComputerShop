@@ -1,6 +1,6 @@
 ﻿namespace ComputerShop.FormViews
 {
-    partial class FProductsRAMMain
+    partial class FComputersMain
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductsRightPanel = new System.Windows.Forms.Panel();
+            this.SpecyficationPSULabel = new System.Windows.Forms.Label();
+            this.PSULabel = new System.Windows.Forms.Label();
+            this.SpecyficationHardDriveLabel = new System.Windows.Forms.Label();
+            this.HardDriveLabel = new System.Windows.Forms.Label();
             this.CacheLabelSpecyfication = new System.Windows.Forms.Label();
-            this.RAMTypeLabel = new System.Windows.Forms.Label();
+            this.GPULabel = new System.Windows.Forms.Label();
             this.IgpLabelSpecyfications = new System.Windows.Forms.Label();
-            this.SpecyficationClockSpeedLabel = new System.Windows.Forms.Label();
-            this.ClockSpeedLabel = new System.Windows.Forms.Label();
-            this.SpecyficationRamTypeLabel = new System.Windows.Forms.Label();
-            this.SpecyficationRamCapacityLabel = new System.Windows.Forms.Label();
-            this.RamCapacityLabel = new System.Windows.Forms.Label();
+            this.SpecyficationRAMLabel = new System.Windows.Forms.Label();
+            this.RAMLabel = new System.Windows.Forms.Label();
+            this.SpecyficationGPULabel = new System.Windows.Forms.Label();
+            this.SpecyficationCPULabel = new System.Windows.Forms.Label();
+            this.CPULabel = new System.Windows.Forms.Label();
             this.SpecyficationBrandLabel = new System.Windows.Forms.Label();
             this.BrandLabel = new System.Windows.Forms.Label();
             this.SpecyficationNameLabel = new System.Windows.Forms.Label();
@@ -48,10 +52,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.SpecyficationMainboardLabel = new System.Windows.Forms.Label();
+            this.MainboardLabel = new System.Windows.Forms.Label();
             this.ProductsRightPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,25 +67,73 @@
             this.ProductsRightPanel.AutoScroll = true;
             this.ProductsRightPanel.AutoSize = true;
             this.ProductsRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(34)))));
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationMainboardLabel);
+            this.ProductsRightPanel.Controls.Add(this.MainboardLabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationPSULabel);
+            this.ProductsRightPanel.Controls.Add(this.PSULabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationHardDriveLabel);
+            this.ProductsRightPanel.Controls.Add(this.HardDriveLabel);
             this.ProductsRightPanel.Controls.Add(this.CacheLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.RAMTypeLabel);
+            this.ProductsRightPanel.Controls.Add(this.GPULabel);
             this.ProductsRightPanel.Controls.Add(this.IgpLabelSpecyfications);
-            this.ProductsRightPanel.Controls.Add(this.SpecyficationClockSpeedLabel);
-            this.ProductsRightPanel.Controls.Add(this.ClockSpeedLabel);
-            this.ProductsRightPanel.Controls.Add(this.SpecyficationRamTypeLabel);
-            this.ProductsRightPanel.Controls.Add(this.SpecyficationRamCapacityLabel);
-            this.ProductsRightPanel.Controls.Add(this.RamCapacityLabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationRAMLabel);
+            this.ProductsRightPanel.Controls.Add(this.RAMLabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationGPULabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecyficationCPULabel);
+            this.ProductsRightPanel.Controls.Add(this.CPULabel);
             this.ProductsRightPanel.Controls.Add(this.SpecyficationBrandLabel);
             this.ProductsRightPanel.Controls.Add(this.BrandLabel);
             this.ProductsRightPanel.Controls.Add(this.SpecyficationNameLabel);
             this.ProductsRightPanel.Controls.Add(this.ProductNameInfoLabel);
             this.ProductsRightPanel.Controls.Add(this.SpecificationLabel);
             this.ProductsRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductsRightPanel.Location = new System.Drawing.Point(1035, 0);
+            this.ProductsRightPanel.Location = new System.Drawing.Point(1018, 0);
             this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ProductsRightPanel.Name = "ProductsRightPanel";
-            this.ProductsRightPanel.Size = new System.Drawing.Size(245, 720);
-            this.ProductsRightPanel.TabIndex = 1;
+            this.ProductsRightPanel.Size = new System.Drawing.Size(226, 626);
+            this.ProductsRightPanel.TabIndex = 3;
+            // 
+            // SpecyficationPSULabel
+            // 
+            this.SpecyficationPSULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationPSULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationPSULabel.Location = new System.Drawing.Point(24, 507);
+            this.SpecyficationPSULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationPSULabel.Name = "SpecyficationPSULabel";
+            this.SpecyficationPSULabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationPSULabel.TabIndex = 36;
+            // 
+            // PSULabel
+            // 
+            this.PSULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PSULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PSULabel.Location = new System.Drawing.Point(24, 475);
+            this.PSULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PSULabel.Name = "PSULabel";
+            this.PSULabel.Size = new System.Drawing.Size(218, 26);
+            this.PSULabel.TabIndex = 35;
+            this.PSULabel.Text = "Power Supply Unit";
+            // 
+            // SpecyficationHardDriveLabel
+            // 
+            this.SpecyficationHardDriveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationHardDriveLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationHardDriveLabel.Location = new System.Drawing.Point(24, 449);
+            this.SpecyficationHardDriveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationHardDriveLabel.Name = "SpecyficationHardDriveLabel";
+            this.SpecyficationHardDriveLabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationHardDriveLabel.TabIndex = 34;
+            // 
+            // HardDriveLabel
+            // 
+            this.HardDriveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HardDriveLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HardDriveLabel.Location = new System.Drawing.Point(24, 417);
+            this.HardDriveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HardDriveLabel.Name = "HardDriveLabel";
+            this.HardDriveLabel.Size = new System.Drawing.Size(218, 26);
+            this.HardDriveLabel.TabIndex = 33;
+            this.HardDriveLabel.Text = "Hard Drive Capacity";
             // 
             // CacheLabelSpecyfication
             // 
@@ -92,16 +145,16 @@
             this.CacheLabelSpecyfication.Size = new System.Drawing.Size(174, 26);
             this.CacheLabelSpecyfication.TabIndex = 31;
             // 
-            // RAMTypeLabel
+            // GPULabel
             // 
-            this.RAMTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RAMTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RAMTypeLabel.Location = new System.Drawing.Point(25, 294);
-            this.RAMTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RAMTypeLabel.Name = "RAMTypeLabel";
-            this.RAMTypeLabel.Size = new System.Drawing.Size(218, 26);
-            this.RAMTypeLabel.TabIndex = 30;
-            this.RAMTypeLabel.Text = "RAM type";
+            this.GPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GPULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.GPULabel.Location = new System.Drawing.Point(25, 294);
+            this.GPULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.GPULabel.Name = "GPULabel";
+            this.GPULabel.Size = new System.Drawing.Size(218, 26);
+            this.GPULabel.TabIndex = 30;
+            this.GPULabel.Text = "GPU";
             // 
             // IgpLabelSpecyfications
             // 
@@ -113,57 +166,57 @@
             this.IgpLabelSpecyfications.Size = new System.Drawing.Size(139, 21);
             this.IgpLabelSpecyfications.TabIndex = 29;
             // 
-            // SpecyficationClockSpeedLabel
+            // SpecyficationRAMLabel
             // 
-            this.SpecyficationClockSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecyficationClockSpeedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecyficationClockSpeedLabel.Location = new System.Drawing.Point(25, 391);
-            this.SpecyficationClockSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecyficationClockSpeedLabel.Name = "SpecyficationClockSpeedLabel";
-            this.SpecyficationClockSpeedLabel.Size = new System.Drawing.Size(218, 26);
-            this.SpecyficationClockSpeedLabel.TabIndex = 23;
+            this.SpecyficationRAMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationRAMLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationRAMLabel.Location = new System.Drawing.Point(25, 391);
+            this.SpecyficationRAMLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationRAMLabel.Name = "SpecyficationRAMLabel";
+            this.SpecyficationRAMLabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationRAMLabel.TabIndex = 23;
             // 
-            // ClockSpeedLabel
+            // RAMLabel
             // 
-            this.ClockSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClockSpeedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClockSpeedLabel.Location = new System.Drawing.Point(25, 359);
-            this.ClockSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ClockSpeedLabel.Name = "ClockSpeedLabel";
-            this.ClockSpeedLabel.Size = new System.Drawing.Size(218, 26);
-            this.ClockSpeedLabel.TabIndex = 22;
-            this.ClockSpeedLabel.Text = "Clock speed";
+            this.RAMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RAMLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RAMLabel.Location = new System.Drawing.Point(25, 359);
+            this.RAMLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RAMLabel.Name = "RAMLabel";
+            this.RAMLabel.Size = new System.Drawing.Size(218, 26);
+            this.RAMLabel.TabIndex = 22;
+            this.RAMLabel.Text = "RAM";
             // 
-            // SpecyficationRamTypeLabel
+            // SpecyficationGPULabel
             // 
-            this.SpecyficationRamTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecyficationRamTypeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecyficationRamTypeLabel.Location = new System.Drawing.Point(25, 326);
-            this.SpecyficationRamTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecyficationRamTypeLabel.Name = "SpecyficationRamTypeLabel";
-            this.SpecyficationRamTypeLabel.Size = new System.Drawing.Size(218, 26);
-            this.SpecyficationRamTypeLabel.TabIndex = 21;
+            this.SpecyficationGPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationGPULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationGPULabel.Location = new System.Drawing.Point(25, 326);
+            this.SpecyficationGPULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationGPULabel.Name = "SpecyficationGPULabel";
+            this.SpecyficationGPULabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationGPULabel.TabIndex = 21;
             // 
-            // SpecyficationRamCapacityLabel
+            // SpecyficationCPULabel
             // 
-            this.SpecyficationRamCapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecyficationRamCapacityLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecyficationRamCapacityLabel.Location = new System.Drawing.Point(25, 261);
-            this.SpecyficationRamCapacityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecyficationRamCapacityLabel.Name = "SpecyficationRamCapacityLabel";
-            this.SpecyficationRamCapacityLabel.Size = new System.Drawing.Size(218, 26);
-            this.SpecyficationRamCapacityLabel.TabIndex = 19;
+            this.SpecyficationCPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationCPULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationCPULabel.Location = new System.Drawing.Point(25, 261);
+            this.SpecyficationCPULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationCPULabel.Name = "SpecyficationCPULabel";
+            this.SpecyficationCPULabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationCPULabel.TabIndex = 19;
             // 
-            // RamCapacityLabel
+            // CPULabel
             // 
-            this.RamCapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RamCapacityLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RamCapacityLabel.Location = new System.Drawing.Point(25, 229);
-            this.RamCapacityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.RamCapacityLabel.Name = "RamCapacityLabel";
-            this.RamCapacityLabel.Size = new System.Drawing.Size(218, 26);
-            this.RamCapacityLabel.TabIndex = 18;
-            this.RamCapacityLabel.Text = "Ram capacity";
+            this.CPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPULabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CPULabel.Location = new System.Drawing.Point(25, 229);
+            this.CPULabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CPULabel.Name = "CPULabel";
+            this.CPULabel.Size = new System.Drawing.Size(218, 26);
+            this.CPULabel.TabIndex = 18;
+            this.CPULabel.Text = "CPU";
             // 
             // SpecyficationBrandLabel
             // 
@@ -228,9 +281,8 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 720);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(1018, 626);
+            this.panel1.TabIndex = 4;
             // 
             // dataGridView1
             // 
@@ -254,7 +306,6 @@
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Brand,
-            this.Product,
             this.Price,
             this.Rating});
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -286,7 +337,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(852, 598);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Brand
             // 
@@ -296,15 +347,6 @@
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
             this.Brand.Width = 220;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "Name";
-            this.Product.HeaderText = "Product";
-            this.Product.MinimumWidth = 6;
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            this.Product.Width = 220;
             // 
             // Price
             // 
@@ -332,20 +374,39 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // FProductsRAMMain
+            // SpecyficationMainboardLabel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.SpecyficationMainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationMainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationMainboardLabel.Location = new System.Drawing.Point(24, 565);
+            this.SpecyficationMainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationMainboardLabel.Name = "SpecyficationMainboardLabel";
+            this.SpecyficationMainboardLabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationMainboardLabel.TabIndex = 38;
+            // 
+            // MainboardLabel
+            // 
+            this.MainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainboardLabel.Location = new System.Drawing.Point(24, 533);
+            this.MainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MainboardLabel.Name = "MainboardLabel";
+            this.MainboardLabel.Size = new System.Drawing.Size(218, 26);
+            this.MainboardLabel.TabIndex = 37;
+            this.MainboardLabel.Text = "Mainboard";
+            // 
+            // FComputers
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1244, 626);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ProductsRightPanel);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FProductsRAMMain";
-            this.Text = "FRAMMain";
-            this.Load += new System.EventHandler(this.FProductsRAMMain_Load);
+            this.Name = "FComputers";
+            this.Text = "FComputers";
+            this.Load += new System.EventHandler(this.FComputers_Load);
             this.ProductsRightPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -357,25 +418,30 @@
         #endregion
 
         private System.Windows.Forms.Panel ProductsRightPanel;
+        private System.Windows.Forms.Label SpecyficationPSULabel;
+        private System.Windows.Forms.Label PSULabel;
+        private System.Windows.Forms.Label SpecyficationHardDriveLabel;
+        private System.Windows.Forms.Label HardDriveLabel;
         private System.Windows.Forms.Label CacheLabelSpecyfication;
-        private System.Windows.Forms.Label RAMTypeLabel;
+        private System.Windows.Forms.Label GPULabel;
         private System.Windows.Forms.Label IgpLabelSpecyfications;
-        private System.Windows.Forms.Label SpecyficationClockSpeedLabel;
-        private System.Windows.Forms.Label ClockSpeedLabel;
-        private System.Windows.Forms.Label SpecyficationRamTypeLabel;
-        private System.Windows.Forms.Label SpecyficationRamCapacityLabel;
-        private System.Windows.Forms.Label RamCapacityLabel;
+        private System.Windows.Forms.Label SpecyficationRAMLabel;
+        private System.Windows.Forms.Label RAMLabel;
+        private System.Windows.Forms.Label SpecyficationGPULabel;
+        private System.Windows.Forms.Label SpecyficationCPULabel;
+        private System.Windows.Forms.Label CPULabel;
         private System.Windows.Forms.Label SpecyficationBrandLabel;
         private System.Windows.Forms.Label BrandLabel;
         private System.Windows.Forms.Label SpecyficationNameLabel;
         private System.Windows.Forms.Label ProductNameInfoLabel;
         private System.Windows.Forms.Label SpecificationLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Brand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label SpecyficationMainboardLabel;
+        private System.Windows.Forms.Label MainboardLabel;
     }
 }
