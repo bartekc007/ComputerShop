@@ -52,12 +52,12 @@
             this.ProductNameInfoLabel = new System.Windows.Forms.Label();
             this.SpecificationLabel = new System.Windows.Forms.Label();
             this.FProductsLeftPanel = new System.Windows.Forms.Panel();
+            this.KoszykButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KoszykButton = new System.Windows.Forms.Button();
             this.ProductsRightPanel.SuspendLayout();
             this.FProductsLeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -285,6 +285,21 @@
             this.FProductsLeftPanel.Name = "FProductsLeftPanel";
             this.FProductsLeftPanel.Size = new System.Drawing.Size(1104, 709);
             this.FProductsLeftPanel.TabIndex = 2;
+            this.FProductsLeftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FProductsLeftPanel_Paint_2);
+            // 
+            // KoszykButton
+            // 
+            this.KoszykButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.KoszykButton.Location = new System.Drawing.Point(907, 52);
+            this.KoszykButton.Name = "KoszykButton";
+            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
+            this.KoszykButton.TabIndex = 24;
+            this.KoszykButton.Text = "Add to my order";
+            this.KoszykButton.UseVisualStyleBackColor = false;
+            this.KoszykButton.Click += new System.EventHandler(this.KoszykButton_Click_1);
             // 
             // dataGridView1
             // 
@@ -376,20 +391,6 @@
             this.Rating.Name = "Rating";
             this.Rating.ReadOnly = true;
             this.Rating.Width = 120;
-            // 
-            // KoszykButton
-            // 
-            this.KoszykButton.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.KoszykButton.Location = new System.Drawing.Point(907, 52);
-            this.KoszykButton.Name = "KoszykButton";
-            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
-            this.KoszykButton.TabIndex = 24;
-            this.KoszykButton.Text = "Add to my order";
-            this.KoszykButton.UseVisualStyleBackColor = false;
-            this.KoszykButton.Click += new System.EventHandler(this.KoszykButton_Click_1);
             // 
             // FProductsCpuMain
             // 

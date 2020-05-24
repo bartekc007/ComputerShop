@@ -123,10 +123,10 @@ namespace ComputerShop.FormViews
                     queryProductName = "SELECT hard_drives.Name FROM hard_drives INNER JOIN specyfications ON specyfications.Hard_drive = hard_drives.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
                     break;
                 case "Monitory":
-                    queryProductName = "SELECT screens.Name FROM screens INNER JOIN specyfications ON specyfications.Screen = screens.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
+                    queryProductName = "SELECT screens.Brand FROM screens INNER JOIN specyfications ON specyfications.Screen = screens.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
                     break;
                 case "Telewizory":
-                    queryProductName = "SELECT screens.Name FROM screens INNER JOIN specyfications ON specyfications.Screen = screend.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
+                    queryProductName = "SELECT screens.Brand FROM screens INNER JOIN specyfications ON specyfications.Screen = screend.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
                     break;
                 case "Zasilacze":
                     queryProductName = "SELECT power_supply_units.Name FROM power_supply_units INNER JOIN specyfications ON specyfications.Power_supply_unit = power_supply_units.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";

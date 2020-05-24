@@ -16,14 +16,25 @@ namespace ComputerShop.FormViews
     public partial class FProductsMainboardsMain : Form
     {
         private MySqlConnection connection;
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsMainboardsMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
         }
+        public FProductsMainboardsMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
+        }
 
-       
+
 
         private void FProductsLeftPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -76,7 +87,25 @@ namespace ComputerShop.FormViews
                 MySqlCommand selectMaxRamcmd = new MySqlCommand(selectMaxRam, connection);
                 var maxram = selectMaxRamcmd.ExecuteScalar().ToString();
                 MaxRamLabelSpecyfication.Text = maxram;
+
+                string selectProductId = "Select p.ID From mainboards " +
+                                         "INNER JOIN specyfications s on mainboards.ID = s.mainboard " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where Name = '" + NameLabel.Text.Trim() + "' AND GPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
             }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

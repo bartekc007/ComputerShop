@@ -107,33 +107,33 @@ namespace ComputerShop.FormViews
 
         private void MainboardSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsMainboardsMain());
+            OpenChildForm(new FProductsMainboardsMain(koszyk.koszyk.MyProducts, UserId));
             
         }
 
         private void GpuSubmenyButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsGpuMain());
+            OpenChildForm(new FProductsGpuMain(koszyk.koszyk.MyProducts, UserId));
         }
 
         private void RamSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsRAMMain());
+            OpenChildForm(new FProductsRAMMain(koszyk.koszyk.MyProducts, UserId));
         }
 
         private void HardDriveSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsHardDrivesMain());
+            OpenChildForm(new FProductsHardDrivesMain(koszyk.koszyk.MyProducts, UserId));
         }
 
         private void ScreenSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsScreensMain());
+            OpenChildForm(new FProductsScreensMain(koszyk.koszyk.MyProducts, UserId));
         }
 
         private void powerSupplyUnitSubmenuButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FProductsPowerSupplyUnitsMain());
+            OpenChildForm(new FProductsPowerSupplyUnitsMain(koszyk.koszyk.MyProducts, UserId));
         }
 
         #endregion

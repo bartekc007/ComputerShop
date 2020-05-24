@@ -16,12 +16,22 @@ namespace ComputerShop.FormViews
     public partial class FProductsPowerSupplyUnitsMain : Form
     {
         private MySqlConnection connection;
-
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsPowerSupplyUnitsMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+        public FProductsPowerSupplyUnitsMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -46,6 +56,14 @@ namespace ComputerShop.FormViews
                                         " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectEfficiencyCmd = new MySqlCommand(selectEfficiency, connection);
                 SpecyficationEfficiencyLabel.Text = selectEfficiencyCmd.ExecuteScalar().ToString() + " %";
+
+                string selectProductId = "Select p.ID From power_supply_units " +
+                                         "INNER JOIN specyfications s on power_supply_units.ID = s.power_supply_unit " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND GPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
             }
         }
 
@@ -65,9 +83,10 @@ namespace ComputerShop.FormViews
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

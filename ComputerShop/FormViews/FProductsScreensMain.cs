@@ -16,12 +16,23 @@ namespace ComputerShop.FormViews
     public partial class FProductsScreensMain : Form
     {
         MySqlConnection connection;
-
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsScreensMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+
+        public FProductsScreensMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -39,6 +50,8 @@ namespace ComputerShop.FormViews
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
             DataTable dtb1 = new DataTable();
             adapter.Fill(dtb1);
+
+            
 
             dataGridView1.DataSource = dtb1;
         }
@@ -94,7 +107,20 @@ namespace ComputerShop.FormViews
                 MySqlCommand selectCurvedCmd = new MySqlCommand(selectCurved, connection);
                 SpecyficationCurvedLabel.Text = selectCurvedCmd.ExecuteScalar().ToString();
 
+                string selectProductId = "SELECT DISTINCT products.Id " +
+                "FROM products " +
+                "INNER JOIN specyfications s on products.specyficationsID = s.ID " +
+                "INNER JOIN screens r on s.screen = r.ID WHERE CPU IS NULL AND r.Brand = '" + SpecyficationBrandLabel.Text + "'";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
+
             }
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

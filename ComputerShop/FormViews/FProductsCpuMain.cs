@@ -125,5 +125,10 @@ namespace ComputerShop.FormViews
         {
             MyProducts.Add(ProductId);
         }
+
+        private void FProductsLeftPanel_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

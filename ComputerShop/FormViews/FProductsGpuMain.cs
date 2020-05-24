@@ -17,11 +17,22 @@ namespace ComputerShop.FormViews
     {
         private MySqlConnection connection;
 
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsGpuMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+        public FProductsGpuMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
         }
 
         private void CapacityLabel_Click(object sender, EventArgs e)
@@ -55,7 +66,7 @@ namespace ComputerShop.FormViews
                 string selectcapacity = "SELECT RAM_capacity FROM gpus" +
                         " INNER JOIN specyfications s on gpus.ID = s.GPU" +
                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectCapacityCmd = new MySqlCommand(selectcapacity, connection);
                 SpecyficationCapacityLabel.Text = selectCapacityCmd.ExecuteScalar().ToString() + " GB";
 
@@ -80,7 +91,30 @@ namespace ComputerShop.FormViews
                 MySqlCommand selectOutuptsCmd = new MySqlCommand(selectOutputs, connection);
                 SpecyficationOutputsLabel.Text = selectOutuptsCmd.ExecuteScalar().ToString();
 
+                string selectProductId = "Select p.ID From gpus " +
+                                         "INNER JOIN specyfications s on gpus.ID = s.GPU " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND CPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
+
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

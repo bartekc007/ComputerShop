@@ -17,12 +17,23 @@ namespace ComputerShop.FormViews
     {
 
         private MySqlConnection connection;
-
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsHardDrivesMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+
+        public FProductsHardDrivesMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -42,42 +53,42 @@ namespace ComputerShop.FormViews
                 string selectType = "SELECT Type FROM hard_drives" +
                                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectTypeCmd = new MySqlCommand(selectType, connection);
                 SpecyficationTypeLabel.Text = selectTypeCmd.ExecuteScalar().ToString();
 
                 string selectCapacity = "SELECT Capacity FROM hard_drives" +
                                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectCapacityCmd = new MySqlCommand(selectCapacity, connection);
                 SpecyficationCapacityLabel.Text = selectCapacityCmd.ExecuteScalar().ToString() + " GB";
 
                 string selectInternalInterface = "SELECT internal_interface FROM hard_drives" +
                                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectInternalInterfaceCmd = new MySqlCommand(selectInternalInterface, connection);
                 SpecyficationInternalInterfaceLabel.Text = selectInternalInterfaceCmd.ExecuteScalar().ToString() + " GB";
 
                 string selectMaxWriteSpeed = "SELECT Max_Sequential_Write_Speed FROM hard_drives" +
                                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectMaxWriteSpeedCmd = new MySqlCommand(selectMaxWriteSpeed, connection);
                 SpecyficationMaxWriteSpeedLabel.Text = selectMaxWriteSpeedCmd.ExecuteScalar().ToString() + " Mb/s";
 
                 string selectMaxReadSpeed = "SELECT Max_Sequential_Read_Speed FROM hard_drives" +
                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectMaxReadSpeedCmd = new MySqlCommand(selectMaxReadSpeed, connection);
                 SpecyficationMaxReadSpeedLabel.Text = selectMaxReadSpeedCmd.ExecuteScalar().ToString() + " Mb/s";
 
                 string selectRotationaSpeed = "SELECT Hard_Disk_Rotational_Speed FROM hard_drives" +
                         " INNER JOIN specyfications s on hard_drives.ID = s.hard_drive" +
                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                        " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                        " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectMaxRotationaSpeedCmd = new MySqlCommand(selectRotationaSpeed, connection);
                 SpecyficationRotationalSpeedLabel.Text = selectMaxRotationaSpeedCmd.ExecuteScalar().ToString();
                 
@@ -92,7 +103,15 @@ namespace ComputerShop.FormViews
 
                 }
 
-              
+                string selectProductId = "Select p.ID From hard_drives " +
+                                         "INNER JOIN specyfications s on hard_drives.ID = s.Hard_drive " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where Name = '" + SpecyficationNameLabel.Text + "' AND GPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
+
+
 
 
             }
@@ -107,6 +126,11 @@ namespace ComputerShop.FormViews
             adapter.Fill(dtb1);
 
             dataGridView1.DataSource = dtb1;
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

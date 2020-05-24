@@ -32,6 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FProductsLeftPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductsRightPanel = new System.Windows.Forms.Panel();
             this.MaxRamLabelSpecyfication = new System.Windows.Forms.Label();
             this.MaxRamLabel = new System.Windows.Forms.Label();
@@ -46,188 +51,24 @@
             this.NameLabel = new System.Windows.Forms.Label();
             this.ProductNameInfoLabel = new System.Windows.Forms.Label();
             this.SpecificationLabel = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KoszykButton = new System.Windows.Forms.Button();
             this.FProductsLeftPanel.SuspendLayout();
-            this.ProductsRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ProductsRightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // FProductsLeftPanel
             // 
             this.FProductsLeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.FProductsLeftPanel.Controls.Add(this.KoszykButton);
             this.FProductsLeftPanel.Controls.Add(this.dataGridView1);
             this.FProductsLeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FProductsLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.FProductsLeftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FProductsLeftPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FProductsLeftPanel.Name = "FProductsLeftPanel";
-            this.FProductsLeftPanel.Size = new System.Drawing.Size(1024, 576);
+            this.FProductsLeftPanel.Size = new System.Drawing.Size(1365, 709);
             this.FProductsLeftPanel.TabIndex = 0;
             this.FProductsLeftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FProductsLeftPanel_Paint);
-            // 
-            // ProductsRightPanel
-            // 
-            this.ProductsRightPanel.AutoScroll = true;
-            this.ProductsRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(34)))));
-            this.ProductsRightPanel.Controls.Add(this.MaxRamLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.MaxRamLabel);
-            this.ProductsRightPanel.Controls.Add(this.LedLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.LedLabel);
-            this.ProductsRightPanel.Controls.Add(this.BrandLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.BrandLabel);
-            this.ProductsRightPanel.Controls.Add(this.ChipsetLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.ChipsetLabel);
-            this.ProductsRightPanel.Controls.Add(this.Cpumodelsocketlabel);
-            this.ProductsRightPanel.Controls.Add(this.CpumoelsocketLabelSpecyfication);
-            this.ProductsRightPanel.Controls.Add(this.NameLabel);
-            this.ProductsRightPanel.Controls.Add(this.ProductNameInfoLabel);
-            this.ProductsRightPanel.Controls.Add(this.SpecificationLabel);
-            this.ProductsRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductsRightPanel.Location = new System.Drawing.Point(828, 0);
-            this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ProductsRightPanel.Name = "ProductsRightPanel";
-            this.ProductsRightPanel.Size = new System.Drawing.Size(196, 576);
-            this.ProductsRightPanel.TabIndex = 0;
-            // 
-            // MaxRamLabelSpecyfication
-            // 
-            this.MaxRamLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxRamLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaxRamLabelSpecyfication.Location = new System.Drawing.Point(20, 379);
-            this.MaxRamLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MaxRamLabelSpecyfication.Name = "MaxRamLabelSpecyfication";
-            this.MaxRamLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
-            this.MaxRamLabelSpecyfication.TabIndex = 12;
-            // 
-            // MaxRamLabel
-            // 
-            this.MaxRamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxRamLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaxRamLabel.Location = new System.Drawing.Point(20, 358);
-            this.MaxRamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MaxRamLabel.Name = "MaxRamLabel";
-            this.MaxRamLabel.Size = new System.Drawing.Size(130, 21);
-            this.MaxRamLabel.TabIndex = 11;
-            this.MaxRamLabel.Text = "Max RAM";
-            // 
-            // LedLabelSpecyfication
-            // 
-            this.LedLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LedLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LedLabelSpecyfication.Location = new System.Drawing.Point(20, 328);
-            this.LedLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LedLabelSpecyfication.Name = "LedLabelSpecyfication";
-            this.LedLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
-            this.LedLabelSpecyfication.TabIndex = 10;
-            // 
-            // LedLabel
-            // 
-            this.LedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LedLabel.Location = new System.Drawing.Point(20, 307);
-            this.LedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LedLabel.Name = "LedLabel";
-            this.LedLabel.Size = new System.Drawing.Size(130, 21);
-            this.LedLabel.TabIndex = 9;
-            this.LedLabel.Text = "LED";
-            // 
-            // BrandLabelSpecyfication
-            // 
-            this.BrandLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BrandLabelSpecyfication.Location = new System.Drawing.Point(20, 279);
-            this.BrandLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.BrandLabelSpecyfication.Name = "BrandLabelSpecyfication";
-            this.BrandLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
-            this.BrandLabelSpecyfication.TabIndex = 8;
-            // 
-            // BrandLabel
-            // 
-            this.BrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BrandLabel.Location = new System.Drawing.Point(20, 258);
-            this.BrandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.BrandLabel.Name = "BrandLabel";
-            this.BrandLabel.Size = new System.Drawing.Size(130, 21);
-            this.BrandLabel.TabIndex = 7;
-            this.BrandLabel.Text = "Brand";
-            // 
-            // ChipsetLabelSpecyfication
-            // 
-            this.ChipsetLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChipsetLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ChipsetLabelSpecyfication.Location = new System.Drawing.Point(20, 229);
-            this.ChipsetLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ChipsetLabelSpecyfication.Name = "ChipsetLabelSpecyfication";
-            this.ChipsetLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
-            this.ChipsetLabelSpecyfication.TabIndex = 6;
-            // 
-            // ChipsetLabel
-            // 
-            this.ChipsetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChipsetLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ChipsetLabel.Location = new System.Drawing.Point(20, 208);
-            this.ChipsetLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ChipsetLabel.Name = "ChipsetLabel";
-            this.ChipsetLabel.Size = new System.Drawing.Size(130, 21);
-            this.ChipsetLabel.TabIndex = 5;
-            this.ChipsetLabel.Text = "Chipset";
-            // 
-            // Cpumodelsocketlabel
-            // 
-            this.Cpumodelsocketlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cpumodelsocketlabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Cpumodelsocketlabel.Location = new System.Drawing.Point(20, 171);
-            this.Cpumodelsocketlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Cpumodelsocketlabel.Name = "Cpumodelsocketlabel";
-            this.Cpumodelsocketlabel.Size = new System.Drawing.Size(130, 24);
-            this.Cpumodelsocketlabel.TabIndex = 4;
-            // 
-            // CpumoelsocketLabelSpecyfication
-            // 
-            this.CpumoelsocketLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CpumoelsocketLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CpumoelsocketLabelSpecyfication.Location = new System.Drawing.Point(20, 147);
-            this.CpumoelsocketLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.CpumoelsocketLabelSpecyfication.Name = "CpumoelsocketLabelSpecyfication";
-            this.CpumoelsocketLabelSpecyfication.Size = new System.Drawing.Size(130, 24);
-            this.CpumoelsocketLabelSpecyfication.TabIndex = 3;
-            this.CpumoelsocketLabelSpecyfication.Text = "CPU socket model";
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.NameLabel.Location = new System.Drawing.Point(20, 117);
-            this.NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(130, 21);
-            this.NameLabel.TabIndex = 2;
-            // 
-            // ProductNameInfoLabel
-            // 
-            this.ProductNameInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameInfoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ProductNameInfoLabel.Location = new System.Drawing.Point(20, 87);
-            this.ProductNameInfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductNameInfoLabel.Name = "ProductNameInfoLabel";
-            this.ProductNameInfoLabel.Size = new System.Drawing.Size(130, 21);
-            this.ProductNameInfoLabel.TabIndex = 1;
-            this.ProductNameInfoLabel.Text = "Product";
-            // 
-            // SpecificationLabel
-            // 
-            this.SpecificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecificationLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecificationLabel.Location = new System.Drawing.Point(18, 41);
-            this.SpecificationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecificationLabel.Name = "SpecificationLabel";
-            this.SpecificationLabel.Size = new System.Drawing.Size(148, 33);
-            this.SpecificationLabel.TabIndex = 0;
-            this.SpecificationLabel.Text = "Specyfication";
             // 
             // dataGridView1
             // 
@@ -255,8 +96,8 @@
             this.Price,
             this.Rating});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 34);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(67, 42);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -280,14 +121,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(682, 478);
+            this.dataGridView1.Size = new System.Drawing.Size(704, 588);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Brand
             // 
             this.Brand.DataPropertyName = "Brand";
             this.Brand.HeaderText = "Brand";
+            this.Brand.MinimumWidth = 6;
             this.Brand.Name = "Brand";
             this.Brand.ReadOnly = true;
             this.Brand.Width = 220;
@@ -296,6 +139,7 @@
             // 
             this.Product.DataPropertyName = "Name";
             this.Product.HeaderText = "Product";
+            this.Product.MinimumWidth = 6;
             this.Product.Name = "Product";
             this.Product.ReadOnly = true;
             this.Product.Width = 220;
@@ -304,6 +148,7 @@
             // 
             this.Price.DataPropertyName = "Price";
             this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             this.Price.Width = 120;
@@ -312,25 +157,188 @@
             // 
             this.Rating.DataPropertyName = "Rating";
             this.Rating.HeaderText = "Rating";
+            this.Rating.MinimumWidth = 6;
             this.Rating.Name = "Rating";
             this.Rating.ReadOnly = true;
             this.Rating.Width = 120;
             // 
+            // ProductsRightPanel
+            // 
+            this.ProductsRightPanel.AutoScroll = true;
+            this.ProductsRightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(34)))));
+            this.ProductsRightPanel.Controls.Add(this.MaxRamLabelSpecyfication);
+            this.ProductsRightPanel.Controls.Add(this.MaxRamLabel);
+            this.ProductsRightPanel.Controls.Add(this.LedLabelSpecyfication);
+            this.ProductsRightPanel.Controls.Add(this.LedLabel);
+            this.ProductsRightPanel.Controls.Add(this.BrandLabelSpecyfication);
+            this.ProductsRightPanel.Controls.Add(this.BrandLabel);
+            this.ProductsRightPanel.Controls.Add(this.ChipsetLabelSpecyfication);
+            this.ProductsRightPanel.Controls.Add(this.ChipsetLabel);
+            this.ProductsRightPanel.Controls.Add(this.Cpumodelsocketlabel);
+            this.ProductsRightPanel.Controls.Add(this.CpumoelsocketLabelSpecyfication);
+            this.ProductsRightPanel.Controls.Add(this.NameLabel);
+            this.ProductsRightPanel.Controls.Add(this.ProductNameInfoLabel);
+            this.ProductsRightPanel.Controls.Add(this.SpecificationLabel);
+            this.ProductsRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ProductsRightPanel.Location = new System.Drawing.Point(1104, 0);
+            this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductsRightPanel.Name = "ProductsRightPanel";
+            this.ProductsRightPanel.Size = new System.Drawing.Size(261, 709);
+            this.ProductsRightPanel.TabIndex = 0;
+            // 
+            // MaxRamLabelSpecyfication
+            // 
+            this.MaxRamLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxRamLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MaxRamLabelSpecyfication.Location = new System.Drawing.Point(27, 466);
+            this.MaxRamLabelSpecyfication.Name = "MaxRamLabelSpecyfication";
+            this.MaxRamLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.MaxRamLabelSpecyfication.TabIndex = 12;
+            // 
+            // MaxRamLabel
+            // 
+            this.MaxRamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxRamLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MaxRamLabel.Location = new System.Drawing.Point(27, 441);
+            this.MaxRamLabel.Name = "MaxRamLabel";
+            this.MaxRamLabel.Size = new System.Drawing.Size(173, 26);
+            this.MaxRamLabel.TabIndex = 11;
+            this.MaxRamLabel.Text = "Max RAM";
+            // 
+            // LedLabelSpecyfication
+            // 
+            this.LedLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LedLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LedLabelSpecyfication.Location = new System.Drawing.Point(27, 404);
+            this.LedLabelSpecyfication.Name = "LedLabelSpecyfication";
+            this.LedLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.LedLabelSpecyfication.TabIndex = 10;
+            // 
+            // LedLabel
+            // 
+            this.LedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LedLabel.Location = new System.Drawing.Point(27, 378);
+            this.LedLabel.Name = "LedLabel";
+            this.LedLabel.Size = new System.Drawing.Size(173, 26);
+            this.LedLabel.TabIndex = 9;
+            this.LedLabel.Text = "LED";
+            // 
+            // BrandLabelSpecyfication
+            // 
+            this.BrandLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BrandLabelSpecyfication.Location = new System.Drawing.Point(27, 343);
+            this.BrandLabelSpecyfication.Name = "BrandLabelSpecyfication";
+            this.BrandLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.BrandLabelSpecyfication.TabIndex = 8;
+            // 
+            // BrandLabel
+            // 
+            this.BrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BrandLabel.Location = new System.Drawing.Point(27, 318);
+            this.BrandLabel.Name = "BrandLabel";
+            this.BrandLabel.Size = new System.Drawing.Size(173, 26);
+            this.BrandLabel.TabIndex = 7;
+            this.BrandLabel.Text = "Brand";
+            // 
+            // ChipsetLabelSpecyfication
+            // 
+            this.ChipsetLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChipsetLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ChipsetLabelSpecyfication.Location = new System.Drawing.Point(27, 282);
+            this.ChipsetLabelSpecyfication.Name = "ChipsetLabelSpecyfication";
+            this.ChipsetLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.ChipsetLabelSpecyfication.TabIndex = 6;
+            // 
+            // ChipsetLabel
+            // 
+            this.ChipsetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChipsetLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ChipsetLabel.Location = new System.Drawing.Point(27, 256);
+            this.ChipsetLabel.Name = "ChipsetLabel";
+            this.ChipsetLabel.Size = new System.Drawing.Size(173, 26);
+            this.ChipsetLabel.TabIndex = 5;
+            this.ChipsetLabel.Text = "Chipset";
+            // 
+            // Cpumodelsocketlabel
+            // 
+            this.Cpumodelsocketlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cpumodelsocketlabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Cpumodelsocketlabel.Location = new System.Drawing.Point(27, 210);
+            this.Cpumodelsocketlabel.Name = "Cpumodelsocketlabel";
+            this.Cpumodelsocketlabel.Size = new System.Drawing.Size(173, 30);
+            this.Cpumodelsocketlabel.TabIndex = 4;
+            // 
+            // CpumoelsocketLabelSpecyfication
+            // 
+            this.CpumoelsocketLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CpumoelsocketLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CpumoelsocketLabelSpecyfication.Location = new System.Drawing.Point(27, 181);
+            this.CpumoelsocketLabelSpecyfication.Name = "CpumoelsocketLabelSpecyfication";
+            this.CpumoelsocketLabelSpecyfication.Size = new System.Drawing.Size(173, 30);
+            this.CpumoelsocketLabelSpecyfication.TabIndex = 3;
+            this.CpumoelsocketLabelSpecyfication.Text = "CPU socket model";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.NameLabel.Location = new System.Drawing.Point(27, 144);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(173, 26);
+            this.NameLabel.TabIndex = 2;
+            // 
+            // ProductNameInfoLabel
+            // 
+            this.ProductNameInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNameInfoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ProductNameInfoLabel.Location = new System.Drawing.Point(27, 107);
+            this.ProductNameInfoLabel.Name = "ProductNameInfoLabel";
+            this.ProductNameInfoLabel.Size = new System.Drawing.Size(173, 26);
+            this.ProductNameInfoLabel.TabIndex = 1;
+            this.ProductNameInfoLabel.Text = "Product";
+            // 
+            // SpecificationLabel
+            // 
+            this.SpecificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecificationLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecificationLabel.Location = new System.Drawing.Point(24, 50);
+            this.SpecificationLabel.Name = "SpecificationLabel";
+            this.SpecificationLabel.Size = new System.Drawing.Size(197, 41);
+            this.SpecificationLabel.TabIndex = 0;
+            this.SpecificationLabel.Text = "Specyfication";
+            // 
+            // KoszykButton
+            // 
+            this.KoszykButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.KoszykButton.Location = new System.Drawing.Point(878, 84);
+            this.KoszykButton.Name = "KoszykButton";
+            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
+            this.KoszykButton.TabIndex = 25;
+            this.KoszykButton.Text = "Add to my order";
+            this.KoszykButton.UseVisualStyleBackColor = false;
+            this.KoszykButton.Click += new System.EventHandler(this.KoszykButton_Click);
+            // 
             // FProductsMainboardsMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.ClientSize = new System.Drawing.Size(1365, 709);
             this.Controls.Add(this.ProductsRightPanel);
             this.Controls.Add(this.FProductsLeftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FProductsMainboardsMain";
             this.Text = "FProductsMain";
             this.Load += new System.EventHandler(this.FProductsMain_Load);
             this.FProductsLeftPanel.ResumeLayout(false);
-            this.ProductsRightPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ProductsRightPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -357,5 +365,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
+        private System.Windows.Forms.Button KoszykButton;
     }
 }

@@ -16,12 +16,23 @@ namespace ComputerShop.FormViews
     public partial class FProductsRAMMain : Form
     {
         private MySqlConnection connection;
-
+        List<int> MyProducts;
+        int UserId;
+        public int ProductId { get; private set; }
         public FProductsRAMMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+
+        public FProductsRAMMain(List<int> Myproducts, int userid)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = Myproducts;
+            this.UserId = userid;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -41,23 +52,31 @@ namespace ComputerShop.FormViews
                 string selectcapacity = "SELECT RAM_capacity FROM rams" +
                                         " INNER JOIN specyfications s on rams.ID = s.RAM" +
                                         " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                        " WHERE Name = '" +SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                        " WHERE Name = '" +SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectCapacityCmd = new MySqlCommand(selectcapacity, connection);
                 SpecyficationRamCapacityLabel.Text = selectCapacityCmd.ExecuteScalar().ToString() + " GB";
 
                 string selectRamType = "SELECT RAM_type FROM rams" +
                                        " INNER JOIN specyfications s on rams.ID = s.RAM" +
                                        " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                       " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                       " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectRamTypeCmd = new MySqlCommand(selectRamType, connection);
                 SpecyficationRamTypeLabel.Text = selectRamTypeCmd.ExecuteScalar().ToString();
 
                 string selectSpeed = "SELECT Clock_speed FROM rams" +
                                        " INNER JOIN specyfications s on rams.ID = s.RAM" +
                                        " INNER JOIN products p on s.ID = p.specyficationsID" +
-                                       " WHERE Name = '" + SpecyficationNameLabel.Text.Trim() + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
+                                       " WHERE Name = '" + SpecyficationNameLabel.Text + "' AND p.Price = " + row.Cells["Price"].Value.ToString();
                 MySqlCommand selectSpeedCmd = new MySqlCommand(selectSpeed, connection);
                 SpecyficationClockSpeedLabel.Text = selectSpeedCmd.ExecuteScalar().ToString() + " Mhz";
+
+                string selectProductId = "Select p.ID From rams " +
+                                         "INNER JOIN specyfications s on rams.ID = s.RAM " +
+                                         "INNER JOIN products p on s.ID = p.specyficationsID " +
+                                         "Where Name = '" + SpecyficationNameLabel.Text + "' AND GPU IS NULL";
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
 
             }
         }
@@ -76,6 +95,11 @@ namespace ComputerShop.FormViews
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }
