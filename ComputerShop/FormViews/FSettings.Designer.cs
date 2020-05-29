@@ -81,6 +81,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.KoszykButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EmailPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneNumberPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PostCodePictureBox)).BeginInit();
@@ -588,6 +589,8 @@
             this.SubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SubmitButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SubmitButton.Location = new System.Drawing.Point(990, 582);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(130, 49);
@@ -596,12 +599,28 @@
             this.SubmitButton.UseVisualStyleBackColor = false;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // KoszykButton
+            // 
+            this.KoszykButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.KoszykButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.KoszykButton.Location = new System.Drawing.Point(990, 524);
+            this.KoszykButton.Name = "KoszykButton";
+            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
+            this.KoszykButton.TabIndex = 160;
+            this.KoszykButton.Text = "Delete account";
+            this.KoszykButton.UseVisualStyleBackColor = false;
+            this.KoszykButton.Click += new System.EventHandler(this.KoszykButton_Click);
+            // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1132, 642);
+            this.Controls.Add(this.KoszykButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.label1);
@@ -729,5 +748,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Button KoszykButton;
     }
 }

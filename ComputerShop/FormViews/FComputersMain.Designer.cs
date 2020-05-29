@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductsRightPanel = new System.Windows.Forms.Panel();
+            this.SpecyficationMainboardLabel = new System.Windows.Forms.Label();
+            this.MainboardLabel = new System.Windows.Forms.Label();
             this.SpecyficationPSULabel = new System.Windows.Forms.Label();
             this.PSULabel = new System.Windows.Forms.Label();
             this.SpecyficationHardDriveLabel = new System.Windows.Forms.Label();
@@ -55,8 +57,7 @@
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.SpecyficationMainboardLabel = new System.Windows.Forms.Label();
-            this.MainboardLabel = new System.Windows.Forms.Label();
+            this.KoszykButton = new System.Windows.Forms.Button();
             this.ProductsRightPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,11 +88,32 @@
             this.ProductsRightPanel.Controls.Add(this.ProductNameInfoLabel);
             this.ProductsRightPanel.Controls.Add(this.SpecificationLabel);
             this.ProductsRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductsRightPanel.Location = new System.Drawing.Point(1018, 0);
+            this.ProductsRightPanel.Location = new System.Drawing.Point(1055, 0);
             this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ProductsRightPanel.Name = "ProductsRightPanel";
-            this.ProductsRightPanel.Size = new System.Drawing.Size(226, 626);
+            this.ProductsRightPanel.Size = new System.Drawing.Size(245, 685);
             this.ProductsRightPanel.TabIndex = 3;
+            // 
+            // SpecyficationMainboardLabel
+            // 
+            this.SpecyficationMainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecyficationMainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SpecyficationMainboardLabel.Location = new System.Drawing.Point(24, 565);
+            this.SpecyficationMainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpecyficationMainboardLabel.Name = "SpecyficationMainboardLabel";
+            this.SpecyficationMainboardLabel.Size = new System.Drawing.Size(218, 26);
+            this.SpecyficationMainboardLabel.TabIndex = 38;
+            // 
+            // MainboardLabel
+            // 
+            this.MainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainboardLabel.Location = new System.Drawing.Point(24, 533);
+            this.MainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MainboardLabel.Name = "MainboardLabel";
+            this.MainboardLabel.Size = new System.Drawing.Size(218, 26);
+            this.MainboardLabel.TabIndex = 37;
+            this.MainboardLabel.Text = "Mainboard";
             // 
             // SpecyficationPSULabel
             // 
@@ -275,13 +297,14 @@
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel1.Controls.Add(this.KoszykButton);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 626);
+            this.panel1.Size = new System.Drawing.Size(1055, 685);
             this.panel1.TabIndex = 4;
             // 
             // dataGridView1
@@ -334,7 +357,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(852, 598);
+            this.dataGridView1.Size = new System.Drawing.Size(511, 598);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -374,37 +397,30 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // SpecyficationMainboardLabel
+            // KoszykButton
             // 
-            this.SpecyficationMainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecyficationMainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecyficationMainboardLabel.Location = new System.Drawing.Point(24, 565);
-            this.SpecyficationMainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecyficationMainboardLabel.Name = "SpecyficationMainboardLabel";
-            this.SpecyficationMainboardLabel.Size = new System.Drawing.Size(218, 26);
-            this.SpecyficationMainboardLabel.TabIndex = 38;
+            this.KoszykButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.KoszykButton.Location = new System.Drawing.Point(720, 63);
+            this.KoszykButton.Name = "KoszykButton";
+            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
+            this.KoszykButton.TabIndex = 25;
+            this.KoszykButton.Text = "Add to my order";
+            this.KoszykButton.UseVisualStyleBackColor = false;
+            this.KoszykButton.Click += new System.EventHandler(this.KoszykButton_Click);
             // 
-            // MainboardLabel
-            // 
-            this.MainboardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainboardLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainboardLabel.Location = new System.Drawing.Point(24, 533);
-            this.MainboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MainboardLabel.Name = "MainboardLabel";
-            this.MainboardLabel.Size = new System.Drawing.Size(218, 26);
-            this.MainboardLabel.TabIndex = 37;
-            this.MainboardLabel.Text = "Mainboard";
-            // 
-            // FComputers
+            // FComputersMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1244, 626);
+            this.ClientSize = new System.Drawing.Size(1300, 685);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ProductsRightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FComputers";
+            this.Name = "FComputersMain";
             this.Text = "FComputers";
             this.Load += new System.EventHandler(this.FComputers_Load);
             this.ProductsRightPanel.ResumeLayout(false);
@@ -443,5 +459,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label SpecyficationMainboardLabel;
         private System.Windows.Forms.Label MainboardLabel;
+        private System.Windows.Forms.Button KoszykButton;
     }
 }

@@ -16,12 +16,23 @@ namespace ComputerShop.FormViews
     public partial class FLaptopsMain : Form
     {
         private MySqlConnection connection;
-
+        private List<int> MyProducts;
+        private int UserId;
+        private int ProductId { get; set; }
         public FLaptopsMain()
         {
             InitializeComponent();
             string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
             connection = new MySqlConnection(conn);
+        }
+
+        public FLaptopsMain(List<int> myProducts, int userId)
+        {
+            InitializeComponent();
+            string conn = ConfigurationManager.ConnectionStrings["DBconn"].ConnectionString;
+            connection = new MySqlConnection(conn);
+            this.MyProducts = myProducts;
+            this.UserId = userId;
         }
 
         private void SpecyficationRamCapacityLabel_Click(object sender, EventArgs e)
@@ -85,10 +96,22 @@ namespace ComputerShop.FormViews
                 MySqlCommand selectScreenCmd = new MySqlCommand(selectScreen, connection);
                 SpecyficationScreenLabel.Text = selectScreenCmd.ExecuteScalar().ToString() + "''";
 
+                double temptPrice = Convert.ToDouble(row.Cells["Price"].Value);
+                string brand = row.Cells["Brand"].Value.ToString();
+                double rating = Convert.ToDouble(row.Cells["Rating"].Value);
+                string selectProductId = "Select ID From products WHERE Brand = '" + brand + "' AND Rating = " + rating + " AND Price=" + temptPrice;
 
+                MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
+                var productid = (int)selectProductIdcmd.ExecuteScalar();
+                ProductId = productid;
 
 
             }
+        }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Add(ProductId);
         }
     }
 }

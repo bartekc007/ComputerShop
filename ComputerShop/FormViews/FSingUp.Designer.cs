@@ -224,6 +224,8 @@
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackButton.Location = new System.Drawing.Point(648, 703);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(110, 43);
@@ -309,6 +311,8 @@
             // NextButton
             // 
             this.NextButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.NextButton.Location = new System.Drawing.Point(793, 703);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(110, 43);

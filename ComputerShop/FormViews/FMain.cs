@@ -77,14 +77,14 @@ namespace ComputerShop.FormViews
         private void ProductsComputersButton_Click(object sender, EventArgs e)
         {          
             HideSubmenu();
-            OpenChildForm(new FComputersMain());
+            OpenChildForm(new FComputersMain(koszyk.koszyk.MyProducts, UserId));
 
         }
 
         private void ProductsLaptopButton_Click(object sender, EventArgs e)
         {
             HideSubmenu();
-            OpenChildForm(new FLaptopsMain());
+            OpenChildForm(new FLaptopsMain(koszyk.koszyk.MyProducts, UserId));
 
         }
 

@@ -637,5 +637,29 @@ namespace ComputerShop.FormViews
         {
 
         }
+
+        private void KoszykButton_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure you want to remove your account", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                connection.Open();
+
+                string queryDeleteOrder = "Delete From orders where UserID = " + UserId;
+                MySqlCommand cmd1 = new MySqlCommand(queryDeleteOrder, connection);
+                cmd1.ExecuteNonQuery();
+
+                string queryDeleteUser = "Delete From user where ID = " + UserId;
+                MySqlCommand cmd2 = new MySqlCommand(queryDeleteUser, connection);
+                cmd2.ExecuteNonQuery();
+
+                FLogin fLogin = new FLogin();
+                this.Hide();
+                activeForm.Hide();
+                fLogin.Show();
+            }
+            
+            
+        }
     }
 }

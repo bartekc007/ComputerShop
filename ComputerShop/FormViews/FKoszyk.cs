@@ -19,6 +19,11 @@ namespace ComputerShop.FormViews
         private MySqlConnection connection;
         private int UserId;
         private IList<int> MyProducts;
+        private int productId { get; set; }
+        private double price {get;set;}
+        private double temptPrice { get; set; }
+        private string brand { get; set; }
+        private double rating { get; set; }
         public FKoszyk(IList<int> Myproducts, int userId)
         {
             InitializeComponent();
@@ -26,6 +31,7 @@ namespace ComputerShop.FormViews
             connection = new MySqlConnection(conn);
             UserId = userId;
             MyProducts = Myproducts;
+            price = 0;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -39,14 +45,22 @@ namespace ComputerShop.FormViews
         {
             if (e.RowIndex >= 0)
             {
-
-
+                connection.Open();
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                temptPrice = Convert.ToDouble(row.Cells["Price"].Value);
+                brand = row.Cells["Brand"].Value.ToString();
+                rating = Convert.ToDouble(row.Cells["Rating"].Value);
+                string queryID = "SELECT ID FROM products WHERE Price = " + temptPrice + " AND Brand = '" + brand + "' AND Rating = " + rating ;
+                MySqlCommand IDcmd = new MySqlCommand(queryID, connection);
+                productId = (Int32)IDcmd.ExecuteScalar();
+                int temtp = productId;
+                connection.Close();
             }
         }
 
         private void FKoszyk1_Load(object sender, EventArgs e)
         {
-            connection.Open();
+           // connection.Open();
             List<KoszykProductsView> Koszyczek = new List<KoszykProductsView>();
             foreach (var item in MyProducts)
             {
@@ -66,6 +80,87 @@ namespace ComputerShop.FormViews
             }
 
 
+
+        }
+
+        private void PurchaseButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(DeliveryTextBox.Text))
+            {
+                DeliveryLabel.Text = "This field can not be empty";
+            }
+            else if (DeliveryTextBox.Text == "Inpost" || DeliveryTextBox.Text == "DHL" || DeliveryTextBox.Text == "DPD" || DeliveryTextBox.Text == "Fedex" || DeliveryTextBox.Text == "Poczta Polska")
+            {
+                connection.Open();
+
+                //Get new order Number
+                int orderNumber = 0;
+                try
+                {
+                    string queryordernumber = "SELECT MAX(Order_number) FROM orders";
+                    MySqlCommand ordernumbercmd = new MySqlCommand(queryordernumber, connection);
+                    orderNumber = (Int32)ordernumbercmd.ExecuteScalar();
+                    orderNumber++;
+                }
+                catch (NullReferenceException s) when (s.Data != null)
+                {
+                    orderNumber = 1;
+                }
+                catch (InvalidCastException s) when (s.Data != null)
+                {
+                    orderNumber = 1;
+                }
+
+
+
+                //Converting DateTime C# formatto MySql DateTime Format
+                DateTime orderDate = DateTime.Now;
+                orderDate.ToString("YYYY-MM-DD HH:MM:SS");
+
+
+                foreach (var item in MyProducts)
+                {
+
+                    string queryPrice = "Select Price FROM products Where ID = '" + item + "' ";
+                    MySqlCommand pricecmd = new MySqlCommand(queryPrice, connection);
+
+                    var tempt = (Double)pricecmd.ExecuteScalar();
+                    price += tempt;
+
+
+
+                    string InsertIntoOrders = "INSERT INTO orders(UserID, Order_number, Order_date, ProductID, Product_number, Delivery) " +
+                                               "VALUES(" + UserId + "," + orderNumber + ",'" + orderDate + "'," + item + ", 1,'" + DeliveryTextBox.Text + "')";
+                    MySqlCommand InsertIntoOrdersCmd = new MySqlCommand(InsertIntoOrders, connection);
+                    InsertIntoOrdersCmd.ExecuteNonQuery();
+
+                }
+                connection.Close();
+                if (MessageBox.Show("Are you sure you want to pay " + price + " zł?", "Message", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    MyProducts.Clear();
+                    price = 0;
+                    FKoszyk1_Load(sender, e);
+                    DeliveryLabel.Text = "Choose your delivery: ";
+                    DeliveryTextBox.Text = "";
+                }
+            }
+            else
+            {
+                DeliveryLabel.Text = "Wrong Delivery, Tou can choose: Inpost, DPD, DHL, Fedex, Poczta Polska";
+            }
+
+
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            MyProducts.Remove(productId);
+            FKoszyk1_Load(sender, e);
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
@@ -131,18 +226,28 @@ namespace ComputerShop.FormViews
                 case "Zasilacze":
                     queryProductName = "SELECT power_supply_units.Name FROM power_supply_units INNER JOIN specyfications ON specyfications.Power_supply_unit = power_supply_units.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
                     break;
+                case "Komputery":
+                    queryProductName = "Komputer";
+                    break;
+                case "Laptopy":
+                    queryProductName = "Laptop";
+                    break;
                 default:
                     queryProductName = "SELECT power_supply_units.Name FROM power_supply_units INNER JOIN specyfications ON specyfications.Power_supply_unit = power_supply_units.ID INNER JOIN products on products.ID = specyfications.ID WHERE CPU IS NULL";
 
                     break;
             }
-            MySqlCommand ProductNamecmd = new MySqlCommand(queryProductName, connection);
-            datareader = ProductNamecmd.ExecuteReader();
-            while (datareader.Read())
+            if(tempt!="Komputery" && tempt!="Laptopy")
             {
-                ProductName = datareader.GetString(0).ToString();
+                MySqlCommand ProductNamecmd = new MySqlCommand(queryProductName, connection);
+                datareader = ProductNamecmd.ExecuteReader();
+                while (datareader.Read())
+                {
+                    ProductName = datareader.GetString(0).ToString();
+                }
+                datareader.Close();
             }
-            datareader.Close();
+            
 
             string queryPrice = "Select Price FROM products Where ID = " + productId + " ";
             MySqlCommand Pricecmd = new MySqlCommand(queryPrice, connection);
