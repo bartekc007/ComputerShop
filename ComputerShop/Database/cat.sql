@@ -1,4 +1,6 @@
 create database cat;
+CREATE USER 'cat'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'cat'@'localhost';
 use cat;
 
 create table addresses
@@ -343,35 +345,35 @@ VALUES ('Toshiba', 'P300', 'HDD', 3000, NULL, NULL, 7200,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
 VALUES ('Toshiba', 'L200', 'HDD', 1000, NULL, NULL, 5400,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Plextor', '-', 'SSD', 512, 560, 520, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Plextor', 'M8VC', 'SSD', 512, 560, 520, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('GOODRAM', '-', 'SSD', 480, 550, 460, NULL,'SATA III (6 Gbit/s)');
+VALUES ('GOODRAM', 'CL100', 'SSD', 480, 550, 460, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('ADATA', '-', 'SSD', 512, 3500, 2300, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('ADATA', 'SX8200', 'SSD', 512, 3500, 2300, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', '-', 'SSD', 240, 540, 500, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Crucial', 'BX500', 'SSD', 240, 540, 500, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', '-', 'SSD', 500, 560, 510, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Crucial', 'MX500', 'SSD', 500, 560, 510, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Samsung', '-', 'SSD', 500, 550, 520, NULL,'SATA III (6 Gbit/s)');
+VALUES ('Samsung', 'EVO860', 'SSD', 500, 550, 520, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('PNY', '-', 'SSD', 240, 535, 500, NULL,'SATA III (6 Gbit/s)');
+VALUES ('PNY', 'CS900', 'SSD', 240, 535, 500, NULL,'SATA III (6 Gbit/s)');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Plextor', '-', 'SSD', 512, 3200, 2000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Plextor', 'M9PGN', 'SSD', 512, 3200, 2000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Silicon Power', '-', 'SSD', 256, 3400, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Silicon Power', 'A55', 'SSD', 256, 3400, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Crucial', '-', 'SSD', 1024, 2000, 1700, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Crucial', 'P1', 'SSD', 1024, 2000, 1700, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Patriot', '-', 'SSD', 2048, 3100, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Patriot', 'VPN100', 'SSD', 2048, 3100, 3000, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Corsair', '-', 'SSD', 2048, 4950, 4250, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Corsair', 'MP600', 'SSD', 2048, 4950, 4250, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Intel', '-', 'SSD', 2048, 1800, 1800, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Intel', '660p', 'SSD', 2048, 1800, 1800, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Silicon Power', '-', 'SSD', 1024, 2200, 1600, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Silicon Power', 'A60', 'SSD', 1024, 2200, 1600, NULL,'M.2 PCIe NVMe 3.0 x4');
 INSERT INTO hard_drives (Brand, Name, Type, Capacity, Max_Sequential_Read_Speed, Max_Sequential_Write_Speed, Hard_Disk_Rotational_Speed, Internal_interface)
-VALUES ('Samsung', '-', 'SSD', 1024, 3500, 3300, NULL,'M.2 PCIe NVMe 3.0 x4');
+VALUES ('Samsung', 'EVO970', 'SSD', 1024, 3500, 3300, NULL,'M.2 PCIe NVMe 3.0 x4');
 
 
 ##### Płyty główne #####
