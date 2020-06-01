@@ -69,8 +69,8 @@
             this.Price,
             this.Rating});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 11);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 14);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -93,7 +93,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(683, 460);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -138,10 +138,10 @@
             this.RemoveButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RemoveButton.Location = new System.Drawing.Point(554, 93);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveButton.Location = new System.Drawing.Point(739, 114);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(82, 35);
+            this.RemoveButton.Size = new System.Drawing.Size(109, 43);
             this.RemoveButton.TabIndex = 72;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = false;
@@ -152,10 +152,10 @@
             this.PurchaseButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.PurchaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PurchaseButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PurchaseButton.Location = new System.Drawing.Point(554, 41);
-            this.PurchaseButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PurchaseButton.Location = new System.Drawing.Point(739, 50);
+            this.PurchaseButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PurchaseButton.Name = "PurchaseButton";
-            this.PurchaseButton.Size = new System.Drawing.Size(82, 35);
+            this.PurchaseButton.Size = new System.Drawing.Size(109, 43);
             this.PurchaseButton.TabIndex = 73;
             this.PurchaseButton.Text = "Purchase";
             this.PurchaseButton.UseVisualStyleBackColor = false;
@@ -163,18 +163,21 @@
             // 
             // DeliveryLabel
             // 
+            this.DeliveryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.DeliveryLabel.ForeColor = System.Drawing.Color.White;
-            this.DeliveryLabel.Location = new System.Drawing.Point(551, 152);
-            this.DeliveryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DeliveryLabel.Location = new System.Drawing.Point(735, 187);
             this.DeliveryLabel.Name = "DeliveryLabel";
-            this.DeliveryLabel.Size = new System.Drawing.Size(161, 41);
+            this.DeliveryLabel.Size = new System.Drawing.Size(215, 50);
             this.DeliveryLabel.TabIndex = 75;
             this.DeliveryLabel.Text = "Chose your delivery";
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Inpost",
@@ -182,24 +185,25 @@
             "DPD",
             "Fedex",
             "Poczta Polska"});
-            this.checkedListBox1.Location = new System.Drawing.Point(554, 170);
+            this.checkedListBox1.Location = new System.Drawing.Point(738, 224);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 79);
+            this.checkedListBox1.Size = new System.Drawing.Size(235, 136);
             this.checkedListBox1.TabIndex = 76;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
             // FKoszyk
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(746, 492);
+            this.ClientSize = new System.Drawing.Size(995, 606);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.DeliveryLabel);
             this.Controls.Add(this.PurchaseButton);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FKoszyk";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FKoszyk1_Load);
