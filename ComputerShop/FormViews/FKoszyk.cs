@@ -39,7 +39,11 @@ namespace ComputerShop.FormViews
 
         }
 
-
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int ix = 0; ix < checkedListBox1.Items.Count; ++ix)
+                if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -50,7 +54,8 @@ namespace ComputerShop.FormViews
                 temptPrice = Convert.ToDouble(row.Cells["Price"].Value);
                 brand = row.Cells["Brand"].Value.ToString();
                 rating = Convert.ToDouble(row.Cells["Rating"].Value);
-                string queryID = "SELECT ID FROM products WHERE Price = " + temptPrice + " AND Brand = '" + brand + "' AND Rating = " + rating ;
+                int tempRating = (int)((rating * 10) % 10);
+                string queryID = "SELECT ID FROM products WHERE Price = " + temptPrice + " AND Brand = '" + brand + "' AND Rating = " + (int)rating + "." + tempRating; ;
                 MySqlCommand IDcmd = new MySqlCommand(queryID, connection);
                 productId = (Int32)IDcmd.ExecuteScalar();
                 int temtp = productId;
@@ -85,11 +90,12 @@ namespace ComputerShop.FormViews
 
         private void PurchaseButton_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(DeliveryTextBox.Text))
+
+            if (checkedListBox1.CheckedItems.Count == 0)
             {
-                DeliveryLabel.Text = "This field can not be empty";
+                DeliveryLabel.Text = "Check your delivery!";
             }
-            else if (DeliveryTextBox.Text == "Inpost" || DeliveryTextBox.Text == "DHL" || DeliveryTextBox.Text == "DPD" || DeliveryTextBox.Text == "Fedex" || DeliveryTextBox.Text == "Poczta Polska")
+            else
             {
                 connection.Open();
 
@@ -130,7 +136,7 @@ namespace ComputerShop.FormViews
 
 
                     string InsertIntoOrders = "INSERT INTO orders(UserID, Order_number, Order_date, ProductID, Product_number, Delivery) " +
-                                               "VALUES(" + UserId + "," + orderNumber + ",'" + orderDate + "'," + item + ", 1,'" + DeliveryTextBox.Text + "')";
+                                               "VALUES(" + UserId + "," + orderNumber + ",'" + orderDate + "'," + item + ", 1,'" + checkedListBox1.CheckedItems[0].ToString() + "')";
                     MySqlCommand InsertIntoOrdersCmd = new MySqlCommand(InsertIntoOrders, connection);
                     InsertIntoOrdersCmd.ExecuteNonQuery();
 
@@ -142,13 +148,8 @@ namespace ComputerShop.FormViews
                     price = 0;
                     FKoszyk1_Load(sender, e);
                     DeliveryLabel.Text = "Choose your delivery: ";
-                    DeliveryTextBox.Text = "";
                 }
-            }
-            else
-            {
-                DeliveryLabel.Text = "Wrong Delivery, Tou can choose: Inpost, DPD, DHL, Fedex, Poczta Polska";
-            }
+            };
 
 
         }
@@ -160,6 +161,11 @@ namespace ComputerShop.FormViews
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeliveryTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -267,6 +273,7 @@ namespace ComputerShop.FormViews
             }
             datareader.Close();
         }
+
         public string Brand { get; set; }
         public string ProductName { get; set; }
         public string Price { get; set; }

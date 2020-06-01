@@ -150,6 +150,8 @@ namespace ComputerShop.FormViews
         private void OrdersHistoryButton_Click(object sender, EventArgs e)
         {
             HideSubmenu();
+            OpenChildForm(new FOrdersHistory(UserId));
+
         }
         #endregion
 

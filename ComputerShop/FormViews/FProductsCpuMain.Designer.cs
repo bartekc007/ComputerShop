@@ -87,28 +87,30 @@
             this.ProductsRightPanel.Controls.Add(this.ProductNameInfoLabel);
             this.ProductsRightPanel.Controls.Add(this.SpecificationLabel);
             this.ProductsRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProductsRightPanel.Location = new System.Drawing.Point(1104, 0);
-            this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductsRightPanel.Location = new System.Drawing.Point(828, 0);
+            this.ProductsRightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ProductsRightPanel.Name = "ProductsRightPanel";
-            this.ProductsRightPanel.Size = new System.Drawing.Size(261, 709);
+            this.ProductsRightPanel.Size = new System.Drawing.Size(196, 576);
             this.ProductsRightPanel.TabIndex = 1;
             // 
             // CacheLabelSpecyfication
             // 
             this.CacheLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CacheLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CacheLabelSpecyfication.Location = new System.Drawing.Point(25, 644);
+            this.CacheLabelSpecyfication.Location = new System.Drawing.Point(19, 523);
+            this.CacheLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CacheLabelSpecyfication.Name = "CacheLabelSpecyfication";
-            this.CacheLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.CacheLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.CacheLabelSpecyfication.TabIndex = 31;
             // 
             // CacheLabel
             // 
             this.CacheLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CacheLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CacheLabel.Location = new System.Drawing.Point(25, 618);
+            this.CacheLabel.Location = new System.Drawing.Point(19, 502);
+            this.CacheLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CacheLabel.Name = "CacheLabel";
-            this.CacheLabel.Size = new System.Drawing.Size(173, 26);
+            this.CacheLabel.Size = new System.Drawing.Size(130, 21);
             this.CacheLabel.TabIndex = 30;
             this.CacheLabel.Text = "Cache";
             // 
@@ -116,18 +118,20 @@
             // 
             this.IgpLabelSpecyfications.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IgpLabelSpecyfications.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.IgpLabelSpecyfications.Location = new System.Drawing.Point(25, 582);
+            this.IgpLabelSpecyfications.Location = new System.Drawing.Point(19, 473);
+            this.IgpLabelSpecyfications.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IgpLabelSpecyfications.Name = "IgpLabelSpecyfications";
-            this.IgpLabelSpecyfications.Size = new System.Drawing.Size(173, 26);
+            this.IgpLabelSpecyfications.Size = new System.Drawing.Size(130, 21);
             this.IgpLabelSpecyfications.TabIndex = 29;
             // 
             // IgpLabel
             // 
             this.IgpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IgpLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.IgpLabel.Location = new System.Drawing.Point(25, 556);
+            this.IgpLabel.Location = new System.Drawing.Point(19, 452);
+            this.IgpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IgpLabel.Name = "IgpLabel";
-            this.IgpLabel.Size = new System.Drawing.Size(173, 26);
+            this.IgpLabel.Size = new System.Drawing.Size(130, 21);
             this.IgpLabel.TabIndex = 28;
             this.IgpLabel.Text = "IGP";
             // 
@@ -135,18 +139,20 @@
             // 
             this.LogicalCoresLabelSpecyfications.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogicalCoresLabelSpecyfications.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogicalCoresLabelSpecyfications.Location = new System.Drawing.Point(25, 521);
+            this.LogicalCoresLabelSpecyfications.Location = new System.Drawing.Point(19, 423);
+            this.LogicalCoresLabelSpecyfications.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LogicalCoresLabelSpecyfications.Name = "LogicalCoresLabelSpecyfications";
-            this.LogicalCoresLabelSpecyfications.Size = new System.Drawing.Size(173, 26);
+            this.LogicalCoresLabelSpecyfications.Size = new System.Drawing.Size(130, 21);
             this.LogicalCoresLabelSpecyfications.TabIndex = 27;
             // 
             // LogicalCoresLabel
             // 
             this.LogicalCoresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogicalCoresLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogicalCoresLabel.Location = new System.Drawing.Point(25, 495);
+            this.LogicalCoresLabel.Location = new System.Drawing.Point(19, 402);
+            this.LogicalCoresLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LogicalCoresLabel.Name = "LogicalCoresLabel";
-            this.LogicalCoresLabel.Size = new System.Drawing.Size(173, 26);
+            this.LogicalCoresLabel.Size = new System.Drawing.Size(130, 21);
             this.LogicalCoresLabel.TabIndex = 26;
             this.LogicalCoresLabel.Text = "Logical cores";
             // 
@@ -154,18 +160,20 @@
             // 
             this.PhysicalCoresLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhysicalCoresLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PhysicalCoresLabelSpecyfication.Location = new System.Drawing.Point(25, 458);
+            this.PhysicalCoresLabelSpecyfication.Location = new System.Drawing.Point(19, 372);
+            this.PhysicalCoresLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhysicalCoresLabelSpecyfication.Name = "PhysicalCoresLabelSpecyfication";
-            this.PhysicalCoresLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.PhysicalCoresLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.PhysicalCoresLabelSpecyfication.TabIndex = 25;
             // 
             // PhysicalCoresLabel
             // 
             this.PhysicalCoresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhysicalCoresLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PhysicalCoresLabel.Location = new System.Drawing.Point(25, 432);
+            this.PhysicalCoresLabel.Location = new System.Drawing.Point(19, 351);
+            this.PhysicalCoresLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhysicalCoresLabel.Name = "PhysicalCoresLabel";
-            this.PhysicalCoresLabel.Size = new System.Drawing.Size(173, 26);
+            this.PhysicalCoresLabel.Size = new System.Drawing.Size(130, 21);
             this.PhysicalCoresLabel.TabIndex = 24;
             this.PhysicalCoresLabel.Text = "Physical cores";
             // 
@@ -173,18 +181,20 @@
             // 
             this.BoostSpeedLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoostSpeedLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BoostSpeedLabelSpecyfication.Location = new System.Drawing.Point(25, 396);
+            this.BoostSpeedLabelSpecyfication.Location = new System.Drawing.Point(19, 322);
+            this.BoostSpeedLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BoostSpeedLabelSpecyfication.Name = "BoostSpeedLabelSpecyfication";
-            this.BoostSpeedLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.BoostSpeedLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.BoostSpeedLabelSpecyfication.TabIndex = 23;
             // 
             // BoostSpeedLabel
             // 
             this.BoostSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoostSpeedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BoostSpeedLabel.Location = new System.Drawing.Point(25, 370);
+            this.BoostSpeedLabel.Location = new System.Drawing.Point(19, 301);
+            this.BoostSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BoostSpeedLabel.Name = "BoostSpeedLabel";
-            this.BoostSpeedLabel.Size = new System.Drawing.Size(173, 26);
+            this.BoostSpeedLabel.Size = new System.Drawing.Size(130, 21);
             this.BoostSpeedLabel.TabIndex = 22;
             this.BoostSpeedLabel.Text = "Boost speed";
             // 
@@ -192,18 +202,20 @@
             // 
             this.BrandLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrandLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BrandLabelSpecyfication.Location = new System.Drawing.Point(25, 335);
+            this.BrandLabelSpecyfication.Location = new System.Drawing.Point(19, 272);
+            this.BrandLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BrandLabelSpecyfication.Name = "BrandLabelSpecyfication";
-            this.BrandLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.BrandLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.BrandLabelSpecyfication.TabIndex = 21;
             // 
             // BrandLabel
             // 
             this.BrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrandLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BrandLabel.Location = new System.Drawing.Point(25, 309);
+            this.BrandLabel.Location = new System.Drawing.Point(19, 251);
+            this.BrandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BrandLabel.Name = "BrandLabel";
-            this.BrandLabel.Size = new System.Drawing.Size(173, 26);
+            this.BrandLabel.Size = new System.Drawing.Size(130, 21);
             this.BrandLabel.TabIndex = 20;
             this.BrandLabel.Text = "Brand";
             // 
@@ -211,18 +223,20 @@
             // 
             this.ClockSpeedLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClockSpeedLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClockSpeedLabelSpecyfication.Location = new System.Drawing.Point(25, 274);
+            this.ClockSpeedLabelSpecyfication.Location = new System.Drawing.Point(19, 223);
+            this.ClockSpeedLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ClockSpeedLabelSpecyfication.Name = "ClockSpeedLabelSpecyfication";
-            this.ClockSpeedLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.ClockSpeedLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.ClockSpeedLabelSpecyfication.TabIndex = 19;
             // 
             // ClockSpeedLabel
             // 
             this.ClockSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClockSpeedLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClockSpeedLabel.Location = new System.Drawing.Point(25, 249);
+            this.ClockSpeedLabel.Location = new System.Drawing.Point(19, 202);
+            this.ClockSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ClockSpeedLabel.Name = "ClockSpeedLabel";
-            this.ClockSpeedLabel.Size = new System.Drawing.Size(173, 26);
+            this.ClockSpeedLabel.Size = new System.Drawing.Size(130, 21);
             this.ClockSpeedLabel.TabIndex = 18;
             this.ClockSpeedLabel.Text = "Clock speed";
             // 
@@ -230,18 +244,20 @@
             // 
             this.CpuModelLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CpuModelLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CpuModelLabelSpecyfication.Location = new System.Drawing.Point(25, 203);
+            this.CpuModelLabelSpecyfication.Location = new System.Drawing.Point(19, 165);
+            this.CpuModelLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CpuModelLabelSpecyfication.Name = "CpuModelLabelSpecyfication";
-            this.CpuModelLabelSpecyfication.Size = new System.Drawing.Size(173, 30);
+            this.CpuModelLabelSpecyfication.Size = new System.Drawing.Size(130, 24);
             this.CpuModelLabelSpecyfication.TabIndex = 17;
             // 
             // CpuModelLabel
             // 
             this.CpuModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CpuModelLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CpuModelLabel.Location = new System.Drawing.Point(25, 174);
+            this.CpuModelLabel.Location = new System.Drawing.Point(19, 141);
+            this.CpuModelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CpuModelLabel.Name = "CpuModelLabel";
-            this.CpuModelLabel.Size = new System.Drawing.Size(173, 30);
+            this.CpuModelLabel.Size = new System.Drawing.Size(130, 24);
             this.CpuModelLabel.TabIndex = 16;
             this.CpuModelLabel.Text = "CPU model";
             // 
@@ -249,18 +265,20 @@
             // 
             this.NameLabelSpecyfication.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLabelSpecyfication.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.NameLabelSpecyfication.Location = new System.Drawing.Point(25, 135);
+            this.NameLabelSpecyfication.Location = new System.Drawing.Point(19, 110);
+            this.NameLabelSpecyfication.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameLabelSpecyfication.Name = "NameLabelSpecyfication";
-            this.NameLabelSpecyfication.Size = new System.Drawing.Size(173, 26);
+            this.NameLabelSpecyfication.Size = new System.Drawing.Size(130, 21);
             this.NameLabelSpecyfication.TabIndex = 15;
             // 
             // ProductNameInfoLabel
             // 
             this.ProductNameInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNameInfoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ProductNameInfoLabel.Location = new System.Drawing.Point(25, 98);
+            this.ProductNameInfoLabel.Location = new System.Drawing.Point(19, 80);
+            this.ProductNameInfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductNameInfoLabel.Name = "ProductNameInfoLabel";
-            this.ProductNameInfoLabel.Size = new System.Drawing.Size(173, 26);
+            this.ProductNameInfoLabel.Size = new System.Drawing.Size(130, 21);
             this.ProductNameInfoLabel.TabIndex = 14;
             this.ProductNameInfoLabel.Text = "Product";
             // 
@@ -268,9 +286,10 @@
             // 
             this.SpecificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpecificationLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SpecificationLabel.Location = new System.Drawing.Point(23, 42);
+            this.SpecificationLabel.Location = new System.Drawing.Point(17, 34);
+            this.SpecificationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SpecificationLabel.Name = "SpecificationLabel";
-            this.SpecificationLabel.Size = new System.Drawing.Size(197, 41);
+            this.SpecificationLabel.Size = new System.Drawing.Size(148, 33);
             this.SpecificationLabel.TabIndex = 13;
             this.SpecificationLabel.Text = "Specyfication";
             // 
@@ -281,9 +300,9 @@
             this.FProductsLeftPanel.Controls.Add(this.dataGridView1);
             this.FProductsLeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FProductsLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.FProductsLeftPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FProductsLeftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FProductsLeftPanel.Name = "FProductsLeftPanel";
-            this.FProductsLeftPanel.Size = new System.Drawing.Size(1104, 709);
+            this.FProductsLeftPanel.Size = new System.Drawing.Size(828, 576);
             this.FProductsLeftPanel.TabIndex = 2;
             this.FProductsLeftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FProductsLeftPanel_Paint_2);
             // 
@@ -293,9 +312,10 @@
             this.KoszykButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.KoszykButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KoszykButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.KoszykButton.Location = new System.Drawing.Point(907, 52);
+            this.KoszykButton.Location = new System.Drawing.Point(680, 42);
+            this.KoszykButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KoszykButton.Name = "KoszykButton";
-            this.KoszykButton.Size = new System.Drawing.Size(130, 49);
+            this.KoszykButton.Size = new System.Drawing.Size(98, 40);
             this.KoszykButton.TabIndex = 24;
             this.KoszykButton.Text = "Add to my order";
             this.KoszykButton.UseVisualStyleBackColor = false;
@@ -327,8 +347,8 @@
             this.Price,
             this.Rating});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(67, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 34);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -352,9 +372,10 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(715, 588);
+            this.dataGridView1.Size = new System.Drawing.Size(536, 478);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Brand
             // 
@@ -394,13 +415,13 @@
             // 
             // FProductsCpuMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 709);
+            this.ClientSize = new System.Drawing.Size(1024, 576);
             this.Controls.Add(this.FProductsLeftPanel);
             this.Controls.Add(this.ProductsRightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FProductsCpuMain";
             this.Text = "FProductsMain";
             this.Load += new System.EventHandler(this.FProductsMain_Load);

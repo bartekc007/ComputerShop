@@ -2188,3 +2188,5 @@ VALUES ('Komputery', 5099.00, 'HP', 33, '', 3.4, 195);
 
 INSERT INTO products(category, price, brand, on_stock, description, rating, specyficationsid)
 VALUES ('Komputery', 8399.00, 'Lenovo', 74, '', 4.2, 207);
+
+ALTER TABLE orders MODIFY COLUMN Order_date TEXT;

@@ -99,7 +99,8 @@ namespace ComputerShop.FormViews
                 double temptPrice = Convert.ToDouble(row.Cells["Price"].Value);
                 string brand = row.Cells["Brand"].Value.ToString();
                 double rating = Convert.ToDouble(row.Cells["Rating"].Value);
-                string selectProductId = "Select ID From products WHERE Brand = '" + brand + "' AND Rating = " + rating + " AND Price=" + temptPrice;
+                int tempRating = (int)((rating * 10) % 10);
+                string selectProductId = "Select ID From products WHERE Brand = '" + brand + "' AND Rating = " + (int)rating + "."+ tempRating+ " AND Price=" + temptPrice;
 
                 MySqlCommand selectProductIdcmd = new MySqlCommand(selectProductId, connection);
                 var productid = (int)selectProductIdcmd.ExecuteScalar();
