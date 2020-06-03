@@ -1,11 +1,14 @@
 Instrukcja:
-Zaloguj się do mysql jako root, bądź użytkownik z możliwością dodawania nowych użytkowników do bazy i zaimportuj schemat z pliku Database.
-Upewnij się że baza danych działa na adresie localhost na porcie 3306. Jeżeli nie możesz uruchomić bazę danych na podanym sockecie lub zmienić plik App.config na wybrane przez siebie dane.
-Uruchom aplikację i zarejestruj się jako nowy użytkownik.
+
+1.Zaloguj się do mysql jako root, bądź użytkownik z możliwością dodawania nowych użytkowników do bazy i zaimportuj schemat z pliku Database.
+
+2.Upewnij się że baza danych działa na adresie localhost na porcie 3306. Jeżeli nie możesz uruchomić bazę danych na podanym sockecie lub zmienić plik App.config na wybrane przez siebie dane.
+
+3.Uruchom aplikację i zarejestruj się jako nowy użytkownik.
+
+
 
 Zapytania SQL użyte w Aplikacji ComputerShop:
-
-
 
 INSERT:
 
